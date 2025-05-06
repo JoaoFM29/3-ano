@@ -1,0 +1,281 @@
+
+.about-us[b-kyuxa1jlvz] {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+    .about-us .overlap-group-wrapper[b-kyuxa1jlvz] {
+        background-color: #ffffff;
+        width: 100%;
+        max-width: 1440px; /* Add max-width for larger screens */
+        margin: 0 auto; /* Center the content */
+    }
+
+    .about-us .overlap-group[b-kyuxa1jlvz] {
+        position: relative;
+        height: auto; /* Set height to auto for responsiveness */
+    }
+
+    .about-us .whatsapp-image[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 401px;
+        height: 262px;
+        top: 0;
+        left: 503px;
+        object-fit: cover;
+    }
+
+    .about-us .rectangle[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 1440px;
+        height: 800px;
+        top: 242px;
+        left: 0;
+        background-color: #d9d9d9;
+    }
+
+    .about-us .morada-braga-s-o[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 270px;
+        top: 721px;
+        left: 1024px;
+        font-family: "Inter-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #000000;
+        font-size: 32px;
+        letter-spacing: 0;
+        line-height: 41.6px;
+    }
+
+    .about-us .email-birdbox-gmail[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 311px;
+        top: 734px;
+        left: 563px;
+        font-family: "Inter-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #000000;
+        font-size: 32px;
+        letter-spacing: 0;
+        line-height: 41.6px;
+    }
+
+    .about-us .pngtreephone-icon-in[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 148px;
+        height: 133px;
+        top: 555px;
+        left: 161px;
+        object-fit: cover;
+    }
+
+    .about-us .vecteezy-email-and[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 177px;
+        height: 164px;
+        top: 540px;
+        left: 615px;
+        object-fit: cover;
+    }
+
+    .about-us .vecteezy-mapa[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 79px;
+        height: 109px;
+        top: 555px;
+        left: 1116px;
+        object-fit: cover;
+    }
+
+    .about-us .contactos[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 204px;
+        top: 730px;
+        left: 149px;
+        font-family: "Inter-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #000000;
+        font-size: 32px;
+        letter-spacing: 0;
+        line-height: 41.6px;
+    }
+
+    .about-us .text-wrapper[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 483px;
+        top: 334px;
+        left: 462px;
+        font-family: "Inter-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #000000;
+        font-size: 32px;
+        letter-spacing: 0;
+        line-height:  41.6px;
+    }
+
+
+@media (max-width: 1440px) {
+    .about-us .rectangle[b-kyuxa1jlvz] {
+        width: 1300px;
+        height: 800px;
+    }
+    .about-us .morada-braga-s-o[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 270px;
+        top: 721px;
+        left: 1000px;
+        font-size: 32px;
+        letter-spacing: 0;
+        line-height: 41.6px;
+    }
+
+    .about-us .email-birdbox-gmail[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 311px;
+        top: 734px;
+        left: 563px;
+        font-family: "Inter-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #000000;
+        font-size: 32px;
+        letter-spacing: 0;
+        line-height: 41.6px;
+    }
+
+    .about-us .pngtreephone-icon-in[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 148px;
+        height: 133px;
+        top: 555px;
+        left: 161px;
+        object-fit: cover;
+    }
+
+    .about-us .vecteezy-email-and[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 177px;
+        height: 164px;
+        top: 540px;
+        left: 615px;
+        object-fit: cover;
+    }
+
+    .about-us .vecteezy-mapa[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 79px;
+        height: 109px;
+        top: 555px;
+        left: 1090px;
+        object-fit: cover;
+    }
+
+    .about-us .contactos[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 204px;
+        top: 730px;
+        left: 149px;
+        font-size: 32px;
+        letter-spacing: 0;
+        line-height: 41.6px;
+    }
+
+    .about-us .text-wrapper[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 483px;
+        top: 334px;
+        left: 462px;
+        font-size: 32px;
+        letter-spacing: 0;
+        line-height:  41.6px;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+
+    .about-us .whatsapp-image[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 401px;
+        height: 262px;
+        top: 0;
+        left: 270px;
+        object-fit: cover;
+    }
+    .about-us .rectangle[b-kyuxa1jlvz] {
+        width: 900px;
+        height: 800px;
+    }
+
+    .about-us .morada-braga-s-o[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 270px;
+        top: 721px;
+        left: 650px;
+        font-size: 25px;
+        letter-spacing: 0;
+        line-height: 41.6px;
+    }
+
+    .about-us .email-birdbox-gmail[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 311px;
+        top: 734px;
+        left: 358px;
+        font-family: "Inter-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #000000;
+        font-size: 25px;
+        letter-spacing: 0;
+        line-height: 41.6px;
+    }
+
+    .about-us .pngtreephone-icon-in[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 148px;
+        height: 133px;
+        top: 555px;
+        left: 120px;
+        object-fit: cover;
+    }
+
+    .about-us .vecteezy-email-and[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 177px;
+        height: 164px;
+        top: 540px;
+        left: 385px;
+        object-fit: cover;
+    }
+
+    .about-us .vecteezy-mapa[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 79px;
+        height: 109px;
+        top: 580px;
+        left: 710px;
+        object-fit: cover;
+    }
+
+    .about-us .contactos[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 204px;
+        top: 730px;
+        left: 120px;
+        font-size: 25px;
+        letter-spacing: 0;
+        line-height: 41.6px;
+    }
+
+    .about-us .text-wrapper[b-kyuxa1jlvz] {
+        position: absolute;
+        width: 483px;
+        top: 400px;
+        left: 260px;
+        font-size: 32px;
+        letter-spacing: 0;
+        line-height:  41.6px;
+    }
+}

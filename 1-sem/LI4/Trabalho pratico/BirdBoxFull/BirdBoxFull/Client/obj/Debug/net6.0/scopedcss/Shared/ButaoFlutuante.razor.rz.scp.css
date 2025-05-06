@@ -1,0 +1,21 @@
+/* Floating Button Styles */
+.floating-button[b-xtebftmcyg] {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #D9D9D9; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .floating-button:hover[b-xtebftmcyg] {
+        background-color: #808080; /* Button background color on hover */
+    }

@@ -1,0 +1,283 @@
+.log-button[b-8p8vvvrmws] {
+    width: 16rem;
+    padding: 8px 10px; /* Adjust padding to control the height */
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #D9D9D9; /* Fix: Add # before color code */
+    color: #000;
+    line-height: 1; /* Set line-height to control vertical alignment */
+}
+
+
+.card-container[b-8p8vvvrmws] {
+    display: flex;
+    width: 63rem;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust as needed */
+}
+
+
+.card[b-8p8vvvrmws] {
+    display: flex;
+    flex-direction: column;
+    height: 22rem;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: #D9D9D9;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: calc(100%); /* Set the width of each item, adjust as needed */
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.card-img-wrapper[b-8p8vvvrmws] {
+    margin-bottom: 2rem;
+}
+
+.card-img[b-8p8vvvrmws] {
+    margin-top: 1.5rem;
+    margin-left:-30rem;
+    width: 250px;
+    height: 190px;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.card-text[b-8p8vvvrmws] {
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-align: left;
+    padding: 0 1rem;
+    width: 100%;
+    margin-left: 50rem;
+    margin-top : -12rem;
+}
+
+    .card-text a[b-8p8vvvrmws] {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .card-text h4[b-8p8vvvrmws] {
+        margin-top: 0.1rem;
+        margin-bottom: 0.1rem;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .card-text p[b-8p8vvvrmws] {
+        margin-top: 0.1rem;
+        margin-bottom: 0.1rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+@media (max-width: 1024px) {
+
+    .card-container[b-8p8vvvrmws] {
+        width: 38rem;
+    }
+
+    .card[b-8p8vvvrmws] {
+        height: 21rem;
+        border-radius: 24px;
+        margin-bottom: 1rem;
+        margin-bottom: 15px; /* Adjust as needed */
+    }
+
+    .card-img[b-8p8vvvrmws] {
+        margin-top: 1.5rem;
+        width: 250px;
+        height: 190px;
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
+        margin-top: 1.5rem;
+        margin-left: -15rem;
+    }
+
+    .log-button[b-8p8vvvrmws] {
+        width: 14rem;
+        padding: 5px 10px; /* Adjust padding to control the height */
+        font-size: 13px;
+        border-radius: 5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-text[b-8p8vvvrmws] {
+        font-weight: bold;
+        font-size: 0.8rem;
+        text-align: left;
+        padding: 0 1rem;
+        width: 100%;
+        margin-left: 46rem;
+        margin-top: -10rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .card-container[b-8p8vvvrmws] {
+        width: 32rem;
+    }
+
+    .card[b-8p8vvvrmws] {
+        height: 18rem;
+        border-radius: 24px;
+        margin-bottom: 1rem;
+        margin-bottom: 15px; /* Adjust as needed */
+    }
+
+    .card-img[b-8p8vvvrmws] {
+        margin-top: 1.5rem;
+        width: 200px;
+        height: 140px;
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
+        margin-top: 1.5rem;
+        margin-left: -15rem;
+    }
+
+    .log-button[b-8p8vvvrmws] {
+        width: 12rem;
+        padding: 5px 10px; /* Adjust padding to control the height */
+        font-size: 13px;
+        border-radius: 5rem;
+        margin-bottom: 0.5rem;
+    }
+    .card-text[b-8p8vvvrmws] {
+        font-weight: bold;
+        font-size: 0.8rem;
+        text-align: left;
+        padding: 0 1rem;
+        width: 100%;
+        margin-left: 35rem;
+        margin-top: -10rem;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .card-container[b-8p8vvvrmws] {
+        width: 24rem;
+    }
+
+    .card[b-8p8vvvrmws] {
+        height: 22rem;
+        border-radius: 24px;
+        margin-bottom: 1rem;
+        margin-bottom: 15px; /* Adjust as needed */
+    }
+
+    .card-img[b-8p8vvvrmws] {
+        margin-top: 1.5rem;
+        width: 180px;
+        height: 140px;
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
+        margin-top: 1.5rem;
+        margin-left: -10rem;
+    }
+
+    .log-button[b-8p8vvvrmws] {
+        width: 18rem;
+        padding: 5px 10px; /* Adjust padding to control the height */
+        font-size: 13px;
+        border-radius: 5rem;
+        margin-bottom: 0.5rem;
+    }
+    .card-text[b-8p8vvvrmws] {
+        font-weight: bold;
+        text-align: left;
+        padding: 0 1rem;
+        width: 100%;
+        margin-left: 25rem;
+        margin-top: -10rem;
+    }
+        .card-text h4[b-8p8vvvrmws] {
+            margin-top: 0.1rem;
+            margin-bottom: 0.1rem;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        .card-text p[b-8p8vvvrmws] {
+            margin-top: 0.1rem;
+            margin-bottom: 0.1rem;
+            font-size: 0.6rem;
+            font-weight: bold;
+        }
+}
+
+@media (max-width: 375px) {
+
+    .card-container[b-8p8vvvrmws] {
+        width: 20rem;
+    }
+
+    .card[b-8p8vvvrmws] {
+        height: 22rem;
+        border-radius: 24px;
+        margin-bottom: 1rem;
+     
+        margin-bottom: 15px; /* Adjust as needed */
+    }
+
+    .card-img[b-8p8vvvrmws] {
+        margin-top: 1.5rem;
+        width: 250px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    .log-button[b-8p8vvvrmws] {
+        width: 15rem;
+        padding: 5px 10px; /* Adjust padding to control the height */
+        font-size: 13px;
+        border-radius: 5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 325px) {
+
+    .card-container[b-8p8vvvrmws] {
+        width: 18rem;
+    }
+
+    .card[b-8p8vvvrmws] {
+        height: 22rem;
+        border-radius: 24px;
+        margin-bottom: 1rem;
+        width: calc(100%); /* Set the width of each item, adjust as needed */
+        margin-bottom: 15px; /* Adjust as needed */
+    }
+
+    .card-img[b-8p8vvvrmws] {
+        margin-top: 1.5rem;
+        width: 250px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    .log-button[b-8p8vvvrmws] {
+        width: 15rem;
+        padding: 5px 10px; /* Adjust padding to control the height */
+        font-size: 13px;
+        border-radius: 5rem;
+        margin-bottom: 0.5rem;
+    }
+}

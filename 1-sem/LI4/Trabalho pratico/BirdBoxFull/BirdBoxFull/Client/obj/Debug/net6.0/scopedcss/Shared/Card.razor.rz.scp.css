@@ -1,0 +1,32 @@
+.card[b-b3z9wzq13q] {
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: #F0F0F0;
+}
+
+.card-img-top[b-b3z9wzq13q] {
+    margin-top: 10px;
+    /* Adjust the margin value as needed */
+    border-radius: 24px;
+    width: 90%;
+    height: auto;
+    align-self: center;
+    /* Align the image in the center vertically */
+}
+
+.card-title[b-b3z9wzq13q] {
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    /* Adjust the margin value as needed */
+}
+
+.card-text[b-b3z9wzq13q] {
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 3px;
+    /* Adjust the margin value as needed */
+}

@@ -1,0 +1,53 @@
+.card[b-xktn6j10mb] {
+    display: flex;
+    flex-direction: column;
+    width: 55rem;
+    height: 40rem;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: #F0F0F0;
+}
+
+.img-thumbnail[b-xktn6j10mb] {
+    width: 259px; /* Set the desired width */
+    height: 175px; /* Maintain the aspect ratio */
+    border-radius: 15px; /* Adicionando bordas arredondadas */
+    margin-left: 1.3rem;
+    object-fit: cover;
+}
+
+.card-img-big img[b-xktn6j10mb] {
+    width: 490px; /* Make the image fill the container */
+    height: 420px; /* Maintain the aspect ratio */
+    margin-left: -21rem;
+    border-radius: 15px; /* Adicionando bordas arredondadas */
+    object-fit: cover;
+}
+
+.card-img-big[b-xktn6j10mb] {
+    margin-top: 30px;
+    border-radius: 24px;
+    width: 800px;
+    height: 600px;
+    align-self: center;
+}
+
+.card-img-small[b-xktn6j10mb] {
+    margin-top: 20px;
+}
+
+
+.card-title[b-xktn6j10mb] {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    margin-top: -150px;
+    margin-left: -300px;
+}
+
+.card-text[b-xktn6j10mb] {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 3px;
+    margin-left: -300px;
+}

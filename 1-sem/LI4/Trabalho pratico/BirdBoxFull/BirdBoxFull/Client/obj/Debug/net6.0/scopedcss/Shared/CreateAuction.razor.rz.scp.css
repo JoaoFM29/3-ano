@@ -1,0 +1,594 @@
+.form-group[b-r0u542v45z] {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Style for the custom button */
+.custom-file-input[b-r0u542v45z] {
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #737171;
+    color: #fff;
+    width: 15rem;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5rem;
+    transition: background-color 0.3s;
+    display: inline-block;
+    text-align: center; /* Center the text */
+}
+
+    .custom-file-input:hover[b-r0u542v45z] {
+        background-color: #e2e6ea;
+    }
+
+/* Hide the default file input button */
+.input-file[b-r0u542v45z] {
+    display: none;
+    background-color: red;
+}
+
+.form-categorias[b-r0u542v45z] {
+    width: 33rem;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5rem;
+    border: 1px solid #ccc;
+    background-color: rgba(217, 217, 217, 0.5);
+    height: 2.3rem;
+}
+
+.form-control[b-r0u542v45z] {
+    width: 22rem;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5rem;
+    border: 1px solid #ccc;
+    background-color: rgba(217, 217, 217, 0.5);
+    height: 2.3rem;
+}
+
+.form-pagamento[b-r0u542v45z] {
+    width: 22rem;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: rgba(217,217,217,0.5);
+    height: 2.3rem;
+    margin-right:1rem;
+    text-align: center; /* Align text horizontally in the center */
+    line-height: 1rem; /* Vertically center the text */
+   
+}
+
+.button-group[b-r0u542v45z]{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.button-controller-media[b-r0u542v45z] {
+    background-color: #737171;
+    margin-left: 0.82rem;
+    width: 20rem;
+    height: 3rem;
+    border-radius: 5rem;
+    border-color: #737171;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-controller-autenticacao[b-r0u542v45z] {
+    background-color: #737171;
+    margin-left: 0.05rem;
+    width: 22rem;
+    height: 3rem;
+    border-radius: 5rem;
+    border-color: #737171;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*************************************************************************************************************************************/
+/*************************************************************************************************************************************/
+/*************************************************************************************************************************************/
+/*************************************************************************************************************************************/
+
+@media (max-width: 1024px) {
+    .form-group[b-r0u542v45z] {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .form-categorias[b-r0u542v45z] {
+        width: 25rem;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217, 217, 217, 0.5);
+        height: 2.1rem;
+    }
+    
+    .form-control[b-r0u542v45z] {
+        width: 19rem;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217, 217, 217, 0.5);
+        height: 2.3rem;
+    }
+    
+    .form-pagamento[b-r0u542v45z] {
+        width: 19rem;
+        padding: 10px;
+        font-size: 15px;
+        border: 1px solid #ccc;
+        background-color: rgba(217,217,217,0.5);
+        height: 2.3rem;
+        margin-right:1rem;
+        text-align: center; /* Align text horizontally in the center */
+        line-height: 1rem; /* Vertically center the text */
+       
+    }
+    
+    .button-group[b-r0u542v45z]{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    .button-controller-media[b-r0u542v45z] {
+        background-color: #737171;
+        margin-left: 0.72rem;
+        width: 18rem;
+        height: 3rem;
+        border-radius: 5rem;
+        border-color: #737171;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .button-controller-autenticacao[b-r0u542v45z] {
+        background-color: #737171;
+        margin-left: 0rem;
+        width: 20rem;
+        height: 3rem;
+        border-radius: 5rem;
+        border-color: #737171;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/*************************************************************************************************************************************/
+/*************************************************************************************************************************************/
+/*************************************************************************************************************************************/
+/*************************************************************************************************************************************/
+@media (max-width: 800px) {
+    .form-group[b-r0u542v45z] {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .form-categorias[b-r0u542v45z] {
+        width: 19rem;
+        padding: 10px;
+        font-size: 13px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217, 217, 217, 0.5);
+        height: 2.1rem;
+    }
+    
+    .form-control[b-r0u542v45z] {
+        width: 15rem;
+        padding: 10px;
+        font-size: 13px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217, 217, 217, 0.5);
+        height: 2.3rem;
+    }
+    
+    .form-pagamento[b-r0u542v45z] {
+        width: 15rem;
+        padding: 10px;
+        font-size: 13px;
+        border: 1px solid #ccc;
+        background-color: rgba(217,217,217,0.5);
+        height: 2.3rem;
+        margin-right:1rem;
+        text-align: center; /* Align text horizontally in the center */
+        line-height: 1rem; /* Vertically center the text */
+       
+    }
+    
+    .button-group[b-r0u542v45z]{
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    .button-controller-media[b-r0u542v45z] {
+        background-color: #737171;
+        margin-left: 0.72rem;
+        width: 13rem;
+        height: 3rem;
+        border-radius: 5rem;
+        border-color: #737171;
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .button-controller-autenticacao[b-r0u542v45z] {
+        background-color: #737171;
+        margin-left: 0rem;
+        width: 15rem;
+        height: 3rem;
+        border-radius: 5rem;
+        border-color: #737171;
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-group[b-r0u542v45z] {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .form-categorias[b-r0u542v45z] {
+        width: 15rem;
+        padding: 10px;
+        font-size: 10px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217, 217, 217, 0.5);
+        height: 2.1rem;
+    }
+    
+    .form-control[b-r0u542v45z] {
+        width: 11rem;
+        padding: 10px;
+        font-size: 10px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217, 217, 217, 0.5);
+        height: 2.3rem;
+    }
+    
+    .form-pagamento[b-r0u542v45z] {
+        width: 11rem;
+        padding: 10px;
+        font-size: 10px;
+        border: 1px solid #ccc;
+        background-color: rgba(217,217,217,0.5);
+        height: 2.3rem;
+        margin-right:1rem;
+        text-align: center; /* Align text horizontally in the center */
+        line-height: 1rem; /* Vertically center the text */
+       
+    }
+    
+    .button-group[b-r0u542v45z]{
+        margin-top: -0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    .button-controller-media[b-r0u542v45z] {
+        background-color: #737171;
+        margin-left: 0.72rem;
+        width: 9rem;
+        height: 2.5rem;
+        border-radius: 5rem;
+        border-color: #737171;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .button-controller-autenticacao[b-r0u542v45z] {
+        background-color: #737171;
+        margin-left: 0rem;
+        width: 11rem;
+        height: 2.5rem;
+        border-radius: 5rem;
+        border-color: #737171;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-group[b-r0u542v45z] {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .form-categorias[b-r0u542v45z] {
+        width: 15rem;
+        padding: 10px;
+        font-size: 10px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217, 217, 217, 0.5);
+        height: 2.1rem;
+    }
+    
+    .form-control[b-r0u542v45z] {
+        width: 11rem;
+        padding: 10px;
+        font-size: 10px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217, 217, 217, 0.5);
+        height: 2.3rem;
+    }
+    
+    .form-pagamento[b-r0u542v45z] {
+        width: 11rem;
+        padding: 10px;
+        font-size: 10px;
+        border: 1px solid #ccc;
+        background-color: rgba(217,217,217,0.5);
+        height: 2.3rem;
+        margin-right:1rem;
+        text-align: center; /* Align text horizontally in the center */
+        line-height: 1rem; /* Vertically center the text */
+       
+    }
+    
+    .button-group[b-r0u542v45z]{
+        margin-top: -0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    .button-controller-media[b-r0u542v45z] {
+        background-color: #737171;
+        margin-left: 0.72rem;
+        width: 9rem;
+        height: 2.5rem;
+        border-radius: 5rem;
+        border-color: #737171;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .button-controller-autenticacao[b-r0u542v45z] {
+        background-color: #737171;
+        margin-left: 0rem;
+        width: 11rem;
+        height: 2.5rem;
+        border-radius: 5rem;
+        border-color: #737171;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}  
+
+@media (max-width: 460px) {
+    .form-group[b-r0u542v45z] {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .form-categorias[b-r0u542v45z] {
+        width: 12rem;
+        padding: 10px;
+        font-size: 8px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217, 217, 217, 0.5);
+        height: 1.9rem;
+    }
+    
+    .form-control[b-r0u542v45z] {
+        width: 9rem;
+        padding: 10px;
+        font-size: 8px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217, 217, 217, 0.5);
+        height: 1.9rem;
+    }
+    
+    .form-pagamento[b-r0u542v45z] {
+        width: 9rem;
+        padding: 10px;
+        font-size: 8px;
+        border: 1px solid #ccc;
+        background-color: rgba(217,217,217,0.5);
+        height: 1.9rem;
+        margin-right:1rem;
+        text-align: center; /* Align text horizontally in the center */
+        line-height: 1rem; /* Vertically center the text */
+       
+    }
+    
+    .button-group[b-r0u542v45z]{
+        margin-top: -0.7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    .button-controller-media[b-r0u542v45z] {
+        background-color: #737171;
+        margin-left: 0.95rem;
+        width: 7rem;
+        height: 2.3rem;
+        border-radius: 5rem;
+        border-color: #737171;
+        font-size: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .button-controller-autenticacao[b-r0u542v45z] {
+        background-color: #737171;
+        margin-left: 0rem;
+        width: 9rem;
+        height: 2.3rem;
+        border-radius: 5rem;
+        border-color: #737171;
+        font-size: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .form-group[b-r0u542v45z] {
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 0.7rem;
+        margin-bottom: 2rem;
+    }
+    
+    .form-categorias[b-r0u542v45z] {
+        width: 8rem;
+        padding: 7px;
+        font-size: 6px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217, 217, 217, 0.5);
+        height: 1.5rem;
+    }
+    
+    .form-control[b-r0u542v45z] {
+        width: 7rem;
+        padding: 10px;
+        font-size: 6px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217, 217, 217, 0.5);
+        height: 1.5rem;
+    }
+    
+    .form-pagamento[b-r0u542v45z] {
+        width: 7rem;
+        padding: 10px;
+        font-size: 6px;
+        border: 1px solid #ccc;
+        background-color: rgba(217,217,217,0.5);
+        height: 1.5rem;
+        margin-right:1rem;
+        text-align: center; /* Align text horizontally in the center */
+        line-height: 1rem; /* Vertically center the text */
+       
+    }
+    
+    .button-group[b-r0u542v45z]{
+        margin-top: -1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    .button-controller-media[b-r0u542v45z] {
+        background-color: #737171;
+        margin-left: 0.95rem;
+        width: 5rem;
+        height: 1.7rem;
+        border-radius: 5rem;
+        border-color: #737171;
+        font-size: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .button-controller-autenticacao[b-r0u542v45z] {
+        background-color: #737171;
+        margin-left: 0rem;
+        width: 7rem;
+        height: 1.7rem;
+        border-radius: 5rem;
+        border-color: #737171;
+        font-size: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
