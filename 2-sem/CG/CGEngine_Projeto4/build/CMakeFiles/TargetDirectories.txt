@@ -1,0 +1,4 @@
+/home/nuno/Desktop/CGEngine_Projeto4/build/CMakeFiles/engine.dir
+/home/nuno/Desktop/CGEngine_Projeto4/build/CMakeFiles/generator.dir
+/home/nuno/Desktop/CGEngine_Projeto4/build/CMakeFiles/edit_cache.dir
+/home/nuno/Desktop/CGEngine_Projeto4/build/CMakeFiles/rebuild_cache.dir
