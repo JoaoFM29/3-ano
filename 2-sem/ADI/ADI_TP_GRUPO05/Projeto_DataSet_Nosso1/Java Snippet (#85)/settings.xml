@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <entry key="scriptImports" type="xstring" value="import java.util.*;%%00010%%00010"/>
+        <entry key="scriptFields" type="xstring" value="// Your custom variables:%%00010"/>
+        <entry key="scriptBody" type="xstring" value="// Define your input column%%00010String input = c_Uniqueconcatenatewithcountprice_1;%%00010%%00010// Split the input string by comma and space to get individual values%%00010String[] values = input.split(&quot;, &quot;);%%00010%%00010// Initialize output columns%%00010int count1 = 0, count2 = 0, count3 = 0, count4 = 0, count5 = 0, count6 = 0, count7 = 0;%%00010%%00010// Loop through the values and count occurrences%%00010for(String value : values) {%%00010    // Extract the numeric part and count from each value%%00010    String[] parts = value.split(&quot;\\(&quot;);%%00010    double x = Double.parseDouble(parts[0]);%%00010    %%00010    int count = Integer.parseInt(parts[1].substring(0, parts[1].length() - 1));%%00010    %%00010    if (x &gt; 10000 &amp;&amp; x &lt;= 30000) {%%00010        count1 += count;%%00010    } else if (x &lt;= 5000) {%%00010        count2 += count;%%00010    } else if (x &gt; 5000 &amp;&amp; x &lt;= 10000) {%%00010        count3 += count;%%00010    } else if (x &gt; 30000 &amp;&amp; x &lt;= 60000) {%%00010        count4 += count;%%00010    } else if (x &gt; 60000 &amp;&amp; x &lt;= 100000) {%%00010        count5 += count;%%00010    } else if (x &gt; 100000 &amp;&amp; x &lt;= 150000) {%%00010        count6 += count;%%00010    } else if (x &gt; 150000) {%%00010        count7 += count;%%00010    }%%00010}%%00010out_10000x30000 = count1;%%00010out_5000m = count2;%%00010out_5000x = count3;%%00010out_30000x60000 = count4;%%00010out_60000x100000 = count5;%%00010out_100000x150000 = count6;%%00010out_150000 =  count7;%%00010%%00010%%00010%%00009%%00009%%00010%%00010%%00010"/>
+        <config key="jarFiles">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="outCols">
+            <entry key="array-size" type="xint" value="7"/>
+            <config key="0">
+                <entry key="Name" type="xstring" value="&lt;= 5000"/>
+                <entry key="JavaName" type="xstring" value="out_5000m"/>
+                <entry key="JavaType" type="xstring" value="java.lang.Integer"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.IntCell$IntCellFactory.create(class java.lang.Integer)"/>
+                <entry key="replaceExisting" type="xboolean" value="false"/>
+            </config>
+            <config key="1">
+                <entry key="Name" type="xstring" value="5000 &lt; x &lt;= 10000"/>
+                <entry key="JavaName" type="xstring" value="out_5000x"/>
+                <entry key="JavaType" type="xstring" value="java.lang.Integer"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.IntCell$IntCellFactory.create(class java.lang.Integer)"/>
+                <entry key="replaceExisting" type="xboolean" value="false"/>
+            </config>
+            <config key="2">
+                <entry key="Name" type="xstring" value="10000 &lt; x &lt;= 30000"/>
+                <entry key="JavaName" type="xstring" value="out_10000x30000"/>
+                <entry key="JavaType" type="xstring" value="java.lang.Integer"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.IntCell$IntCellFactory.create(class java.lang.Integer)"/>
+                <entry key="replaceExisting" type="xboolean" value="false"/>
+            </config>
+            <config key="3">
+                <entry key="Name" type="xstring" value="30000 &lt; x &lt;= 60000"/>
+                <entry key="JavaName" type="xstring" value="out_30000x60000"/>
+                <entry key="JavaType" type="xstring" value="java.lang.Integer"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.IntCell$IntCellFactory.create(class java.lang.Integer)"/>
+                <entry key="replaceExisting" type="xboolean" value="false"/>
+            </config>
+            <config key="4">
+                <entry key="Name" type="xstring" value="60000 &lt; x &lt;= 100000"/>
+                <entry key="JavaName" type="xstring" value="out_60000x100000"/>
+                <entry key="JavaType" type="xstring" value="java.lang.Integer"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.IntCell$IntCellFactory.create(class java.lang.Integer)"/>
+                <entry key="replaceExisting" type="xboolean" value="false"/>
+            </config>
+            <config key="5">
+                <entry key="Name" type="xstring" value="100000 &lt; x &lt;= 150000"/>
+                <entry key="JavaName" type="xstring" value="out_100000x150000"/>
+                <entry key="JavaType" type="xstring" value="java.lang.Integer"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.IntCell$IntCellFactory.create(class java.lang.Integer)"/>
+                <entry key="replaceExisting" type="xboolean" value="false"/>
+            </config>
+            <config key="6">
+                <entry key="Name" type="xstring" value="150000 &gt;"/>
+                <entry key="JavaName" type="xstring" value="out_150000"/>
+                <entry key="JavaType" type="xstring" value="java.lang.Integer"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.IntCell$IntCellFactory.create(class java.lang.Integer)"/>
+                <entry key="replaceExisting" type="xboolean" value="false"/>
+            </config>
+        </config>
+        <config key="outVars">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="inCols">
+            <entry key="array-size" type="xint" value="1"/>
+            <config key="0">
+                <entry key="Name" type="xstring" value="Unique concatenate with count*(price)"/>
+                <entry key="JavaName" type="xstring" value="c_Uniqueconcatenatewithcountprice_1"/>
+                <entry key="JavaType" type="xstring" value="java.lang.String"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.convert.java.SimpleDataCellToJavaConverterFactory(StringValue,class java.lang.String,String)"/>
+            </config>
+        </config>
+        <config key="inVars">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <entry key="version" type="xstring" value="version 1.x"/>
+        <entry key="templateUUID" type="xstring" isnull="true" value=""/>
+        <entry key="runOnExecute" type="xboolean" value="false"/>
+        <config key="bundles">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="CONFIGURED"/>
+    <entry key="factory" type="xstring" value="org.knime.base.node.jsnippet.JavaSnippetNodeFactory"/>
+    <entry key="node-name" type="xstring" value="Java Snippet"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME Java Snippet Nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.jsnippets"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="5.2.0.v202310301555"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Javasnippet"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.javasnippet.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="5.2.0.v202310301555"/>
+    <config key="factory_settings"/>
+    <entry key="name" type="xstring" value="Java Snippet"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+    </config>
+</config>

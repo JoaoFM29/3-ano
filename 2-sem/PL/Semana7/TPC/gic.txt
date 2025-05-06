@@ -1,0 +1,22 @@
+GIC = <T,N,S,P>
+T: {igual, id, numero, +, -, *, /}
+N: {EXPRESSAO, EXP, SINAL, VAR}
+S: EXPRESSAO
+P:  
+    EXPRESSAO ->  ? VAR {?}
+                | ! VAR {!}
+                | id igual VAR {id}
+                | vazio {vazio}
+
+    EXP -> VAR SINAL VAR {numero, id, +, -, *, /}
+         | vazio {vazio}
+    
+    SINAL -> + {+}
+           | - {-}
+           | * {*}
+           | / {/}
+    
+    VAR -> (EXP)  {(}
+        | numero  {numero} 
+        | id      {id}
+        | vazio   {vazio}

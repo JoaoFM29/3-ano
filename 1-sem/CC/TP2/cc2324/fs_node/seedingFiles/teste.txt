@@ -1,0 +1,4 @@
+Tipos de mensagens:
+      regn
+      getf <<filename>>
+      regf <<filename>> <intervalo>>

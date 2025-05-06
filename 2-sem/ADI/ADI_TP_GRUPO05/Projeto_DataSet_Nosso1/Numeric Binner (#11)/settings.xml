@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <config key="year">
+            <config key="&lt; 1970_0">
+                <entry key="bin_name" type="xstring" value="&lt; 1970"/>
+                <entry key="left_open" type="xboolean" value="true"/>
+                <entry key="left_value" type="xdouble" value="-Infinity"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="1970.0"/>
+            </config>
+            <config key="1970 &lt;= x &lt; 1980_1">
+                <entry key="bin_name" type="xstring" value="1970 &lt;= x &lt; 1980"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="1970.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="1980.0"/>
+            </config>
+            <config key="1980 &lt;= x &lt; 1990_2">
+                <entry key="bin_name" type="xstring" value="1980 &lt;= x &lt; 1990"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="1980.0"/>
+                <entry key="right_open" type="xboolean" value="false"/>
+                <entry key="right_value" type="xdouble" value="1990.0"/>
+            </config>
+            <config key="1990 &lt;= x &lt; 2000_3">
+                <entry key="bin_name" type="xstring" value="1990 &lt;= x &lt; 2000"/>
+                <entry key="left_open" type="xboolean" value="true"/>
+                <entry key="left_value" type="xdouble" value="1990.0"/>
+                <entry key="right_open" type="xboolean" value="false"/>
+                <entry key="right_value" type="xdouble" value="2000.0"/>
+            </config>
+            <config key="2000 &lt;= x &lt; 2010_4">
+                <entry key="bin_name" type="xstring" value="2000 &lt;= x &lt; 2010"/>
+                <entry key="left_open" type="xboolean" value="true"/>
+                <entry key="left_value" type="xdouble" value="2000.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="2010.0"/>
+            </config>
+            <config key="2010 &lt;= x &lt; 2020_5">
+                <entry key="bin_name" type="xstring" value="2010 &lt;= x &lt; 2020"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="2010.0"/>
+                <entry key="right_open" type="xboolean" value="false"/>
+                <entry key="right_value" type="xdouble" value="2020.0"/>
+            </config>
+            <config key="2020 &gt;_6">
+                <entry key="bin_name" type="xstring" value="2020 &gt;"/>
+                <entry key="left_open" type="xboolean" value="true"/>
+                <entry key="left_value" type="xdouble" value="2020.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="Infinity"/>
+            </config>
+        </config>
+        <entry key="year_is_appended" type="xstring" isnull="true" value=""/>
+        <config key="binned_columns">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="year"/>
+        </config>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="CONFIGURED"/>
+    <entry key="factory" type="xstring" value="org.knime.base.node.preproc.binner.BinnerNodeFactory"/>
+    <entry key="node-name" type="xstring" value="Numeric Binner"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="5.2.2.v202403061155"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Base nodes"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.base.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="5.2.2.v202403061155"/>
+    <config key="factory_settings"/>
+    <entry key="name" type="xstring" value="Numeric Binner"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+    </config>
+</config>

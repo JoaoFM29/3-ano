@@ -1,0 +1,64 @@
+{
+    "stock": [
+        {
+            "cod": "A23",
+            "nome": "água 0.5L",
+            "quant": 8,
+            "preco": 0.7
+        },
+        {
+            "cod": "B45",
+            "nome": "refrigerante cola 0.33L",
+            "quant": 12,
+            "preco": 1.2
+        },
+        {
+            "cod": "C67",
+            "nome": "chips de batata",
+            "quant": 15,
+            "preco": 1.5
+        },
+        {
+            "cod": "D89",
+            "nome": "barra de chocolate",
+            "quant": 10,
+            "preco": 1.0
+        },
+        {
+            "cod": "E12",
+            "nome": "iogurte natural 200ml",
+            "quant": 6,
+            "preco": 0.9
+        },
+        {
+            "cod": "F34",
+            "nome": "sanduíche de frango",
+            "quant": 5,
+            "preco": 2.5
+        },
+        {
+            "cod": "G56",
+            "nome": "café expresso",
+            "quant": 10,
+            "preco": 1.8
+        },
+        {
+            "cod": "H78",
+            "nome": "barras de cereais",
+            "quant": 8,
+            "preco": 1.3
+        },
+        {
+            "cod": "I90",
+            "nome": "biscoitos de aveia",
+            "quant": 7,
+            "preco": 1.2
+        },
+        {
+            "cod": "J01",
+            "nome": "suco de laranja 0.25L",
+            "quant": 9,
+            "preco": 1.0
+        }
+    ]
+}

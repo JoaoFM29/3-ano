@@ -1,0 +1,12 @@
+{
+  "version" : "5.2.1.v202401291517",
+  "projects" : [ {
+    "name" : "resolucao",
+    "active" : true,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "resolucao"
+    }
+  } ]
+}

@@ -1,0 +1,17 @@
+GIC = <T,N,S,P>
+T: 
+N:Dicionario, Entradas, Sinonimos, Signif,
+S:Dicionario
+P:    
+	Dicionario -> Entradas
+	Entradas   -> Entrada 
+        	   |  Entrada Entradas
+    Entrada     -> PALAVRA '[' Sinonimos ']' Signif
+	Sinonimos -> PALAVRA
+ 			|  Sinonimos ',' PALAVRA
+	Signif -> €
+			 | TEXTO
+tokens = (
+	'PALAVRA',
+	'TEXTO'
+)

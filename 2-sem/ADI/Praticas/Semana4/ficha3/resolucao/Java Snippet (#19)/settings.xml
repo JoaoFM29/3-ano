@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <entry key="scriptImports" type="xstring" value="// Your custom imports:%%00010"/>
+        <entry key="scriptFields" type="xstring" value="// Your custom variables:%%00010String mes;%%00010String estacao;"/>
+        <entry key="scriptBody" type="xstring" value="// Enter your code here:%%00010 %%00010    if (c_Monthnumber &gt; 0 &amp;&amp; c_Monthnumber &lt;= 3) {%%00010        mes = &quot;1&quot;;%%00010    } else if (c_Monthnumber &gt; 3 &amp;&amp; c_Monthnumber &lt;= 6) {%%00010        mes = &quot;2&quot;;%%00010    } else if (c_Monthnumber &gt; 6 &amp;&amp; c_Monthnumber &lt;= 9) {%%00010        mes = &quot;3&quot;;%%00010    } else if (c_Monthnumber &gt; 9 &amp;&amp; c_Monthnumber &lt;= 12) {%%00010        mes = &quot;4&quot;;%%00010    } else {%%00010        mes = &quot;10&quot;;%%00010    }%%00010    switch(c_Monthnumber){%%00010%%00009%%00009case 12:%%00010%%00009%%00009case 1:%%00010%%00009%%00009case 2:%%00010%%00009%%00009 estacao = &quot;Inverno&quot;;%%00010%%00009%%00009 break;%%00010%%00009%%00009case 3:%%00010%%00009%%00009case 4:%%00010%%00009%%00009case 5:%%00010%%00009%%00009 estacao = &quot;Primavera&quot;;%%00010%%00009%%00009 break;%%00010%%00009%%00009case 6:%%00010%%00009%%00009case 7:%%00010%%00009%%00009case 8:%%00010%%00009%%00009 estacao = &quot;Verão&quot;;%%00010%%00009%%00009 break;%%00010%%00009%%00009case 9:%%00010%%00009%%00009case 10:%%00010%%00009%%00009case 11:%%00010%%00009%%00009 estacao = &quot;Outono&quot;;%%00010%%00009%%00009 break;%%00010%%00009%%00009default:%%00010%%00009%%00009 estacao = &quot;Mês inválido&quot;;%%00010        }%%00010out_Estação = estacao;%%00010out_Mes = mes;"/>
+        <config key="jarFiles">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="outCols">
+            <entry key="array-size" type="xint" value="2"/>
+            <config key="0">
+                <entry key="Name" type="xstring" value="Mes"/>
+                <entry key="JavaName" type="xstring" value="out_Mes"/>
+                <entry key="JavaType" type="xstring" value="java.lang.String"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.StringCell$StringCellFactory.createCell(class java.lang.String)"/>
+                <entry key="replaceExisting" type="xboolean" value="false"/>
+            </config>
+            <config key="1">
+                <entry key="Name" type="xstring" value="Estação"/>
+                <entry key="JavaName" type="xstring" value="out_Estação"/>
+                <entry key="JavaType" type="xstring" value="java.lang.String"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.StringCell$StringCellFactory.createCell(class java.lang.String)"/>
+                <entry key="replaceExisting" type="xboolean" value="false"/>
+            </config>
+        </config>
+        <config key="outVars">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="inCols">
+            <entry key="array-size" type="xint" value="1"/>
+            <config key="0">
+                <entry key="Name" type="xstring" value="Month (number)"/>
+                <entry key="JavaName" type="xstring" value="c_Monthnumber"/>
+                <entry key="JavaType" type="xstring" value="java.lang.Integer"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.convert.java.SimpleDataCellToJavaConverterFactory(IntValue,class java.lang.Integer,Integer)"/>
+            </config>
+        </config>
+        <config key="inVars">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <entry key="version" type="xstring" value="version 1.x"/>
+        <entry key="templateUUID" type="xstring" isnull="true" value=""/>
+        <entry key="runOnExecute" type="xboolean" value="false"/>
+        <config key="bundles">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
+    <config key="nodecontainer_message">
+        <entry key="type" type="xstring" value="WARNING"/>
+        <entry key="message" type="xstring" value="Exceptions in the code caused missing rows to be output.%%00010Check log for details."/>
+    </config>
+    <entry key="factory" type="xstring" value="org.knime.base.node.jsnippet.JavaSnippetNodeFactory"/>
+    <entry key="node-name" type="xstring" value="Java Snippet"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME Java Snippet Nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.jsnippets"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="5.2.0.v202310301555"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Javasnippet"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.javasnippet.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="5.2.0.v202310301555"/>
+    <config key="factory_settings"/>
+    <entry key="name" type="xstring" value="Java Snippet"/>
+    <entry key="hasContent" type="xboolean" value="true"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
+            <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 18779, Cols: 18"/>
+            <entry key="port_dir_location" type="xstring" value="port_1"/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" value="6350db9a-c674-4c51-83c1-1c85450f3dc4"/>
+    </config>
+</config>

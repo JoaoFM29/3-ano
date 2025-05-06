@@ -1,0 +1,14 @@
+version: "2"
+services:
+ web:
+  container_name: galunos-interface
+  image: engweb2024/galunos
+  ports:
+    - "2804:1103"
+  depends_on:
+    - jserver
+  links:
+    - jserver
+ jserver:
+  container_name: json-server
+  image: engweb2024/jserver_alunos

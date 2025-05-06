@@ -1,0 +1,3 @@
+/Users/jony/Desktop/CG/praticas/Semana8/cmake-build-debug/CMakeFiles/class9.dir
+/Users/jony/Desktop/CG/praticas/Semana8/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jony/Desktop/CG/praticas/Semana8/cmake-build-debug/CMakeFiles/rebuild_cache.dir

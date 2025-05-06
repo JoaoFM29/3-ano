@@ -1,0 +1,3 @@
+/home/nuno/Documents/cg/tp5/build/CMakeFiles/class5.dir
+/home/nuno/Documents/cg/tp5/build/CMakeFiles/edit_cache.dir
+/home/nuno/Documents/cg/tp5/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,109 @@
+import ply.yacc as yacc
+import ply.lex as lex
+
+text= "PL { doc {} , aulas { 03-33 { f1,f2,f3} } }"
+commands = []
+
+# mkdir PL
+# cd PL
+# mkdir doc
+# mkdir aulas
+# cd aulas
+# mkdir 03-33
+# cd 03-33
+# touch f1
+# touch f2
+# touch f3
+# cd ..
+# cd ..
+# cd ..
+
+# GIC = <T, N, S, P>
+
+# T = {PASTA RCHA LCHAV COMMA}
+# N = {diretoria, caminho, caminho2}
+# S = diretoria
+#         diretoria -> PASTA LCHAR conteudo RCHAR
+#                   | vazio
+#         conteudo -> entrada COMMA conteudo
+#                   | entrada
+#         entrada ->  PASTA LCHAR RCHAR
+#                   | PASTA LCHAR conteudo RCHAR
+#                   | PASTA 
+
+# Tokens
+tokens = (
+    'PASTA',
+    'RCHAR',
+    'LCHAR',
+    'COMMA'
+)
+
+t_PASTA = r'[a-zA-Z0-9_-]+' 
+t_COMMA = r'\,'
+t_RCHAR = r'\}'
+t_LCHAR = r'\{'
+
+t_ignore = ' \n\t'
+
+# Erro de token
+def t_error(t):
+    print(f"Token found: {t.type} -> {t.value}")
+    t.lexer.skip(1)
+
+# Construção da gramática
+def p_diretoria(p):
+    'diretoria : PASTA LCHAR conteudo RCHAR'
+    commands.append(f"cd {p[1]}")
+    commands.append(f"mkdir {p[1]}")
+    p[0] = None
+
+def p_conteudo_1caso(p):
+    'conteudo : entrada COMMA conteudo'
+    p[0] = None
+    
+def p_conteudo_2caso(p):
+    'conteudo : entrada'
+    p[0] = None
+
+def p_entrada_1caso(p):
+    'entrada : PASTA LCHAR RCHAR'
+    commands.append(f"mkdir {p[1]}")
+    p[0] = None
+    
+def p_entrada_2caso(p):
+    'entrada : PASTA LCHAR conteudo RCHAR'
+    commands.append(f"cd {p[1]}")
+    commands.append(f"mkdir {p[1]}")
+    p[0] = None
+
+def p_entrada_3caso(p):
+    'entrada : PASTA '
+    commands.append(f"touch {p[1]}")
+    p[0] = None
+
+def p_diretoria_empty(p):
+    'diretoria : empty'
+    commands.append(f"cd ..")
+    p[0] = None
+
+# Definindo o token EMPTY
+def p_empty(p):
+    'empty :'
+    pass
+
+def p_error(p):
+    if p:
+        print(f"Syntax error at token '{p.value}' of type {p.type}")
+    else:
+        print("Syntax error at EOF")
+        
+# Build the lexer
+lexer = lex.lex()
+
+# Build the parser
+parser = yacc.yacc()
+
+resultado = parser.parse(text, lexer=lexer)
+print(resultado)
+print(commands)

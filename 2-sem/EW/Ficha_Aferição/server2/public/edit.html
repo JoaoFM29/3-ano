@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Pessoa</title>
+</head>
+<body>
+    <h2>Editar Pessoa</h2>
+    <form id="edit-person-form">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required><br><br>
+    
+        <label for="age">Idade:</label>
+        <input type="number" id="age" name="age" required><br><br>
+    
+        <label for="sex">Sexo:</label>
+        <select id="sex" name="sex" required>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+        </select><br><br>
+        
+        <label for="city">Cidade:</label>
+        <input type="text" id="city" name="city"><br><br>
+        
+        <label for="district">Distrito:</label>
+        <input type="text" id="district" name="district"><br><br>
+
+        <label for="bi">BI:</label>
+        <input type="text" id="bi" name="bi"><br><br>
+
+        <label for="description">Descrição:</label>
+        <input type="text" id="description" name="description"><br><br>
+
+        <label for="occupation">Profissão:</label>
+        <input type="text" id="occupation" name="occupation"><br><br>
+
+        <label for="partyAbbr">Abreviatura do Partido:</label>
+        <input type="text" id="partyAbbr" name="partyAbbr"><br><br>
+
+        <label for="partyName">Nome do Partido:</label>
+        <input type="text" id="partyName" name="partyName"><br><br>
+
+        <label for="religion">Religião:</label>
+        <input type="text" id="religion" name="religion"><br><br>
+
+        <label for="sports">Desportos (separados por vírgula):</label>
+        <input type="text" id="sports" name="sports"><br><br>
+
+        <label for="animals">Animais (separados por vírgula):</label>
+        <input type="text" id="animals" name="animals"><br><br>
+
+        <label for="publicFigures">Figuras Públicas (separadas por vírgula):</label>
+        <input type="text" id="publicFigures" name="publicFigures"><br><br>
+
+        <label for="carBrand">Marca de Carro:</label>
+        <input type="text" id="carBrand" name="carBrand"><br><br>
+
+        <label for="favoriteDestinations">Destinos Favoritos (separados por vírgula):</label>
+        <input type="text" id="favoriteDestinations" name="favoriteDestinations"><br><br>
+
+        <label for="smoker">Fumador:</label>
+        <input type="checkbox" id="smoker" name="smoker"><br><br>
+
+        <label for="likesMovies">Gosta de Cinema:</label>
+        <input type="checkbox" id="likesMovies" name="likesMovies"><br><br>
+
+        <label for="likesTraveling">Gosta de Viajar:</label>
+        <input type="checkbox" id="likesTraveling" name="likesTraveling"><br><br>
+
+        <label for="earlyRiser">Acorda Cedo:</label>
+        <input type="checkbox" id="earlyRiser" name="earlyRiser"><br><br>
+
+        <label for="likesReading">Gosta de Ler:</label>
+        <input type="checkbox" id="likesReading" name="likesReading"><br><br>
+
+        <label for="likesMusic">Gosta de Música:</label>
+        <input type="checkbox" id="likesMusic" name="likesMusic"><br><br>
+
+        <label for="likesEating">Gosta de Comer:</label>
+        <input type="checkbox" id="likesEating" name="likesEating"><br><br>
+
+        <label for="likesPets">Gosta de Animais de Estimação:</label>
+        <input type="checkbox" id="likesPets" name="likesPets"><br><br>
+
+        <label for="likesDancing">Gosta de Dançar:</label>
+        <input type="checkbox" id="likesDancing" name="likesDancing"><br><br>
+
+        <label for="favoriteFood">Comida Favorita:</label>
+        <input type="text" id="favoriteFood" name="favoriteFood"><br><br>
+
+        <button type="submit" id="save-person-btn">Salvar Pessoa</button>
+        
+        <button type="back" id="backButton">Voltar</button>
+    </form>
+
+    <!-- Importe a biblioteca Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Script JavaScript para interação com o servidor -->
+    <script src="edit-script.js"></script>
+
+    <script>
+        // Este script será executado ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const personId = urlParams.get('id');
+
+            if (personId) {
+                // Buscar os detalhes da pessoa para preencher o formulário de edição
+                axios.get(`/api/pessoas/${personId}`)
+                    .then(response => {
+                        const person = response.data;
+                        document.getElementById('name').value = person.nome;
+                        document.getElementById('age').value = person.idade;
+                        document.getElementById('sex').value = person.sexo;
+                        document.getElementById('city').value = person.morada.cidade;
+                        document.getElementById('district').value = person.morada.distrito;
+                        document.getElementById('bi').value = person.BI;
+                        document.getElementById('description').value = person.descrição;
+                        document.getElementById('occupation').value = person.profissao;
+                        document.getElementById('partyAbbr').value = person.partido_politico.party_abbr;
+                        document.getElementById('partyName').value = person.partido_politico.party_name;
+                        document.getElementById('religion').value = person.religiao;
+                        document.getElementById('sports').value = person.desportos.join(', ');
+                        document.getElementById('animals').value = person.animais.join(', ');
+                        document.getElementById('publicFigures').value = person.figura_publica_pt.join(', ');
+                        document.getElementById('carBrand').value = person.marca_carro;
+                        document.getElementById('favoriteDestinations').value = person.destinos_favoritos.join(', ');
+                        document.getElementById('smoker').checked = person.atributos.fumador;
+                        document.getElementById('likesMovies').checked = person.atributos.gosta_cinema;
+                        document.getElementById('likesTraveling').checked = person.atributos.gosta_viajar;
+                        document.getElementById('earlyRiser').checked = person.atributos.acorda_cedo;
+                        document.getElementById('likesReading').checked = person.atributos.gosta_ler;
+                        document.getElementById('likesMusic').checked = person.atributos.gosta_musica;
+                        document.getElementById('likesEating').checked = person.atributos.gosta_comer;
+                        document.getElementById('likesPets').checked = person.atributos.gosta_animais_estimacao;
+                        document.getElementById('likesDancing').checked = person.atributos.gosta_dancar;
+                        document.getElementById('favoriteFood').value = person.atributos.comida_favorita;
+                    })
+                    .catch(error => {
+                        console.error('Erro ao carregar dados da pessoa:', error);
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

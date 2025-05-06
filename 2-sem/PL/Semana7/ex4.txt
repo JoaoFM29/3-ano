@@ -1,0 +1,34 @@
+Joana@4000-987;-12,55;67,98
+Rangel.Henriques.Pedro@4715-012;41,55;8,45
+Silva.Ana.Maria@4715-012;41,55;-9,00
+Araujo.?@4715-767;42,05;-10,35
+Mota.Carmo@4780-767;40,05;8,55
+
+GIC = <T, N, S, P>
+
+T = {"@", PONTO, "?", NOME, CP, NUMERO, ";"", "," }
+N = {frase, nome, nome2}
+S = frase
+
+P:
+
+    frase -> NOME nome @ CP ; NUMERO , NUMERO frase
+           | vazio
+
+    nome -> PONTO nome2 NOME nome 
+          | vazio
+
+    nome2 -> ?
+           | vazio
+
+tokens = (
+    @,
+    ponto,
+    ?,
+    nome,
+    cp,
+    numero,
+    pvirgula,
+    virgula
+
+)

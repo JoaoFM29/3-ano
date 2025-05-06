@@ -1,0 +1,11 @@
+Este é um exemplo de texto para testar o programa.
+ON Iniciando a contagem dos números.
+1234 5678 90
+=   // A soma até agora deve ser 
+Texto normal. Off Desativando a contagem.
+987 654
+=   // Neste ponto, a contagem está desativada, então não deve adicionar esses números.
+Outro texto. on Retomando a contagem.
+123 45
+=   // A soma agora deve ser 
+Texto final. 

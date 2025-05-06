@@ -1,0 +1,637 @@
+2024-03-15 11:04:06,614 : WARN  : comm-pool-thread-2 :  : Node : CSV Reader : 3:1 : Please specify a file
+2024-03-15 11:04:08,151 : WARN  : comm-pool-thread-2 :  : Node : CSV Reader : 3:2 : Please specify a file
+2024-03-15 11:04:09,668 : WARN  : comm-pool-thread-2 :  : Node : CSV Reader : 3:3 : Please specify a file
+2024-03-15 11:04:42,347 : ERROR : KNIME-Worker-0-CSV Reader 3:1 :  : Node : CSV Reader : 3:1 : Execute failed: The data row has too many data elements.
+java.lang.IllegalArgumentException: The data row has too many data elements.
+	at org.knime.core.node.util.CheckUtils.checkArgument(CheckUtils.java:259)
+	at org.knime.core.node.util.CheckUtils.checkArgument(CheckUtils.java:120)
+	at org.knime.filehandling.core.node.table.reader.read.CheckSameSizeRead.next(CheckSameSizeRead.java:84)
+	at org.knime.filehandling.core.node.table.reader.read.SkipIdxRead.next(SkipIdxRead.java:85)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutputWithProgress(DefaultIndividualTableReader.java:143)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutput(DefaultIndividualTableReader.java:121)
+	at org.knime.filehandling.core.node.table.reader.DefaultStagedMultiTableRead$ParallelMultiTableRead$TableChunkReader.readTableChunk(DefaultStagedMultiTableRead.java:405)
+	at org.knime.filehandling.core.node.table.reader.DefaultStagedMultiTableRead$ParallelMultiTableRead.readTable(DefaultStagedMultiTableRead.java:295)
+	at org.knime.filehandling.core.node.table.reader.MultiTableReader.readTable(MultiTableReader.java:170)
+	at org.knime.filehandling.core.node.table.reader.TableReaderNodeModel.execute(TableReaderNodeModel.java:160)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-03-15 11:04:46,548 : ERROR : KNIME-Worker-0-CSV Reader 3:1 :  : Node : CSV Reader : 3:1 : Execute failed: The data row has too many data elements.
+java.lang.IllegalArgumentException: The data row has too many data elements.
+	at org.knime.core.node.util.CheckUtils.checkArgument(CheckUtils.java:259)
+	at org.knime.core.node.util.CheckUtils.checkArgument(CheckUtils.java:120)
+	at org.knime.filehandling.core.node.table.reader.read.CheckSameSizeRead.next(CheckSameSizeRead.java:84)
+	at org.knime.filehandling.core.node.table.reader.read.SkipIdxRead.next(SkipIdxRead.java:85)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutputWithProgress(DefaultIndividualTableReader.java:143)
+	at org.knime.filehandling.core.node.table.reader.DefaultIndividualTableReader.fillOutput(DefaultIndividualTableReader.java:121)
+	at org.knime.filehandling.core.node.table.reader.DefaultStagedMultiTableRead$ParallelMultiTableRead$TableChunkReader.readTableChunk(DefaultStagedMultiTableRead.java:405)
+	at org.knime.filehandling.core.node.table.reader.DefaultStagedMultiTableRead$ParallelMultiTableRead.readTable(DefaultStagedMultiTableRead.java:295)
+	at org.knime.filehandling.core.node.table.reader.MultiTableReader.readTable(MultiTableReader.java:170)
+	at org.knime.filehandling.core.node.table.reader.TableReaderNodeModel.execute(TableReaderNodeModel.java:160)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-03-15 11:07:35,958 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:07:35,959 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:07:35,959 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:07:50,057 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:07:59,208 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:07:59,208 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:07:59,208 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:10:50,981 : WARN  : comm-pool-thread-4 :  : Node : Bar Chart : 3:5 : The selected category column "quality_bin" does not exist in the table
+2024-03-15 11:13:50,984 : WARN  : KNIME-Worker-1-Logistic Regression Learner 3:6 :  : Node : Logistic Regression Learner : 3:6 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training (enforce inclusion by using a domain calculator node before)
+The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2024-03-15 11:13:58,383 : WARN  : KNIME-Worker-1-Logistic Regression Learner 3:6 :  : Node : Logistic Regression Learner : 3:6 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training (enforce inclusion by using a domain calculator node before)
+The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2024-03-15 11:15:59,198 : WARN  : KNIME-Worker-2-Logistic Regression Learner 3:6 :  : Node : Logistic Regression Learner : 3:6 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training (enforce inclusion by using a domain calculator node before)
+The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2024-03-15 11:16:28,060 : WARN  : KNIME-Worker-2-Logistic Regression Learner 3:6 :  : Node : Logistic Regression Learner : 3:6 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training (enforce inclusion by using a domain calculator node before)
+The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2024-03-15 11:17:41,977 : WARN  : comm-pool-thread-8 :  : Node : Logistic Regression Predictor : 3:7 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:17:46,925 : WARN  : comm-pool-thread-8 :  : Node : Logistic Regression Predictor : 3:7 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:17:48,112 : WARN  : KNIME-Worker-2-Logistic Regression Learner 3:6 :  : Node : Logistic Regression Learner : 3:6 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training (enforce inclusion by using a domain calculator node before)
+The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2024-03-15 11:17:48,116 : WARN  : KNIME-Worker-2-Logistic Regression Learner 3:6 :  : Node : Logistic Regression Predictor : 3:7 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:19:50,717 : WARN  : main :  : Node : Logistic Regression Predictor : 3:7 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:19:51,365 : WARN  : main :  : Node : Logistic Regression Predictor : 3:7 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:19:52,478 : WARN  : KNIME-Worker-3-Logistic Regression Learner 3:6 :  : Node : Logistic Regression Learner : 3:6 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training (enforce inclusion by using a domain calculator node before)
+The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2024-03-15 11:19:52,482 : WARN  : KNIME-Worker-3-Logistic Regression Learner 3:6 :  : Node : Logistic Regression Predictor : 3:7 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:20:01,594 : WARN  : main :  : WrappedNodeDialog : Logistic Regression Predictor : 3:7 : failed to apply settings: Please define a name for the prediction column.
+org.knime.core.node.InvalidSettingsException: Please define a name for the prediction column.
+	at org.knime.base.node.mine.regression.predict3.RegressionPredictorNodeModel.validateSettings(RegressionPredictorNodeModel.java:135)
+	at org.knime.core.node.Node.validateSettings(Node.java:719)
+	at org.knime.core.node.Node.validateModelSettings(Node.java:691)
+	at org.knime.core.node.workflow.NativeNodeContainer.performValidateSettings(NativeNodeContainer.java:1196)
+	at org.knime.core.node.workflow.SingleNodeContainer.validateSettings(SingleNodeContainer.java:1062)
+	at org.knime.core.node.workflow.WorkflowManager.loadNodeSettings(WorkflowManager.java:2227)
+	at org.knime.core.node.workflow.NodeContainer.applySettingsFromDialog(NodeContainer.java:1141)
+	at org.knime.core.ui.wrapper.NodeContainerWrapper.applySettingsFromDialog(NodeContainerWrapper.java:264)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.callApplySettingsFromDialog(WrappedNodeDialog.java:672)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doApply(WrappedNodeDialog.java:644)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog$6.widgetSelected(WrappedNodeDialog.java:510)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4646)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4413)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3989)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.open(WrappedNodeDialog.java:199)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openDialog(NodeContainerEditPart.java:958)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:865)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor232.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+2024-03-15 11:20:03,796 : WARN  : main :  : WrappedNodeDialog : Logistic Regression Predictor : 3:7 : failed to apply settings: Please define a name for the prediction column.
+org.knime.core.node.InvalidSettingsException: Please define a name for the prediction column.
+	at org.knime.base.node.mine.regression.predict3.RegressionPredictorNodeModel.validateSettings(RegressionPredictorNodeModel.java:135)
+	at org.knime.core.node.Node.validateSettings(Node.java:719)
+	at org.knime.core.node.Node.validateModelSettings(Node.java:691)
+	at org.knime.core.node.workflow.NativeNodeContainer.performValidateSettings(NativeNodeContainer.java:1196)
+	at org.knime.core.node.workflow.SingleNodeContainer.validateSettings(SingleNodeContainer.java:1062)
+	at org.knime.core.node.workflow.WorkflowManager.loadNodeSettings(WorkflowManager.java:2227)
+	at org.knime.core.node.workflow.NodeContainer.applySettingsFromDialog(NodeContainer.java:1141)
+	at org.knime.core.ui.wrapper.NodeContainerWrapper.applySettingsFromDialog(NodeContainerWrapper.java:264)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.callApplySettingsFromDialog(WrappedNodeDialog.java:672)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doApply(WrappedNodeDialog.java:644)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doOK(WrappedNodeDialog.java:559)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog$5.widgetSelected(WrappedNodeDialog.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4646)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4413)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3989)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.open(WrappedNodeDialog.java:199)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openDialog(NodeContainerEditPart.java:958)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:865)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor232.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+2024-03-15 11:20:06,605 : WARN  : main :  : Node : Logistic Regression Predictor : 3:7 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:20:41,020 : WARN  : KNIME-Worker-3-Linear Regression Learner 3:9 :  : LinReg2Learner : Linear Regression Learner : 3:9 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training
+2024-03-15 11:20:41,088 : WARN  : KNIME-Worker-3-Linear Regression Learner 3:9 :  : Node : Linear Regression Learner : 3:9 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training
+2024-03-15 11:21:07,895 : WARN  : comm-pool-thread-10 :  : Node : Regression Predictor : 3:10 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:21:34,900 : WARN  : main :  : Node : Regression Predictor : 3:10 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:21:36,278 : WARN  : KNIME-Worker-3-Linear Regression Learner 3:9 :  : LinReg2Learner : Linear Regression Learner : 3:9 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training
+2024-03-15 11:21:36,313 : WARN  : KNIME-Worker-3-Linear Regression Learner 3:9 :  : Node : Linear Regression Learner : 3:9 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training
+2024-03-15 11:21:36,319 : WARN  : KNIME-Worker-3-Linear Regression Learner 3:9 :  : Node : Regression Predictor : 3:10 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:24:00,573 : WARN  : main :  : Node : Logistic Regression Predictor : 3:7 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:24:01,147 : WARN  : main :  : Node : Logistic Regression Predictor : 3:7 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:24:02,665 : WARN  : KNIME-Worker-3-Logistic Regression Learner 3:6 :  : Node : Logistic Regression Learner : 3:6 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training (enforce inclusion by using a domain calculator node before)
+The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2024-03-15 11:24:02,668 : WARN  : KNIME-Worker-3-Logistic Regression Learner 3:6 :  : Node : Logistic Regression Predictor : 3:7 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:25:54,414 : WARN  : main :  : Node : Regression Predictor : 3:10 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:25:54,945 : WARN  : main :  : Node : Regression Predictor : 3:10 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:27:30,054 : WARN  : KNIME-Worker-4-String to Number 3:11 :  : Node : String to Number : 3:11 : Problems in 4 rows, first error: "40,5" in cell ["Row354", column "free sulfur dioxide", row 355] can not be transformed into a number
+2024-03-15 11:27:30,058 : WARN  : KNIME-Worker-4-String to Number 3:11 :  : Node : String to Number : 3:11 : Problems in 4 rows, first error: "40,5" in cell ["Row354", column "free sulfur dioxide", row 355] can not be transformed into a number
+RowID  |   ..   | chlorides | free sulfur... | total sulfu...
+-------------------------------------------------------------
+Row352 | ..     | 0,09      | 8              | 19            
+Row353 | ..     | 0,12      | 23             | 77            
+Row354 | ..     | 0,066     | 40,5           | 165           
+                             ^^^^^^^^^^^^^^^
+For input string: "40,5"
+2024-03-15 11:27:31,825 : WARN  : comm-pool-thread-14 :  : Node : Regression Predictor : 3:10 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:27:33,827 : WARN  : KNIME-Worker-4-Linear Regression Learner 3:9 :  : LinReg2Learner : Linear Regression Learner : 3:9 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training
+2024-03-15 11:27:33,830 : ERROR : KNIME-Worker-4-Linear Regression Learner 3:9 :  : Node : Linear Regression Learner : 3:9 : Execute failed: Missing value support disabled, see node configuration dialog.
+java.lang.IllegalStateException: Missing value support disabled, see node configuration dialog.
+	at org.knime.base.node.mine.regression.RegressionTrainingRow$MissingHandling.isMissing(RegressionTrainingRow.java:93)
+	at org.knime.base.node.mine.regression.RegressionTrainingRow.<init>(RegressionTrainingRow.java:184)
+	at org.knime.base.node.mine.regression.RegressionTrainingDataIterator.next(RegressionTrainingDataIterator.java:138)
+	at org.knime.base.node.mine.regression.RegressionTrainingDataIterator.next(RegressionTrainingDataIterator.java:1)
+	at org.knime.base.node.mine.regression.linear2.learner.Learner.processTable(Learner.java:176)
+	at org.knime.base.node.mine.regression.linear2.learner.Learner.perform(Learner.java:114)
+	at org.knime.base.node.mine.regression.linear2.learner.LinReg2Learner.execute(LinReg2Learner.java:150)
+	at org.knime.base.node.mine.regression.linear2.learner.LinReg2LearnerNodeModel.execute(LinReg2LearnerNodeModel.java:169)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-03-15 11:27:33,831 : WARN  : KNIME-Worker-4-Linear Regression Learner 3:9 :  : Node : Regression Predictor : 3:10 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:27:35,627 : WARN  : KNIME-Worker-4-Linear Regression Learner 3:9 :  : LinReg2Learner : Linear Regression Learner : 3:9 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training
+2024-03-15 11:27:35,630 : ERROR : KNIME-Worker-4-Linear Regression Learner 3:9 :  : Node : Linear Regression Learner : 3:9 : Execute failed: Missing value support disabled, see node configuration dialog.
+java.lang.IllegalStateException: Missing value support disabled, see node configuration dialog.
+	at org.knime.base.node.mine.regression.RegressionTrainingRow$MissingHandling.isMissing(RegressionTrainingRow.java:93)
+	at org.knime.base.node.mine.regression.RegressionTrainingRow.<init>(RegressionTrainingRow.java:184)
+	at org.knime.base.node.mine.regression.RegressionTrainingDataIterator.next(RegressionTrainingDataIterator.java:138)
+	at org.knime.base.node.mine.regression.RegressionTrainingDataIterator.next(RegressionTrainingDataIterator.java:1)
+	at org.knime.base.node.mine.regression.linear2.learner.Learner.processTable(Learner.java:176)
+	at org.knime.base.node.mine.regression.linear2.learner.Learner.perform(Learner.java:114)
+	at org.knime.base.node.mine.regression.linear2.learner.LinReg2Learner.execute(LinReg2Learner.java:150)
+	at org.knime.base.node.mine.regression.linear2.learner.LinReg2LearnerNodeModel.execute(LinReg2LearnerNodeModel.java:169)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-03-15 11:27:35,631 : WARN  : KNIME-Worker-4-Linear Regression Learner 3:9 :  : Node : Regression Predictor : 3:10 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:27:47,897 : WARN  : comm-pool-thread-15 :  : Node : Regression Predictor : 3:10 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:27:49,975 : WARN  : KNIME-Worker-4-Linear Regression Learner 3:9 :  : LinReg2Learner : Linear Regression Learner : 3:9 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training
+2024-03-15 11:27:49,984 : WARN  : KNIME-Worker-4-Linear Regression Learner 3:9 :  : Node : Linear Regression Learner : 3:9 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training
+2024-03-15 11:28:24,424 : WARN  : comm-pool-thread-15 :  : Node : Numeric Scorer : 3:12 : No columns selected for reference
+2024-03-15 11:29:59,543 : WARN  : comm-pool-thread-15 :  : Node : Regression Predictor : 3:13 : The table for prediction does not contain the column "quality_bin".
+2024-03-15 11:30:06,578 : WARN  : KNIME-Worker-24-Column Filter 3:14 :  : Node : Regression Predictor : 3:13 : The table for prediction does not contain the column "quality_bin".
+2024-03-15 11:31:36,494 : WARN  : comm-pool-thread-16 :  : Node : Logistic Regression Predictor : 3:7 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:31:42,130 : WARN  : KNIME-Worker-25-Logistic Regression Learner 3:6 :  : Node : Logistic Regression Learner : 3:6 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training (enforce inclusion by using a domain calculator node before)
+The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2024-03-15 11:31:42,132 : WARN  : KNIME-Worker-25-Logistic Regression Learner 3:6 :  : Node : Scorer : 3:8 : No columns selected yet.
+2024-03-15 11:31:43,588 : WARN  : KNIME-Worker-26-Logistic Regression Predictor 3:7 :  : Node : Scorer : 3:8 : No columns selected yet.
+2024-03-15 11:35:06,158 : WARN  : comm-pool-thread-18 :  : Node : Logistic Regression Predictor : 3:16 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:35:06,159 : WARN  : comm-pool-thread-18 :  : Node : Regression Predictor : 3:24 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:35:06,159 : WARN  : comm-pool-thread-18 :  : Node : Logistic Regression Predictor : 3:16 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:35:06,159 : WARN  : comm-pool-thread-18 :  : Node : Regression Predictor : 3:24 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:36:22,864 : WARN  : main :  : Node : Regression Predictor : 3:24 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:36:22,865 : WARN  : main :  : Node : Logistic Regression Predictor : 3:16 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:36:23,781 : WARN  : main :  : Node : Regression Predictor : 3:24 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:36:23,781 : WARN  : main :  : Node : Logistic Regression Predictor : 3:16 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:36:26,374 : WARN  : KNIME-Worker-43-Rule Engine 3:23 :  : Node : Logistic Regression Learner : 3:25 : The target column "quality_bin" has one value, only. At least two target categories are expected.
+2024-03-15 11:36:28,382 : WARN  : KNIME-Worker-45-String to Number 3:26 :  : Node : Logistic Regression Learner : 3:25 : The target column "quality_bin" has one value, only. At least two target categories are expected.
+2024-03-15 11:36:29,303 : WARN  : KNIME-Worker-46-Linear Regression Learner 3:19 :  : LinReg2Learner : Linear Regression Learner : 3:19 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training
+2024-03-15 11:36:29,303 : ERROR : KNIME-Worker-46-Linear Regression Learner 3:19 :  : Node : Linear Regression Learner : 3:19 : Execute failed: Missing value support disabled, see node configuration dialog.
+java.lang.IllegalStateException: Missing value support disabled, see node configuration dialog.
+	at org.knime.base.node.mine.regression.RegressionTrainingRow$MissingHandling.isMissing(RegressionTrainingRow.java:93)
+	at org.knime.base.node.mine.regression.RegressionTrainingRow.<init>(RegressionTrainingRow.java:150)
+	at org.knime.base.node.mine.regression.RegressionTrainingDataIterator.next(RegressionTrainingDataIterator.java:138)
+	at org.knime.base.node.mine.regression.RegressionTrainingDataIterator.next(RegressionTrainingDataIterator.java:1)
+	at org.knime.base.node.mine.regression.linear2.learner.Learner.processTable(Learner.java:176)
+	at org.knime.base.node.mine.regression.linear2.learner.Learner.perform(Learner.java:114)
+	at org.knime.base.node.mine.regression.linear2.learner.LinReg2Learner.execute(LinReg2Learner.java:150)
+	at org.knime.base.node.mine.regression.linear2.learner.LinReg2LearnerNodeModel.execute(LinReg2LearnerNodeModel.java:169)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-03-15 11:36:29,304 : WARN  : KNIME-Worker-46-Linear Regression Learner 3:19 :  : Node : Regression Predictor : 3:24 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:39:19,042 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:39:19,042 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:39:19,042 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:40:12,201 : WARN  : KNIME-Worker-51-String to Number 3:28 :  : Node : String to Number : 3:28 : Problems in 15275 rows, first error: "7,4" in cell ["Row0", column "fixed acidity", row 1] can not be transformed into a number
+2024-03-15 11:40:12,201 : WARN  : KNIME-Worker-51-String to Number 3:28 :  : Node : String to Number : 3:28 : Problems in 15275 rows, first error: "7,4" in cell ["Row0", column "fixed acidity", row 1] can not be transformed into a number
+RowID  | fixed acidity | volatile ac...
+---------------------------------------
+Row0   | 7,4           | 0,7           
+        ^^^^^^^^^^^^^^
+For input string: "7,4"
+2024-03-15 11:40:22,097 : WARN  : KNIME-Worker-52-String to Number 3:28 :  : Node : String to Number : 3:28 : Problems in 1599 rows, first error: "normal" in cell ["Row0", column "quality_bin", row 1] can not be transformed into a number
+2024-03-15 11:40:22,097 : WARN  : KNIME-Worker-52-String to Number 3:28 :  : Node : String to Number : 3:28 : Problems in 1599 rows, first error: "normal" in cell ["Row0", column "quality_bin", row 1] can not be transformed into a number
+RowID  |   ..   | quality1_10 | quality_bin
+-------------------------------------------
+Row0   | ..     | 5           | normal     
+                               ^^^^^^^^^^^^
+For input string: "normal"
+2024-03-15 11:40:24,147 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:40:24,147 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:40:24,147 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:40:48,915 : WARN  : KNIME-Worker-54-String to Number 3:28 :  : Node : String to Number : 3:28 : Problems in 500 rows, first error: "normal" in cell ["Row0", column "quality_bin", row 1] can not be transformed into a number
+2024-03-15 11:40:48,915 : WARN  : KNIME-Worker-54-String to Number 3:28 :  : Node : String to Number : 3:28 : Problems in 500 rows, first error: "normal" in cell ["Row0", column "quality_bin", row 1] can not be transformed into a number
+RowID  |   ..   | quality1_10 | quality_bin
+-------------------------------------------
+Row0   | ..     | 5           | normal     
+                               ^^^^^^^^^^^^
+For input string: "normal"
+2024-03-15 11:40:54,310 : WARN  : KNIME-Worker-55-String to Number 3:28 :  : Node : String to Number : 3:28 : Problems in 500 rows, first error: "normal" in cell ["Row0", column "quality_bin", row 1] can not be transformed into a number
+2024-03-15 11:40:54,311 : WARN  : KNIME-Worker-55-String to Number 3:28 :  : Node : String to Number : 3:28 : Problems in 500 rows, first error: "normal" in cell ["Row0", column "quality_bin", row 1] can not be transformed into a number
+RowID  |   ..   | quality1_10 | quality_bin
+-------------------------------------------
+Row0   | ..     | 5           | normal     
+                               ^^^^^^^^^^^^
+For input string: "normal"
+2024-03-15 11:40:56,530 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:40:56,531 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:40:56,531 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:41:53,765 : WARN  : comm-pool-thread-22 :  : Node : Row Filter : 3:29 : No row filter specified
+2024-03-15 11:42:08,521 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:42:08,521 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:42:08,521 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:42:44,864 : WARN  : comm-pool-thread-22 :  : Node : String to Number : 3:30 : No columns selected
+2024-03-15 11:43:05,268 : WARN  : KNIME-Worker-58-String to Number 3:30 :  : Node : String to Number : 3:30 : Problems in 500 rows, first error: "normal" in cell ["Row0", column "quality_bin", row 1] can not be transformed into a number
+2024-03-15 11:43:05,269 : WARN  : KNIME-Worker-58-String to Number 3:30 :  : Node : String to Number : 3:30 : Problems in 500 rows, first error: "normal" in cell ["Row0", column "quality_bin", row 1] can not be transformed into a number
+RowID  |   ..   | quality1_10 | quality_bin
+-------------------------------------------
+Row0   | ..     | 5           | normal     
+                               ^^^^^^^^^^^^
+For input string: "normal"
+2024-03-15 11:43:12,412 : WARN  : comm-pool-thread-22 :  : Node : Row Filter : 3:29 : No row filter specified
+2024-03-15 11:44:11,597 : WARN  : comm-pool-thread-22 :  : Node : Math Formula : 3:31 : No configuration available
+2024-03-15 11:45:10,587 : WARN  : main :  : WrappedNodeDialog : Math Formula : 3:31 : failed to apply settings: Unable to parse m_expression
+Encountered "col2" at line 1, column 4.
+Was expecting one of:
+    "(" ...
+    "[" ...
+    "=" ...
+    
+
+org.knime.core.node.InvalidSettingsException: Unable to parse m_expression
+Encountered "col2" at line 1, column 4.
+Was expecting one of:
+    "(" ...
+    "[" ...
+    "=" ...
+    
+
+	at org.knime.ext.jep.ExpressionParser.parse(ExpressionParser.java:179)
+	at org.knime.ext.jep.ExpressionParser.<init>(ExpressionParser.java:146)
+	at org.knime.ext.jep.JEPNodeDialogPane.saveSettingsTo(JEPNodeDialogPane.java:354)
+	at org.knime.core.node.NodeDialogPane.internalSaveSettingsTo(NodeDialogPane.java:539)
+	at org.knime.core.node.NodeDialogPane$4.run(NodeDialogPane.java:778)
+	at org.knime.core.node.util.ViewUtils$3.run(ViewUtils.java:353)
+	at org.knime.core.node.util.ViewUtils$2.run(ViewUtils.java:155)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+2024-03-15 11:45:44,862 : WARN  : comm-pool-thread-24 :  : Node : Regression Predictor : 3:10 : The column "quality_bin" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:46:59,143 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:46:59,143 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:46:59,143 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-15 11:50:47,055 : WARN  : main :  : Node : Regression Predictor : 3:24 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:50:47,056 : WARN  : main :  : Node : Logistic Regression Predictor : 3:16 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:50:47,695 : WARN  : main :  : Node : Regression Predictor : 3:24 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:50:47,695 : WARN  : main :  : Node : Logistic Regression Predictor : 3:16 : The column "total sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:51:04,575 : WARN  : comm-pool-thread-27 :  : Node : Regression Predictor : 3:24 : The column "fixed acidity" in the table of prediction is expected to be numeric.
+2024-03-15 11:51:04,576 : WARN  : comm-pool-thread-27 :  : Node : Logistic Regression Predictor : 3:16 : The column "fixed acidity" in the table of prediction is expected to be numeric.
+2024-03-15 11:51:13,205 : WARN  : KNIME-Worker-78-Linear Regression Learner 3:19 :  : Node : Regression Predictor : 3:24 : The column "fixed acidity" in the table of prediction is expected to be numeric.
+2024-03-15 11:51:14,291 : ERROR : KNIME-Worker-79-Logistic Regression Learner 3:25 :  : Node : Logistic Regression Learner : 3:25 : Execute failed: The target reference category ("good") is not found in the target column
+org.knime.core.node.InvalidSettingsException: The target reference category ("good") is not found in the target column
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:273)
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:223)
+	at org.knime.base.node.mine.regression.logistic.learner4.data.SparseClassificationTrainingRowBuilder.<init>(SparseClassificationTrainingRowBuilder.java:105)
+	at org.knime.base.node.mine.regression.logistic.learner4.LogRegCoordinator.createRowBuilder(LogRegCoordinator.java:213)
+	at org.knime.base.node.mine.regression.logistic.learner4.LogRegCoordinator.learn(LogRegCoordinator.java:188)
+	at org.knime.base.node.mine.regression.logistic.learner4.LogRegLearnerNodeModel.execute(LogRegLearnerNodeModel.java:140)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-03-15 11:51:14,292 : WARN  : KNIME-Worker-79-Logistic Regression Learner 3:25 :  : Node : Logistic Regression Predictor : 3:16 : The column "fixed acidity" in the table of prediction is expected to be numeric.
+2024-03-15 11:51:24,643 : WARN  : main :  : Node : Logistic Regression Predictor : 3:16 : The column "fixed acidity" in the table of prediction is expected to be numeric.
+2024-03-15 11:51:26,125 : WARN  : main :  : Node : Logistic Regression Predictor : 3:16 : The column "fixed acidity" in the table of prediction is expected to be numeric.
+2024-03-15 11:51:27,856 : WARN  : KNIME-Worker-80-Logistic Regression Learner 3:25 :  : Node : Logistic Regression Learner : 3:25 : The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2024-03-15 11:51:27,859 : WARN  : KNIME-Worker-80-Logistic Regression Learner 3:25 :  : Node : Logistic Regression Predictor : 3:16 : The column "fixed acidity" in the table of prediction is expected to be numeric.
+2024-03-15 11:51:29,593 : WARN  : KNIME-Worker-81-CSV Reader 3:22 :  : Node : Logistic Regression Predictor : 3:16 : The column "fixed acidity" in the table of prediction is expected to be numeric.
+2024-03-15 11:51:29,594 : WARN  : KNIME-Worker-81-CSV Reader 3:22 :  : Node : Regression Predictor : 3:24 : The column "fixed acidity" in the table of prediction is expected to be numeric.
+2024-03-15 11:54:04,037 : WARN  : comm-pool-thread-29 :  : Node : Regression Predictor : 3:24 : The column "volatile acidity" in the table of prediction is expected to be numeric.
+2024-03-15 11:54:04,038 : WARN  : comm-pool-thread-29 :  : Node : Logistic Regression Predictor : 3:16 : The column "volatile acidity" in the table of prediction is expected to be numeric.
+2024-03-15 11:54:06,559 : WARN  : KNIME-Worker-83-Logistic Regression Learner 3:25 :  : Node : Logistic Regression Learner : 3:25 : Column "fixed acidity" has too many different values - will be ignored during training (enforce inclusion by using a domain calculator node before)
+The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2024-03-15 11:54:06,561 : WARN  : KNIME-Worker-83-Logistic Regression Learner 3:25 :  : Node : Logistic Regression Predictor : 3:16 : The column "volatile acidity" in the table of prediction is expected to be numeric.
+2024-03-15 11:54:18,943 : WARN  : comm-pool-thread-29 :  : Node : String to Number : 3:26 : No columns selected
+2024-03-15 11:54:18,944 : WARN  : comm-pool-thread-29 :  : Node : Regression Predictor : 3:24 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:54:18,944 : WARN  : comm-pool-thread-29 :  : Node : Logistic Regression Predictor : 3:16 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:54:20,137 : WARN  : KNIME-Worker-84-String to Number 3:26 :  : Node : String to Number : 3:26 : No columns selected, returning input table.
+2024-03-15 11:54:21,403 : WARN  : KNIME-Worker-85-Linear Regression Learner 3:19 :  : LinReg2Learner : Linear Regression Learner : 3:19 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <6 more> have too many different values - will be ignored during training
+2024-03-15 11:54:21,421 : WARN  : KNIME-Worker-85-Linear Regression Learner 3:19 :  : Node : Linear Regression Learner : 3:19 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <6 more> have too many different values - will be ignored during training
+2024-03-15 11:54:22,894 : WARN  : KNIME-Worker-86-Logistic Regression Learner 3:25 :  : Node : Logistic Regression Learner : 3:25 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <6 more> have too many different values - will be ignored during training (enforce inclusion by using a domain calculator node before)
+The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2024-03-15 11:57:34,287 : WARN  : comm-pool-thread-29 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 11:57:34,288 : WARN  : comm-pool-thread-29 :  : Node : Logistic Regression Predictor : 3:36 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:34,288 : WARN  : comm-pool-thread-29 :  : Node : Regression Predictor : 3:33 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:34,288 : WARN  : comm-pool-thread-29 :  : Node : Logistic Regression Predictor : 3:36 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:34,288 : WARN  : comm-pool-thread-29 :  : Node : Regression Predictor : 3:33 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:34,288 : WARN  : comm-pool-thread-29 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 11:57:39,695 : WARN  : comm-pool-thread-29 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 11:57:39,696 : WARN  : comm-pool-thread-29 :  : Node : Logistic Regression Predictor : 3:36 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:39,696 : WARN  : comm-pool-thread-29 :  : Node : Regression Predictor : 3:33 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:39,696 : WARN  : comm-pool-thread-29 :  : Node : Logistic Regression Predictor : 3:36 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:39,697 : WARN  : comm-pool-thread-29 :  : Node : Regression Predictor : 3:33 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:39,697 : WARN  : comm-pool-thread-29 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 11:57:48,443 : WARN  : comm-pool-thread-29 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 11:57:48,444 : WARN  : comm-pool-thread-29 :  : Node : Logistic Regression Predictor : 3:36 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:48,444 : WARN  : comm-pool-thread-29 :  : Node : Regression Predictor : 3:33 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:48,444 : WARN  : comm-pool-thread-29 :  : Node : Logistic Regression Predictor : 3:36 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:48,444 : WARN  : comm-pool-thread-29 :  : Node : Regression Predictor : 3:33 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:48,444 : WARN  : comm-pool-thread-29 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 11:57:55,282 : WARN  : comm-pool-thread-29 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 11:57:55,283 : WARN  : comm-pool-thread-29 :  : Node : Logistic Regression Predictor : 3:36 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:55,283 : WARN  : comm-pool-thread-29 :  : Node : Regression Predictor : 3:33 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:55,283 : WARN  : comm-pool-thread-29 :  : Node : Logistic Regression Predictor : 3:36 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:55,283 : WARN  : comm-pool-thread-29 :  : Node : Regression Predictor : 3:33 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:57:55,283 : WARN  : comm-pool-thread-29 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 11:58:05,117 : WARN  : comm-pool-thread-29 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 11:58:05,117 : WARN  : comm-pool-thread-29 :  : Node : Logistic Regression Predictor : 3:36 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:58:05,117 : WARN  : comm-pool-thread-29 :  : Node : Regression Predictor : 3:33 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:58:05,118 : WARN  : comm-pool-thread-29 :  : Node : Logistic Regression Predictor : 3:36 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:58:05,118 : WARN  : comm-pool-thread-29 :  : Node : Regression Predictor : 3:33 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:58:05,118 : WARN  : comm-pool-thread-29 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 11:59:58,325 : WARN  : comm-pool-thread-29 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 11:59:59,055 : WARN  : comm-pool-thread-29 :  : Node : Logistic Regression Predictor : 3:36 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 11:59:59,931 : WARN  : comm-pool-thread-29 :  : Node : Regression Predictor : 3:33 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:00:04,842 : WARN  : KNIME-Worker-110-CSV Reader 3:41 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 12:00:04,851 : WARN  : KNIME-Worker-100-Rule Engine 3:32 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 12:00:04,851 : WARN  : KNIME-Worker-101-String to Number 3:35 :  : Node : String to Number : 3:35 : No columns selected, returning input table.
+2024-03-15 12:00:04,862 : WARN  : KNIME-Worker-99-Linear Regression Learner 3:39 :  : LinReg2Learner : Linear Regression Learner : 3:39 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <6 more> have too many different values - will be ignored during training
+2024-03-15 12:00:04,870 : WARN  : KNIME-Worker-99-Linear Regression Learner 3:39 :  : Node : Linear Regression Learner : 3:39 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <6 more> have too many different values - will be ignored during training
+2024-03-15 12:00:07,042 : WARN  : KNIME-Worker-102-Logistic Regression Learner 3:34 :  : Node : Logistic Regression Learner : 3:34 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <6 more> have too many different values - will be ignored during training (enforce inclusion by using a domain calculator node before)
+The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2024-03-15 12:00:48,279 : WARN  : comm-pool-thread-32 :  : Node : Regression Predictor : 3:53 : The column "fixed acidity" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:00:48,280 : WARN  : comm-pool-thread-32 :  : Node : Logistic Regression Predictor : 3:45 : The column "fixed acidity" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:01:26,061 : WARN  : KNIME-Worker-100-Rule Engine 3:43 :  : Node : Logistic Regression Learner : 3:44 : The target column "quality_bin" has one value, only. At least two target categories are expected.
+2024-03-15 12:01:27,116 : WARN  : KNIME-Worker-107-String to Number 3:54 :  : Node : Logistic Regression Learner : 3:44 : The target column "quality_bin" has one value, only. At least two target categories are expected.
+2024-03-15 12:01:27,122 : WARN  : KNIME-Worker-108-Math Formula 3:52 :  : Node : Regression Predictor : 3:53 : The column "fixed acidity" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:01:27,130 : WARN  : KNIME-Worker-111-Linear Regression Learner 3:48 :  : LinReg2Learner : Linear Regression Learner : 3:48 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training
+2024-03-15 12:01:27,131 : ERROR : KNIME-Worker-111-Linear Regression Learner 3:48 :  : Node : Linear Regression Learner : 3:48 : Execute failed: Missing value support disabled, see node configuration dialog.
+java.lang.IllegalStateException: Missing value support disabled, see node configuration dialog.
+	at org.knime.base.node.mine.regression.RegressionTrainingRow$MissingHandling.isMissing(RegressionTrainingRow.java:93)
+	at org.knime.base.node.mine.regression.RegressionTrainingRow.<init>(RegressionTrainingRow.java:150)
+	at org.knime.base.node.mine.regression.RegressionTrainingDataIterator.next(RegressionTrainingDataIterator.java:138)
+	at org.knime.base.node.mine.regression.RegressionTrainingDataIterator.next(RegressionTrainingDataIterator.java:1)
+	at org.knime.base.node.mine.regression.linear2.learner.Learner.processTable(Learner.java:176)
+	at org.knime.base.node.mine.regression.linear2.learner.Learner.perform(Learner.java:114)
+	at org.knime.base.node.mine.regression.linear2.learner.LinReg2Learner.execute(LinReg2Learner.java:150)
+	at org.knime.base.node.mine.regression.linear2.learner.LinReg2LearnerNodeModel.execute(LinReg2LearnerNodeModel.java:169)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-03-15 12:01:27,131 : WARN  : KNIME-Worker-111-Linear Regression Learner 3:48 :  : Node : Regression Predictor : 3:53 : The column "fixed acidity" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:01:49,778 : WARN  : comm-pool-thread-29 :  : Node : Logistic Regression Learner : 3:44 : Type of column "quality_bin" is not nominal.
+2024-03-15 12:01:49,779 : WARN  : comm-pool-thread-29 :  : Node : Regression Predictor : 3:53 : The column "fixed acidity" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:01:50,872 : WARN  : KNIME-Worker-116-String to Number 3:54 :  : Node : Logistic Regression Learner : 3:44 : Type of column "quality_bin" is not nominal.
+2024-03-15 12:01:51,755 : WARN  : KNIME-Worker-117-Linear Regression Learner 3:48 :  : LinReg2Learner : Linear Regression Learner : 3:48 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training
+2024-03-15 12:01:51,755 : ERROR : KNIME-Worker-117-Linear Regression Learner 3:48 :  : Node : Linear Regression Learner : 3:48 : Execute failed: Missing value support disabled, see node configuration dialog.
+java.lang.IllegalStateException: Missing value support disabled, see node configuration dialog.
+	at org.knime.base.node.mine.regression.RegressionTrainingRow$MissingHandling.isMissing(RegressionTrainingRow.java:93)
+	at org.knime.base.node.mine.regression.RegressionTrainingRow.<init>(RegressionTrainingRow.java:184)
+	at org.knime.base.node.mine.regression.RegressionTrainingDataIterator.next(RegressionTrainingDataIterator.java:138)
+	at org.knime.base.node.mine.regression.RegressionTrainingDataIterator.next(RegressionTrainingDataIterator.java:1)
+	at org.knime.base.node.mine.regression.linear2.learner.Learner.processTable(Learner.java:176)
+	at org.knime.base.node.mine.regression.linear2.learner.Learner.perform(Learner.java:114)
+	at org.knime.base.node.mine.regression.linear2.learner.LinReg2Learner.execute(LinReg2Learner.java:150)
+	at org.knime.base.node.mine.regression.linear2.learner.LinReg2LearnerNodeModel.execute(LinReg2LearnerNodeModel.java:169)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-03-15 12:01:51,756 : WARN  : KNIME-Worker-117-Linear Regression Learner 3:48 :  : Node : Regression Predictor : 3:53 : The column "fixed acidity" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:01:58,772 : WARN  : KNIME-Worker-118-Linear Regression Learner 3:48 :  : LinReg2Learner : Linear Regression Learner : 3:48 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training
+2024-03-15 12:01:58,772 : ERROR : KNIME-Worker-118-Linear Regression Learner 3:48 :  : Node : Linear Regression Learner : 3:48 : Execute failed: Missing value support disabled, see node configuration dialog.
+java.lang.IllegalStateException: Missing value support disabled, see node configuration dialog.
+	at org.knime.base.node.mine.regression.RegressionTrainingRow$MissingHandling.isMissing(RegressionTrainingRow.java:93)
+	at org.knime.base.node.mine.regression.RegressionTrainingRow.<init>(RegressionTrainingRow.java:184)
+	at org.knime.base.node.mine.regression.RegressionTrainingDataIterator.next(RegressionTrainingDataIterator.java:138)
+	at org.knime.base.node.mine.regression.RegressionTrainingDataIterator.next(RegressionTrainingDataIterator.java:1)
+	at org.knime.base.node.mine.regression.linear2.learner.Learner.processTable(Learner.java:176)
+	at org.knime.base.node.mine.regression.linear2.learner.Learner.perform(Learner.java:114)
+	at org.knime.base.node.mine.regression.linear2.learner.LinReg2Learner.execute(LinReg2Learner.java:150)
+	at org.knime.base.node.mine.regression.linear2.learner.LinReg2LearnerNodeModel.execute(LinReg2LearnerNodeModel.java:169)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-03-15 12:01:58,773 : WARN  : KNIME-Worker-118-Linear Regression Learner 3:48 :  : Node : Regression Predictor : 3:53 : The column "fixed acidity" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:02:07,497 : WARN  : comm-pool-thread-32 :  : Node : String to Number : 3:54 : No columns selected
+2024-03-15 12:02:07,498 : WARN  : comm-pool-thread-32 :  : Node : Logistic Regression Learner : 3:44 : The target column "quality_bin" has one value, only. At least two target categories are expected.
+2024-03-15 12:02:07,498 : WARN  : comm-pool-thread-32 :  : Node : Regression Predictor : 3:53 : The column "fixed acidity" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:02:08,510 : WARN  : KNIME-Worker-119-String to Number 3:54 :  : Node : String to Number : 3:54 : No columns selected, returning input table.
+2024-03-15 12:02:08,510 : WARN  : KNIME-Worker-119-String to Number 3:54 :  : Node : Logistic Regression Learner : 3:44 : The target column "quality_bin" has one value, only. At least two target categories are expected.
+2024-03-15 12:02:09,385 : WARN  : KNIME-Worker-120-Linear Regression Learner 3:48 :  : LinReg2Learner : Linear Regression Learner : 3:48 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <6 more> have too many different values - will be ignored during training
+2024-03-15 12:02:09,398 : ERROR : KNIME-Worker-120-Linear Regression Learner 3:48 :  : Node : Linear Regression Learner : 3:48 : Execute failed: 0 is smaller than, or equal to, the minimum (0)
+org.apache.commons.math3.exception.NotStrictlyPositiveException: 0 is smaller than, or equal to, the minimum (0)
+	at org.apache.commons.math3.linear.AbstractRealMatrix.<init>(AbstractRealMatrix.java:71)
+	at org.apache.commons.math3.linear.Array2DRowRealMatrix.<init>(Array2DRowRealMatrix.java:60)
+	at org.apache.commons.math3.linear.MatrixUtils.createRealMatrix(MatrixUtils.java:81)
+	at org.knime.base.node.mine.regression.RegressionTrainingRow.<init>(RegressionTrainingRow.java:144)
+	at org.knime.base.node.mine.regression.RegressionTrainingDataIterator.next(RegressionTrainingDataIterator.java:138)
+	at org.knime.base.node.mine.regression.RegressionTrainingDataIterator.next(RegressionTrainingDataIterator.java:1)
+	at org.knime.base.node.mine.regression.linear2.learner.Learner.processTable(Learner.java:176)
+	at org.knime.base.node.mine.regression.linear2.learner.Learner.perform(Learner.java:114)
+	at org.knime.base.node.mine.regression.linear2.learner.LinReg2Learner.execute(LinReg2Learner.java:150)
+	at org.knime.base.node.mine.regression.linear2.learner.LinReg2LearnerNodeModel.execute(LinReg2LearnerNodeModel.java:169)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-03-15 12:02:09,398 : WARN  : KNIME-Worker-120-Linear Regression Learner 3:48 :  : Node : Regression Predictor : 3:53 : The column "fixed acidity" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:03:10,215 : WARN  : comm-pool-thread-32 :  : Node : String to Number : 3:54 : No columns selected
+2024-03-15 12:03:10,216 : WARN  : comm-pool-thread-32 :  : Node : Regression Predictor : 3:53 : The column "fixed acidity" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:03:10,217 : WARN  : comm-pool-thread-32 :  : Node : Logistic Regression Predictor : 3:45 : The column "fixed acidity" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:03:16,736 : WARN  : comm-pool-thread-32 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 12:03:16,737 : WARN  : comm-pool-thread-32 :  : Node : Logistic Regression Predictor : 3:36 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:03:16,737 : WARN  : comm-pool-thread-32 :  : Node : Regression Predictor : 3:33 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:03:46,148 : WARN  : comm-pool-thread-32 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 12:03:46,149 : WARN  : comm-pool-thread-32 :  : Node : Logistic Regression Predictor : 3:36 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:03:46,149 : WARN  : comm-pool-thread-32 :  : Node : Regression Predictor : 3:33 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:03:46,149 : WARN  : comm-pool-thread-32 :  : Node : Logistic Regression Predictor : 3:36 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:03:46,149 : WARN  : comm-pool-thread-32 :  : Node : Regression Predictor : 3:33 : The column "free sulfur dioxide" in the table of prediction is expected to be  compatible with "NominalValue".
+2024-03-15 12:03:46,149 : WARN  : comm-pool-thread-32 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 12:04:05,030 : WARN  : KNIME-Worker-121-CSV Reader 3:41 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 12:04:05,038 : WARN  : KNIME-Worker-122-Rule Engine 3:32 :  : Node : String to Number : 3:35 : No columns selected
+2024-03-15 12:04:07,672 : WARN  : KNIME-Worker-124-String to Number 3:35 :  : Node : String to Number : 3:35 : No columns selected, returning input table.
+2024-03-15 12:04:47,027 : WARN  : KNIME-Worker-125-Linear Regression Learner 3:39 :  : LinReg2Learner : Linear Regression Learner : 3:39 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <6 more> have too many different values - will be ignored during training
+2024-03-15 12:04:47,038 : WARN  : KNIME-Worker-125-Linear Regression Learner 3:39 :  : Node : Linear Regression Learner : 3:39 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <6 more> have too many different values - will be ignored during training
+2024-03-15 12:04:50,749 : WARN  : KNIME-Worker-126-Logistic Regression Learner 3:34 :  : Node : Logistic Regression Learner : 3:34 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <6 more> have too many different values - will be ignored during training (enforce inclusion by using a domain calculator node before)
+The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2024-03-15 12:35:20,085 : WARN  : ModalContext :  : Node : String to Number : 3:26 : No columns selected, returning input table.
+2024-03-15 12:35:20,112 : WARN  : ModalContext :  : Node : Linear Regression Learner : 3:9 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training
+2024-03-15 12:35:20,268 : WARN  : ModalContext :  : Node : Logistic Regression Learner : 3:6 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <5 more> have too many different values - will be ignored during training (enforce inclusion by using a domain calculator node before)
+The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2024-03-15 12:35:20,288 : WARN  : ModalContext :  : Node : Logistic Regression Learner : 3:25 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <6 more> have too many different values - will be ignored during training (enforce inclusion by using a domain calculator node before)
+The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2024-03-15 12:35:20,293 : WARN  : ModalContext :  : Node : Linear Regression Learner : 3:19 : Columns "fixed acidity", "volatile acidity", "citric acid", "residual sugar", "chlorides",  ... <6 more> have too many different values - will be ignored during training

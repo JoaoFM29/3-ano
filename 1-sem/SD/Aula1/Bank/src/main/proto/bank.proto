@@ -1,0 +1,44 @@
+
+syntax = "proto3";
+option java_multiple_files = true;
+
+package bank;
+
+service Bank {
+  rpc Bank(BankRequest) returns (BankReply) {}
+}
+
+message AccountIRequest {
+  int who = 1;
+}
+
+message MontanteRequest {
+  double who = 1;
+}
+
+message DepWdrawRequest {
+  AccountId who = 1;
+  Montante who = 2;
+}
+
+message TransferRequest {
+  AccountId who = 1;
+  AccountId who = 2;
+  Montante who = 3;
+}
+
+message TotBalanceRequest {
+  repeated AccountId who = 1;
+}
+
+message SucessCode {
+  boolean who = 1;
+}
+
+message BankRequest {
+  string who = 1;
+}
+
+message BankReply {
+  string greeting = 1;
+}

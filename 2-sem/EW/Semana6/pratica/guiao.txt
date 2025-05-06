@@ -1,0 +1,12 @@
+GET 
+    /alunos
+    /alunos/registo (esta tem que vir antes da :id senão nunca seria apanhada)
+    /alunos/:id
+    /alunos/edit/:id
+    /alunos/delete/:id
+
+POST
+    /alunos/registo
+    /alunos/edit/:id
+
+re.body vem com toda a informação do post em json

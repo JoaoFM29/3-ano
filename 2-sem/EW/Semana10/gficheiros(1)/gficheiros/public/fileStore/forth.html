@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>forth.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="forth-programming-language">FORTH Programming Language</h1>
+<p>Linguagem de programação muito simples normalmente usada em sistemas embebidos.</p>
+<h2 id="sintaxe">Sintaxe</h2>
+<p>Um programa em FORTH é uma lista de palavras (<code>words</code>) separadas por espaço:</p>
+<p><code>WAKE.UP EAT.BREAKFAST WORK EAT.DINNER PLAY SLEEP</code></p>
+<p>ou</p>
+<p><code>.&quot; #S SWAP ! @ ACCEPT . *</code></p>
+<h2 id="baseada-em-stacks">Baseada em Stacks</h2>
+<p>Todas as operações em FORTH assentam na manipulação de Stacks.
+A mais simples e mais usada é a Stack de Dados (dataStack).</p>
+<p>A Stack de Dados está inicialmente vazia.
+Para colocarmos valores na stack, basta introduzirmos esses valores como palavras:</p>
+<pre class="hljs"><code><div>17 34 23
+</div></code></pre>
+<p>Para imprimir o valor no topo da stack usamos a palavra <code>.</code>:</p>
+<pre class="hljs"><code><div>&lt; 17 34 23
+&lt; .
+&gt; 23
+</div></code></pre>
+<p>A palavra <code>.S</code> permite-nos ver todo o conteúdo da stack:</p>
+<pre class="hljs"><code><div>&lt; 17 34 23
+&lt; .S
+&gt; [17, 34, 23]
+</div></code></pre>
+<p>Entre programas, normalmente, precisamos de reinicializar a stack removendo o que lá está.
+A palavra <code>0SP</code> faz isso.
+Introduzindo mais uns comandos:</p>
+<pre class="hljs"><code><div>&lt; 0SP .S 
+&gt; []
+&lt; 777 DUP .S
+&gt; [777, 777]
+</div></code></pre>
+<p><code>DUP ( n -- n n , DUPlicate top of stack )</code></p>
+<pre class="hljs"><code><div>&lt; 0SP 
+&gt; []
+&lt; 23 7 .S 
+&gt; [23, 7]
+&lt; SWAP .S 
+&gt; [7, 23]
+&lt; SWAP .S
+&gt; [23, 7]
+</div></code></pre>
+<p><code>SWAP ( a b -- b a , swap top two items on stack )</code></p>
+<p><code>OVER ( a b -- a b a , copy second item on stack )</code></p>
+<p><code>DROP ( a -- , remove item from the stack )</code></p>
+<pre class="hljs"><code><div>0SP 11 22 .S
+DROP .S
+</div></code></pre>
+<p>Qual é o output desta sequência?</p>
+<pre class="hljs"><code><div>???
+</div></code></pre>
+<p><code>ROT ( a b c -- b c a , ROTate third item to top )</code></p>
+<p>Para aceder a qualquer valor na stack podemos usar o comando <code>PICK</code>:</p>
+<p>`PICK ( ... v3 v2 v1 v0 N -- ... v3 v2 v1 v0 vN ) ``</p>
+<pre class="hljs"><code><div>0SP
+14 13 12 11 10
+3 PICK . ( prints 13 )
+0 PICK . ( prints 10 )
+4 PICK .
+</div></code></pre>
+<p>Mais alguns comandos interessantes:</p>
+<pre class="hljs"><code><div>DROP ( n -- , remove top of stack ) 
+
+?DUP ( n -- n n | 0 , duplicate only if non-zero, '|' means OR ) 
+
+-ROT ( a b c -- c a b , rotate top to third position ) 
+
+2SWAP ( a b c d -- c d a b , swap pairs ) 
+
+2OVER ( a b c d -- a b c d a b , leapfrog pair ) 
+
+2DUP ( a b -- a b a b , duplicate pair ) 
+
+2DROP ( a b -- , remove pair ) 
+
+NIP ( a b -- b , remove second item from stack ) 
+
+TUCK ( a b -- b a b , copy top item to third position ) 
+</div></code></pre>
+<h2 id="exerc%C3%ADcios">Exercícios</h2>
+<p>Começa cada resposta com: <code>0SP 11 22 33</code></p>
+<p>Para cada alínea realiza as operações que te permitam chegar ao fim com os seguintes elementos na stack:</p>
+<ol>
+<li><code>11 33 22 22</code></li>
+<li><code>22 33</code></li>
+<li><code>22 33 11 11 22</code></li>
+<li><code>11 33 22 33 11</code></li>
+<li><code>33 11 22 11 22</code></li>
+</ol>
+<h2 id="aritm%C3%A9tica">Aritmética</h2>
+<p>Exemplo:</p>
+<pre class="hljs"><code><div>2 3 + .
+2 3 + 10 + .
+</div></code></pre>
+<p>As expressões aritméticas escrevem-se no formato RPN (&quot;Reverse Polish Notation&quot;).</p>
+<pre class="hljs"><code><div>30 5 - . ( 25=30-5 )
+30 5 / . ( 6=30/5 )
+30 5 * . ( 150=30*5 )
+30 5 + 7 / . \ 5=(30+5)/7
+</div></code></pre>
+<p>Atalhos: <code>1+ 1- 2+ 2- 2* 2/</code></p>
+<p>Experimentar no interpretador online:</p>
+<pre class="hljs"><code><div>10 1- .
+7 2* 1+ . ( 15=7*2+1 )
+</div></code></pre>
+<h2 id="defini%C3%A7%C3%A3o-de-uma-nova-palavra">Definição de uma nova palavra</h2>
+<p>Utilizam-se duas novas palavras: <code>:</code> e <code>;</code>
+Que marcam o início e o fim de uma definição.</p>
+<p>Exemplo: <code>: AVERAGE ( a b -- avg ) + 2/ ;</code></p>
+<pre class="hljs"><code><div>: AVERAGE ( a b -- avg ) + 2/ ;
+10 20 AVERAGE .
+</div></code></pre>
+<h2 id="mais-operadores-aritm%C3%A9ticos-o-resto-da-divis%C3%A3o">Mais operadores aritméticos: o resto da divisão</h2>
+<pre class="hljs"><code><div>0SP
+53 10 /MOD .S
+0SP
+7 5 MOD .S
+</div></code></pre>
+<p>Mínimos e máximos:</p>
+<pre class="hljs"><code><div>56 34 MAX .
+56 34 MIN .
+-17 0 MIN .
+</div></code></pre>
+<h2 id="convers%C3%A3o-de-express%C3%B5es-em-formato-infixo-para-p%C3%B3s-fixo">Conversão de expressões em formato infixo para pós-fixo</h2>
+<p>Escreve expressões FORTH para as seguintes expressões aritméticas:</p>
+<pre class="hljs"><code><div>(12 * ( 20 - 17 ))
+(1 - ( 4 * (-18) / 6) )
+( 6 * 13 ) - ( 4 * 2 * 7 )
+</div></code></pre>
+<h3 id="automatizar-o-processo-com-um-parser">Automatizar o processo com um parser</h3>
+<pre class="hljs"><code><div>Program : Exp
+Exp : Exp '+' Termo
+Exp : Exp '-' Termo
+Exp : Termo
+Termo : Termo '*' Fator
+Termo : Termo '/' Fator
+Termo : Fator
+Fator : num
+Fator : '(' Exp ')
+</div></code></pre>
+<p>Acrescenta ações semânticas ao parser (fornecido pelo docente) para automatizar este processo.</p>
+<h2 id="input-e-output-de-carateres">Input e Output de carateres</h2>
+<pre class="hljs"><code><div>CHAR W .
+CHAR % DUP . EMIT
+CHAR A DUP .
+32 + EMIT
+</div></code></pre>
+<p><code>CHAR ( &lt;char&gt; -- char , get ASCII value of a character )</code></p>
+<h3 id="strings">Strings</h3>
+<pre class="hljs"><code><div>: TOFU .&quot; Yummy bean curd!&quot; ;
+TOFU
+</div></code></pre>
+<pre class="hljs"><code><div>: SPROUTS .&quot; Miniature vegetables.&quot; ;
+: MENU
+    CR TOFU CR SPROUTS CR
+;
+MENU
+</div></code></pre>
+<h3 id="input">Input</h3>
+<pre class="hljs"><code><div>: TESTKEY ( -- )
+    .&quot; Hit a key: &quot; KEY CR
+    .&quot; That = &quot; . CR
+;
+TESTKEY
+</div></code></pre>
+<p>Resumindo:</p>
+<pre class="hljs"><code><div>EMIT ( char -- , output character ) 
+KEY ( -- char , input character ) 
+SPACE ( -- , output a space ) 
+SPACES ( n -- , output n spaces ) 
+CHAR ( &lt;char&gt; -- char , convert to ASCII ) 
+CR ( -- , start new line , carriage return ) 
+.&quot; ( -- , output &quot; delimited text )
+</div></code></pre>
+<h2 id="vamos-planear-um-interpretador">Vamos planear um interpretador?</h2>
+<h3 id="gram%C3%A1tica-for-starters">Gramática (for starters)</h3>
+<pre class="hljs"><code><div>&lt;program&gt; ::= &lt;word&gt; &lt;program&gt; | &lt;word&gt;
+
+&lt;word&gt; ::= &lt;number&gt; | &lt;builtin&gt; | &lt;user-defined&gt;
+
+&lt;number&gt; ::= &lt;digit&gt; &lt;number&gt; | &lt;digit&gt;
+
+&lt;builtin&gt; ::= &quot;+&quot; | &quot;-&quot; | &quot;*&quot; | &quot;/&quot; | &quot;dup&quot; | &quot;swap&quot; | &quot;drop&quot;
+
+&lt;user-defined&gt; ::= &quot;:&quot; &lt;word&gt; &lt;definition&gt; &quot;;&quot;
+
+&lt;definition&gt; ::= &lt;word&gt; &lt;definition&gt; | &lt;word&gt;
+</div></code></pre>
+
+</body>
+</html>

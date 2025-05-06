@@ -1,0 +1,23 @@
+1.
+    Tipo de estado: estado único
+2.
+    Estado inicial: Ambos os baldes estão vazios (0 - 0)
+    Estado objetivo: Um dos baldes tem 2 litros e o outro 0 (2 - 0 || 0 - 2)
+    Operadores
+        - nome
+            * Encher um dos dois jarros com água do tanque;
+            * Esvaziar um dos jarros para o tanque;
+            * Transferir o conteúdo de um jarro para o outro, até que o primeiro se esvazie
+            completamente ou o outro atinja a sua capacidade máxima.
+        - pré-condições
+            * Os baldes estarem os dois vazios
+            * Os baldes não tem marcas
+        - efeitos
+            * Encher o balde A inicialmente - o balde fica com 4 l
+            * Encher o balde B inicialmente - o balde fica com 3 l
+            * Encher o balde A com o balde B - o balde fica com 4/3 l
+            * Encher o balde B com o balde A - o balde fica com 3/3 l e o balde A fica com 1/4 l
+        - custo
+            * Custo de água desprediçada ao esvaziar baldes
+
+3. Folha

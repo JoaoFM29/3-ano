@@ -1,0 +1,16 @@
+. Quantos registos estão na base de dados;
+db.contratos.countDocuments()
+
+. Quantos registos de contratos têm o tipo de procedimento com valor "Ajuste Direto Regime Geral"?
+db.suaColecao.count({ "tipoprocedimento": "Ajuste Direto Regime Geral" })
+
+. Qual a lista de entidades comunicantes (ordenada alfabeticamente e sem repetições)?
+db.suaColecao.distinct("entidade_comunicante").sort()
+
+. Qual a distribuição de contratos por tipo de procedimento (quantos contratos tem cada tipo de
+procedimento)?
+db.suaColecao.aggregate([{ $group: { _id: "$tipoprocedimento", total: { $sum: 1 } } }])
+
+. Qual o montante global por entidade comunicante (somatório dos contratos associados a uma
+entidade)?
+db.contratos.aggregate([{ $addFields: { precoContratualNumeric: { $convert: { input: { $trim: { input: "$precoContratual", chars: "," } }, to: "double", onError: 0 } } } }, { $group: { _id: "$entidade_comunicante", totalMontante: { $sum: "$precoContratualNumeric" } } }])

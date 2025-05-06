@@ -1,0 +1,22 @@
+Escrever uma gramática para definir a bibliografia de um investigador.
+A bibliografia é formada por um conjunto não vazio de livros.
+Cada livro é descrito por 4 elementos. Um título, um autor, o ano de edição e o seu ISBN.
+
+GIC = <T,N,S,P>
+
+T -{titulo, autor, ano, isbn, }
+N: {BIBLIOGRAFIA, LIVRO}
+S - {BIBLIOGRAFIA}
+P:
+    BIBLIOGRAFIA -> titulo autor ano isbn LIVRO
+
+    LIVRO -> virgula titulo autor ano isbn LIVRO
+            | vazio
+
+token = (
+    titulo, 
+    autr,
+    ano,
+    isbn,
+    virgula
+)

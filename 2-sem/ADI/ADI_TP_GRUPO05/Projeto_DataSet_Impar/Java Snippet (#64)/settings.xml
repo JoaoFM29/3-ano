@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <entry key="scriptImports" type="xstring" value="// Your custom imports:%%00010import java.util.*;"/>
+        <entry key="scriptFields" type="xstring" value="// Your custom variables:%%00010"/>
+        <entry key="scriptBody" type="xstring" value="// Enter your code here:%%00010// Assuming the input column name is &quot;disease_column&quot;%%00010String[] values = c_UniqueconcatenatewithcountCategory.split(&quot;, &quot;); // Splitting the string by comma and space%%00010%%00010List&lt;String&gt; bloodDonor = new ArrayList&lt;&gt;();%%00010List&lt;String&gt; suspectBloodDonor = new ArrayList&lt;&gt;();%%00010List&lt;String&gt; hepatitis = new ArrayList&lt;&gt;();%%00010List&lt;String&gt; fibrosis = new ArrayList&lt;&gt;();%%00010List&lt;String&gt; cirrhosis = new ArrayList&lt;&gt;();%%00010%%00010for (String value : values) {%%00010    String[] parts = value.split(&quot;=&quot;);%%00010    if (parts.length == 2) {%%00010        String category = parts[1].substring(0, parts[1].indexOf(&quot;(&quot;));%%00010        String count = parts[1].substring(parts[1].indexOf(&quot;(&quot;) + 1, parts[1].indexOf(&quot;)&quot;));%%00010        %%00010        switch (category) {%%00010            case &quot;Blood Donor&quot;:%%00010                bloodDonor.add(count);%%00010                break;%%00010            case &quot;suspect Blood Donor&quot;:%%00010                suspectBloodDonor.add(count);%%00010                break;%%00010            case &quot;Hepatitis&quot;:%%00010                hepatitis.add(count);%%00010                break;%%00010            case &quot;Fibrosis&quot;:%%00010                fibrosis.add(count);%%00010                break;%%00010            case &quot;Cirrhosis&quot;:%%00010                cirrhosis.add(count);%%00010                break;%%00010            default:%%00010                // Do nothing or handle unrecognized category%%00010                break;%%00010        }%%00010    }%%00010}%%00010if (bloodDonor.isEmpty())%%00010out_BloodDonor = &quot;0&quot;;%%00010else out_BloodDonor = bloodDonor.get(0);%%00010%%00010if (suspectBloodDonor.isEmpty())%%00010out_suspectBloodDonor = &quot;0&quot;;%%00010else out_suspectBloodDonor = bloodDonor.get(0);%%00010%%00010%%00010if (hepatitis.isEmpty())%%00010out_Hepatitis= &quot;0&quot;;%%00010else out_Hepatitis= hepatitis.get(0);%%00010%%00010if (fibrosis.isEmpty())%%00010out_Fibrosis= &quot;0&quot;;%%00010else out_Fibrosis= fibrosis.get(0);%%00010%%00010if (cirrhosis.isEmpty())%%00010out_Cirrhosis= &quot;0&quot;;%%00010else out_Cirrhosis= cirrhosis.get(0);%%00010%%00010%%00010"/>
+        <config key="jarFiles">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="outCols">
+            <entry key="array-size" type="xint" value="5"/>
+            <config key="0">
+                <entry key="Name" type="xstring" value="Blood Donor"/>
+                <entry key="JavaName" type="xstring" value="out_BloodDonor"/>
+                <entry key="JavaType" type="xstring" value="java.lang.String"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.StringCell$StringCellFactory.createCell(class java.lang.String)"/>
+                <entry key="replaceExisting" type="xboolean" value="false"/>
+            </config>
+            <config key="1">
+                <entry key="Name" type="xstring" value="suspectBloodDonor"/>
+                <entry key="JavaName" type="xstring" value="out_suspectBloodDonor"/>
+                <entry key="JavaType" type="xstring" value="java.lang.String"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.StringCell$StringCellFactory.createCell(class java.lang.String)"/>
+                <entry key="replaceExisting" type="xboolean" value="false"/>
+            </config>
+            <config key="2">
+                <entry key="Name" type="xstring" value="Hepatitis"/>
+                <entry key="JavaName" type="xstring" value="out_Hepatitis"/>
+                <entry key="JavaType" type="xstring" value="java.lang.String"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.StringCell$StringCellFactory.createCell(class java.lang.String)"/>
+                <entry key="replaceExisting" type="xboolean" value="false"/>
+            </config>
+            <config key="3">
+                <entry key="Name" type="xstring" value="Fibrosis"/>
+                <entry key="JavaName" type="xstring" value="out_Fibrosis"/>
+                <entry key="JavaType" type="xstring" value="java.lang.String"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.StringCell$StringCellFactory.createCell(class java.lang.String)"/>
+                <entry key="replaceExisting" type="xboolean" value="false"/>
+            </config>
+            <config key="4">
+                <entry key="Name" type="xstring" value="Cirrhosis"/>
+                <entry key="JavaName" type="xstring" value="out_Cirrhosis"/>
+                <entry key="JavaType" type="xstring" value="java.lang.String"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.StringCell$StringCellFactory.createCell(class java.lang.String)"/>
+                <entry key="replaceExisting" type="xboolean" value="false"/>
+            </config>
+        </config>
+        <config key="outVars">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="inCols">
+            <entry key="array-size" type="xint" value="1"/>
+            <config key="0">
+                <entry key="Name" type="xstring" value="Unique concatenate with count(Category)"/>
+                <entry key="JavaName" type="xstring" value="c_UniqueconcatenatewithcountCategory"/>
+                <entry key="JavaType" type="xstring" value="java.lang.String"/>
+                <config key="Type">
+                    <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
+                    <entry key="is_null" type="xboolean" value="false"/>
+                </config>
+                <entry key="ConverterFactory" type="xstring" value="org.knime.core.data.convert.java.SimpleDataCellToJavaConverterFactory(StringValue,class java.lang.String,String)"/>
+            </config>
+        </config>
+        <config key="inVars">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <entry key="version" type="xstring" value="version 1.x"/>
+        <entry key="templateUUID" type="xstring" isnull="true" value=""/>
+        <entry key="runOnExecute" type="xboolean" value="false"/>
+        <config key="bundles">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="CONFIGURED"/>
+    <entry key="factory" type="xstring" value="org.knime.base.node.jsnippet.JavaSnippetNodeFactory"/>
+    <entry key="node-name" type="xstring" value="Java Snippet"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME Java Snippet Nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.jsnippets"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="5.2.0.v202310301555"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Javasnippet"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.javasnippet.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="5.2.0.v202310301555"/>
+    <config key="factory_settings"/>
+    <entry key="name" type="xstring" value="Java Snippet"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+    </config>
+</config>

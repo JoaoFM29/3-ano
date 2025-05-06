@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <config key="price">
+            <config key="&lt; 5000_0">
+                <entry key="bin_name" type="xstring" value="&lt; 5000"/>
+                <entry key="left_open" type="xboolean" value="true"/>
+                <entry key="left_value" type="xdouble" value="-Infinity"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="5000.0"/>
+            </config>
+            <config key="5k,10k_1">
+                <entry key="bin_name" type="xstring" value="5k,10k"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="5000.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="10000.0"/>
+            </config>
+            <config key="10k,15k_2">
+                <entry key="bin_name" type="xstring" value="10k,15k"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="10000.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="15000.0"/>
+            </config>
+            <config key="15k,20k_3">
+                <entry key="bin_name" type="xstring" value="15k,20k"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="15000.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="20000.0"/>
+            </config>
+            <config key="20k,25k_4">
+                <entry key="bin_name" type="xstring" value="20k,25k"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="20000.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="25000.0"/>
+            </config>
+            <config key="25k,30k_5">
+                <entry key="bin_name" type="xstring" value="25k,30k"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="25000.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="30000.0"/>
+            </config>
+            <config key="30k,35k_6">
+                <entry key="bin_name" type="xstring" value="30k,35k"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="30000.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="35000.0"/>
+            </config>
+            <config key="35k,40k_7">
+                <entry key="bin_name" type="xstring" value="35k,40k"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="35000.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="40000.0"/>
+            </config>
+            <config key="40k,45k_8">
+                <entry key="bin_name" type="xstring" value="40k,45k"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="40000.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="45000.0"/>
+            </config>
+            <config key="45k,50k_9">
+                <entry key="bin_name" type="xstring" value="45k,50k"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="45000.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="50000.0"/>
+            </config>
+            <config key="50k,80k_10">
+                <entry key="bin_name" type="xstring" value="50k,80k"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="50000.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="80000.0"/>
+            </config>
+            <config key="80k,100k_11">
+                <entry key="bin_name" type="xstring" value="80k,100k"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="80000.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="100000.0"/>
+            </config>
+            <config key="100k,150k_12">
+                <entry key="bin_name" type="xstring" value="100k,150k"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="100000.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="150000.0"/>
+            </config>
+            <config key="150k,200k_13">
+                <entry key="bin_name" type="xstring" value="150k,200k"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="150000.0"/>
+                <entry key="right_open" type="xboolean" value="false"/>
+                <entry key="right_value" type="xdouble" value="200000.0"/>
+            </config>
+            <config key="200k,250k_14">
+                <entry key="bin_name" type="xstring" value="200k,250k"/>
+                <entry key="left_open" type="xboolean" value="true"/>
+                <entry key="left_value" type="xdouble" value="200000.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="250000.0"/>
+            </config>
+            <config key="250000 &gt;_15">
+                <entry key="bin_name" type="xstring" value="250000 &gt;"/>
+                <entry key="left_open" type="xboolean" value="false"/>
+                <entry key="left_value" type="xdouble" value="250000.0"/>
+                <entry key="right_open" type="xboolean" value="true"/>
+                <entry key="right_value" type="xdouble" value="Infinity"/>
+            </config>
+        </config>
+        <entry key="price_is_appended" type="xstring" isnull="true" value=""/>
+        <config key="binned_columns">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="price"/>
+        </config>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="CONFIGURED"/>
+    <entry key="factory" type="xstring" value="org.knime.base.node.preproc.binner.BinnerNodeFactory"/>
+    <entry key="node-name" type="xstring" value="Numeric Binner"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="5.2.2.v202403061155"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Base nodes"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.base.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="5.2.2.v202403061155"/>
+    <config key="factory_settings"/>
+    <entry key="name" type="xstring" value="Numeric Binner"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+    </config>
+</config>

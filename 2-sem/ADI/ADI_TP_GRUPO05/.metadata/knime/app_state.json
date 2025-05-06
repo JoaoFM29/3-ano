@@ -1,0 +1,20 @@
+{
+  "version" : "5.2.3.v202403211026",
+  "projects" : [ {
+    "name" : "Projeto_DataSet_Nosso1",
+    "active" : false,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Projeto_DataSet_Nosso1"
+    }
+  }, {
+    "name" : "treinoTeste",
+    "active" : true,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "treinoTeste"
+    }
+  } ]
+}

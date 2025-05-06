@@ -1,0 +1,171 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> diretoria
+Rule 1     diretoria -> PASTA LCHAR conteudo RCHAR
+Rule 2     conteudo -> entrada COMMA conteudo
+Rule 3     conteudo -> entrada
+Rule 4     entrada -> PASTA LCHAR RCHAR
+Rule 5     entrada -> PASTA LCHAR conteudo RCHAR
+Rule 6     entrada -> PASTA
+Rule 7     diretoria -> empty
+Rule 8     empty -> <empty>
+
+Terminals, with rules where they appear
+
+COMMA                : 2
+LCHAR                : 1 4 5
+PASTA                : 1 4 5 6
+RCHAR                : 1 4 5
+error                : 
+
+Nonterminals, with rules where they appear
+
+conteudo             : 1 2 5
+diretoria            : 0
+empty                : 7
+entrada              : 2 3
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . diretoria
+    (1) diretoria -> . PASTA LCHAR conteudo RCHAR
+    (7) diretoria -> . empty
+    (8) empty -> .
+
+    PASTA           shift and go to state 2
+    $end            reduce using rule 8 (empty -> .)
+
+    diretoria                      shift and go to state 1
+    empty                          shift and go to state 3
+
+state 1
+
+    (0) S' -> diretoria .
+
+
+
+state 2
+
+    (1) diretoria -> PASTA . LCHAR conteudo RCHAR
+
+    LCHAR           shift and go to state 4
+
+
+state 3
+
+    (7) diretoria -> empty .
+
+    $end            reduce using rule 7 (diretoria -> empty .)
+
+
+state 4
+
+    (1) diretoria -> PASTA LCHAR . conteudo RCHAR
+    (2) conteudo -> . entrada COMMA conteudo
+    (3) conteudo -> . entrada
+    (4) entrada -> . PASTA LCHAR RCHAR
+    (5) entrada -> . PASTA LCHAR conteudo RCHAR
+    (6) entrada -> . PASTA
+
+    PASTA           shift and go to state 5
+
+    conteudo                       shift and go to state 6
+    entrada                        shift and go to state 7
+
+state 5
+
+    (4) entrada -> PASTA . LCHAR RCHAR
+    (5) entrada -> PASTA . LCHAR conteudo RCHAR
+    (6) entrada -> PASTA .
+
+    LCHAR           shift and go to state 8
+    COMMA           reduce using rule 6 (entrada -> PASTA .)
+    RCHAR           reduce using rule 6 (entrada -> PASTA .)
+
+
+state 6
+
+    (1) diretoria -> PASTA LCHAR conteudo . RCHAR
+
+    RCHAR           shift and go to state 9
+
+
+state 7
+
+    (2) conteudo -> entrada . COMMA conteudo
+    (3) conteudo -> entrada .
+
+    COMMA           shift and go to state 10
+    RCHAR           reduce using rule 3 (conteudo -> entrada .)
+
+
+state 8
+
+    (4) entrada -> PASTA LCHAR . RCHAR
+    (5) entrada -> PASTA LCHAR . conteudo RCHAR
+    (2) conteudo -> . entrada COMMA conteudo
+    (3) conteudo -> . entrada
+    (4) entrada -> . PASTA LCHAR RCHAR
+    (5) entrada -> . PASTA LCHAR conteudo RCHAR
+    (6) entrada -> . PASTA
+
+    RCHAR           shift and go to state 11
+    PASTA           shift and go to state 5
+
+    conteudo                       shift and go to state 12
+    entrada                        shift and go to state 7
+
+state 9
+
+    (1) diretoria -> PASTA LCHAR conteudo RCHAR .
+
+    $end            reduce using rule 1 (diretoria -> PASTA LCHAR conteudo RCHAR .)
+
+
+state 10
+
+    (2) conteudo -> entrada COMMA . conteudo
+    (2) conteudo -> . entrada COMMA conteudo
+    (3) conteudo -> . entrada
+    (4) entrada -> . PASTA LCHAR RCHAR
+    (5) entrada -> . PASTA LCHAR conteudo RCHAR
+    (6) entrada -> . PASTA
+
+    PASTA           shift and go to state 5
+
+    entrada                        shift and go to state 7
+    conteudo                       shift and go to state 13
+
+state 11
+
+    (4) entrada -> PASTA LCHAR RCHAR .
+
+    COMMA           reduce using rule 4 (entrada -> PASTA LCHAR RCHAR .)
+    RCHAR           reduce using rule 4 (entrada -> PASTA LCHAR RCHAR .)
+
+
+state 12
+
+    (5) entrada -> PASTA LCHAR conteudo . RCHAR
+
+    RCHAR           shift and go to state 14
+
+
+state 13
+
+    (2) conteudo -> entrada COMMA conteudo .
+
+    RCHAR           reduce using rule 2 (conteudo -> entrada COMMA conteudo .)
+
+
+state 14
+
+    (5) entrada -> PASTA LCHAR conteudo RCHAR .
+
+    COMMA           reduce using rule 5 (entrada -> PASTA LCHAR conteudo RCHAR .)
+    RCHAR           reduce using rule 5 (entrada -> PASTA LCHAR conteudo RCHAR .)
+

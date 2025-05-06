@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="CGProjeto"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="engine">
+				<Option output="/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/engine" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/nuno/Documents/cg/CGEngine_Projeto/include"/>
+					<Add directory="/home/nuno/Documents/cg/CGEngine_Projeto/ยง{IL_INCLUDE_DIR}"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/aarch64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 engine"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="engine/fast">
+				<Option output="/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/engine" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/nuno/Documents/cg/CGEngine_Projeto/include"/>
+					<Add directory="/home/nuno/Documents/cg/CGEngine_Projeto/ยง{IL_INCLUDE_DIR}"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/aarch64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 engine/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="generator">
+				<Option output="/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/generator" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/nuno/Documents/cg/CGEngine_Projeto/include"/>
+					<Add directory="/home/nuno/Documents/cg/CGEngine_Projeto/ยง{IL_INCLUDE_DIR}"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/aarch64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 generator"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="generator/fast">
+				<Option output="/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/generator" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/nuno/Documents/cg/CGEngine_Projeto/include"/>
+					<Add directory="/home/nuno/Documents/cg/CGEngine_Projeto/ยง{IL_INCLUDE_DIR}"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/aarch64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 generator/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/nuno/Documents/cg/CGEngine_Projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/include/algebra.hpp">
+			<Option target="engine"/>
+			<Option target="generator"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/include/animations.hpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/include/cena.hpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/include/draw.hpp">
+			<Option target="engine"/>
+			<Option target="generator"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/include/parser.hpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/include/ponto.hpp">
+			<Option target="engine"/>
+			<Option target="generator"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/include/tinyxml2.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/src/engine/animations.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/src/engine/main.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/src/engine/parser.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/src/engine/tinyxml2.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/src/generator/bezier.cpp">
+			<Option target="generator"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/src/generator/box.cpp">
+			<Option target="generator"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/src/generator/cone.cpp">
+			<Option target="generator"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/src/generator/main.cpp">
+			<Option target="generator"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/src/generator/plane.cpp">
+			<Option target="generator"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/src/generator/ring.cpp">
+			<Option target="generator"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/src/generator/sphere.cpp">
+			<Option target="generator"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/src/utils/algebra.cpp">
+			<Option target="engine"/>
+			<Option target="generator"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/src/utils/cena.cpp">
+			<Option target="engine"/>
+			<Option target="generator"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/src/utils/ponto.cpp">
+			<Option target="engine"/>
+			<Option target="generator"/>
+		</Unit>
+		<Unit filename="/home/nuno/Documents/cg/CGEngine_Projeto/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

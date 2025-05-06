@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+  <title id="sigla"></title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="course_website.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<script src="https://kit.fontawesome.com/83260f98e0.js" crossorigin="anonymous"></script>
+<!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"-->
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <div class="w3-container w3-teal">
+            <h2><span id="titulo"></span></h2>
+          </div>
+        </div>
+        
+        <div class="w3-container">
+          <div id="docentes"></div>
+
+          <p class="w3-large"><b><i class="fas fa-clock fa-fw w3-margin-right w3-text-teal"></i>Horário</b></p>
+          <p>Aula(s) Teórica(s): <ul id="teoricas"></ul></p>
+          <p>Aula(s) Prática(s):<ul id="praticas"></ul></p>
+          
+          <br>
+
+          <p class="w3-large w3-text-theme"><b><i class="fas fa-gavel fa-fw w3-margin-right w3-text-teal"></i>Avaliação</b></p>
+          <ul id="avaliacao"></ul>
+
+          <p class="w3-large w3-text-theme"><b><i class="fas fa-gavel fa-fw w3-margin-right w3-text-teal"></i>Datas importantes</b></p>
+          <ul>
+            <li><span id="teste"></span></li>
+            <li><span id="exame"></span></li>
+            <li><span id="projeto"></span></li>
+          </ul>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+
+      <div class="w3-bar w3-teal">
+        <a href="index.html" class="w3-bar-item w3-button">Principal</a>
+        <a href="aulas.html" class="w3-bar-item w3-button">Aulas</a>
+        <a href="#" class="w3-bar-item w3-button">Exames</a>
+      </div>
+
+      <!-- Avisos -->
+  
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fas fa-flag fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Avisos</h2>
+
+        <div class="w3-container">
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mudança de sala das aulas teóricas: 2024-02-26</h6>
+          <p>Estejam atentos, agora as aulas teóricas são na sala 0.05 do Edifício 2.</p>
+          <hr>
+        </div>
+        
+        <div class="w3-container">
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Início das aulas: 2024-02-05</h6>
+          <p>Venham preparados para trabalhar...</p>
+          <p><a href="semana1/MapaRuas-materialBase.zip">Material para o TPC1</a>.</p>
+          <hr>
+        </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>
+    <i class="far fa-copyright"></i> jcr, Set 2022 - Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+  </p>
+</footer>
+
+</body>
+</html>

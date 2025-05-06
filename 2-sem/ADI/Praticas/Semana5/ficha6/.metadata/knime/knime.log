@@ -1,0 +1,18 @@
+2024-03-08 11:06:05,311 : WARN  : comm-pool-thread-1 :  : Node : CSV Reader : 3:1 : Please specify a file
+2024-03-08 11:11:33,230 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-08 11:11:33,231 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-08 11:11:33,231 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-08 11:13:12,486 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-08 11:13:12,487 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-08 11:13:12,487 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-03-08 11:21:32,598 : ERROR : main :  : CEFWizardNodeView :  :  : Uncaught (in promise) TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active (source: http://org.knime.js.pagebuilder/apWrapper.html; line: 1)
+2024-03-08 11:21:32,599 : ERROR : main :  : CEFWizardNodeView :  :  : Uncaught (in promise) TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active (source: http://org.knime.js.pagebuilder/apWrapper.html; line: 1)
+2024-03-08 11:22:24,272 : WARN  : comm-pool-thread-8 :  : Node : Decision Tree Learner : 3:6 : Guessing target column: "class".
+2024-03-08 11:23:33,154 : WARN  : comm-pool-thread-8 :  : Node : Partitioning : 3:7 : No sampling method selected
+2024-03-08 11:25:23,719 : WARN  : comm-pool-thread-10 :  : Node : Scorer : 3:9 : No columns selected yet.
+2024-03-08 11:30:50,141 : WARN  : comm-pool-thread-14 :  : Node : Color Manager : 3:11 : Selected column "class" with default nominal color mapping.
+2024-03-08 11:34:21,683 : WARN  : comm-pool-thread-14 :  : Node : Decision Tree Learner : 3:6 : Class column "class" not found or incompatible
+2024-03-08 11:34:22,929 : WARN  : KNIME-Worker-21-Partitioning 3:7 :  : Node : Decision Tree Learner : 3:6 : Class column "class" not found or incompatible
+2024-03-08 11:34:27,585 : WARN  : main :  : Node : Decision Tree Learner : 3:6 : Class column "class" not found or incompatible
+2024-03-08 11:34:28,440 : WARN  : main :  : Node : Decision Tree Learner : 3:6 : Class column "class" not found or incompatible
+2024-03-08 11:34:29,454 : WARN  : KNIME-Worker-22-Partitioning 3:7 :  : Node : Decision Tree Learner : 3:6 : Class column "class" not found or incompatible

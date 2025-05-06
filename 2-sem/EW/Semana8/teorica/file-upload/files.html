@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple File Upload Example</title>
+    <link rel="stylesheet" href="files.css">
+</head>
+
+<body>
+
+    <div class="file-upload-container">
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="fileInput">Choose File(s):</label>
+            <input type="file" id="fileInput" name="files[]" multiple>
+            <button type="submit" id="uploadBtn">Upload</button>
+        </form>
+        <button id="addMoreBtn">Add More Files</button>
+        <ul id="fileList"></ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="files.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+Capacidade de detetar:
+    - Fumo
+    - Calor
+    - Gases(CO2)
+    - Barulho(<50 ok, >=50 barulho)
+
+    calor -> avisa responsável
+
+se sensor(calor) entao sinal(amarelo, "calor")
+se sensor(calor) e sensor(fumo) entao sinal(vermelho, "incêncido")
+...

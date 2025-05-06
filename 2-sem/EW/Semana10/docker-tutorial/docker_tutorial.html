@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>docker_tutorial.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="docker-tutorial">Docker Tutorial</h1>
+<h2 id="2024-04-27-jcr">2024-04-27 @jcr</h2>
+<hr>
+<h2 id="sinopsis">Sinopsis</h2>
+<p>Neste documento, descreve-se a criação de containers Docker como uma forma de encapsular aplicações web de modo a facilitar a sua distribuição e gestão quando em execução.</p>
+<p>O tutorial começa com exemplos simples de websites estáticos que vão evoluindo até aplicações complexas com vários serviços a ter que serem orquestrados.</p>
+<hr>
+<h2 id="docker1-website-est%C3%A1tico-do-bullarium-bracarensis">Docker1: Website estático do Bullarium Bracarensis</h2>
+<p>A versão HTML+CSS do Bullarium Bracarensis resultou de um trabalho final de uma UC de projeto, designada Opção III, lecionada à antiga Licenciatura em Engenharia de Sistemas e Informática, por José Luis Santos.</p>
+<p>Neste exemplo, decidiu-se aproveitar um website estático interessante e encapsolá-lo num container Docker que o pudesse servir por HTTP.</p>
+<p>Para isso, na imagem Docker a criar é preciso incluir, além das páginas HTML e das folhas de estilo CSS, um servidor web. Qualquer servidor serve, se bem que a configuração de cada um poderá ser diferente.</p>
+<h2 id="vamos-criar-v%C3%A1rias-vers%C3%B5es-com-v%C3%A1rios-servidores-web">Vamos criar várias versões com vários servidores web.</h2>
+<h3 id="nginx">nginx</h3>
+<p>Nesta primeira versão foi usado o <code>nginx</code>.</p>
+<h4 id="dockerfile-para-website-est%C3%A1tico--nginx">Dockerfile para website estático + nginx</h4>
+<pre class="hljs"><code><div>FROM nginx
+COPY . /usr/share/nginx/html
+</div></code></pre>
+<p>Na primeira linha indica-se a imagem de base que será usada, neste caso, a imagem do <code>nginx</code>.
+A seguir copiam-se os ficheiros que constituem o website para a pasta a partir da qual o <code>nginx</code> serve os conteúdos, neste caso a pasta é <code>/usr/share/nginx/html</code>.</p>
+<p>Para colocarmos o container em execução basta saber que o servidor web responde na porta interna do contaier com o identificador <code>80</code>. Vamos mapeá-la numa porta externa, por exemplo <code>2804</code>:</p>
+<pre class="hljs"><code><div>$ docker run -d -p 2804:80 --name bb engweb2024/bb
+</div></code></pre>
+<p>Podemos observar o container em execução: <code>docker ps</code>.</p>
+<h3 id="apache">Apache</h3>
+<p>Para termos um container com o apache só temos de alterar a imagem base e mudar a pasta onde se coloca o website.</p>
+<h4 id="dockerfile-para-website-est%C3%A1tico--apache">Dockerfile para website estático + apache</h4>
+<pre class="hljs"><code><div>FROM httpd:latest
+COPY . /usr/local/apache2/htdocs/
+</div></code></pre>
+<p>Colocamos em execução om uma linha de comando semelhante, uma vez que o apache responde também na porta <code>80</code> interna:</p>
+<pre class="hljs"><code><div>$ docker run -d -p 2804:80 --name bb engweb2024/bb_apache
+</div></code></pre>
+<p>Podemos observar o container em execução: <code>docker ps</code>.</p>
+<pre class="hljs"><code><div>CONTAINER ID   IMAGE                  COMMAND                  CREATED         STATUS         PORTS                      NAMES
+44611bca30f4   engweb2024/bb_apache   &quot;httpd-foreground&quot;       9 minutes ago   Up 9 minutes   0.0.0.0:2804-&gt;80/tcp       bb
+</div></code></pre>
+<p>E depois de algumas interações com o website podemos observar os seus logs:</p>
+<pre class="hljs"><code><div>192.168.65.1 - - [28/Apr/2024:17:35:42 +0000] &quot;GET / HTTP/1.1&quot; 200 293
+192.168.65.1 - - [28/Apr/2024:17:35:42 +0000] &quot;GET /bbtoc.html HTTP/1.1&quot; 200 40108
+192.168.65.1 - - [28/Apr/2024:17:35:42 +0000] &quot;GET /bbcts.html HTTP/1.1&quot; 200 710320
+192.168.65.1 - - [28/Apr/2024:17:35:42 +0000] &quot;GET /bbtoc.css HTTP/1.1&quot; 200 1167
+192.168.65.1 - - [28/Apr/2024:17:35:42 +0000] &quot;GET /bbcts.css HTTP/1.1&quot; 200 851
+192.168.65.1 - - [28/Apr/2024:17:35:43 +0000] &quot;GET /favicon.ico HTTP/1.1&quot; 404 196
+</div></code></pre>
+<p><img src="./imagens/bb_apache.png" alt="Website a ser servido pelo Apache"></p>
+<h3 id="python">Python</h3>
+<p>Para termos um container com o python temos de configurar mais algumas coisas.</p>
+<h4 id="dockerfile-para-website-est%C3%A1tico--python">Dockerfile para website estático + python</h4>
+<pre class="hljs"><code><div>FROM python
+WORKDIR /usr/src/app
+COPY . .
+CMD [&quot;python&quot;, &quot;-m&quot;, &quot;http.server&quot;, &quot;80&quot;]
+</div></code></pre>
+<p>O comando <code>WORKDIR</code> permite definir qual a pasta dentro container que será o alvo por omissão dos comandos seguintes, neste caso, definimos a pasta <code>/usr/src/app</code> que é onde o servidor web do python irá procurar as páginas do website.</p>
+<p>A seguir, copiamos o nosso website. O primeiro <code>.</code> indica a pasta onde está a Dockerfile e o segundo <code>.</code> indica a pasta definida no <code>WORKDIR</code>.</p>
+<p>Como o servidor web é um módulo python que tem de ser colocado em execução, precisamos de executar uma linha de comando com vários argumentos. A forma de o fazer é com o comando <code>CMD</code> seguido de uma lista com os argumentos na forma de string.</p>
+<p>Depois de construirmos a nossa imagem, podemos colocá-la em execução como um container com uma linha de comando semelhante às anteriores, uma vez que configuramos o servidor web do python para responder na porta <code>80</code> interna:</p>
+<pre class="hljs"><code><div>$ docker build . -t engweb2024/bb_python
+$ docker run -d -p 2804:80 --name bb engweb2024/bb_python
+</div></code></pre>
+<p>Podemos observar o container em execução: <code>docker ps</code>.</p>
+<hr>
+<h2 id="docker2-aplica%C3%A7%C3%B5es-com-nodejs">Docker2: Aplicações com nodejs</h2>
+<p>Apresentam-se a seguir alguns exemplos de complexidade crescente para aplicações web desenvolvidas com o nodejs.</p>
+<h3 id="nodejs-hello-world">Nodejs: Hello world!</h3>
+<p>Esta é aplicação web mais simples, materializada num servidor que apenas responde com uma mensagem de texto.</p>
+<h4 id="servi%C3%A7o-web">Serviço web</h4>
+<pre class="hljs"><code><div><span class="hljs-keyword">var</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">'http'</span>)
+
+http.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+    res.writeHead(<span class="hljs-number">200</span>, {<span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'text/plain; charset=utf-8'</span>});
+    res.end(<span class="hljs-string">'Olá turma de 2024! Esta é a versão 3 do servidor...'</span>);
+}).listen(<span class="hljs-number">7777</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Servidor à escuta na porta 7777...'</span>)
+</div></code></pre>
+<p>Para encapsular este serviço num container docker criou-se a seguinte especificação:</p>
+<pre class="hljs"><code><div># Indicamos a imagem de base
+FROM node
+# Criamos a pasta de trabalho dentro da imagem
+WORKDIR /app
+# Copiamos a nossa app para lá
+COPY server1.js .
+# Expomos a porta em que irá correr
+EXPOSE 7777
+# Indicamos como arrancar a aplicação
+CMD [ &quot;node&quot;, &quot;server1.js&quot; ]
+</div></code></pre>
+<h3 id="nodejs-json-server">Nodejs: json-server</h3>
+<p>O <code>json-server</code> é um utilitário interessante para criar API de dados em pouco tempo, possibilitando a rápida demonstração e teste de ideias. Está desenvolvido em <code>nodejs</code> e pressupõe que a base de dados está num ficheiro JSON seguindo uma determinada estrutura.</p>
+<h4 id="base-de-dados-em-json-de-uma-escola-de-m%C3%BAsica-alunos-cursos-e-instrumentos">Base de dados em JSON de uma escola de música: alunos, cursos e instrumentos</h4>
+<p>Exemplo da base de dados que se irá usar (aqui apenas se colocou um registo por coleção):</p>
+<pre class="hljs"><code><div>{
+  <span class="hljs-attr">"alunos"</span>: [
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"A1510"</span>,
+      <span class="hljs-attr">"nome"</span>: <span class="hljs-string">"ADEMAR FONTES DE MAGALHAES GONCALVES"</span>,
+      <span class="hljs-attr">"dataNasc"</span>: <span class="hljs-string">"1999-4-19"</span>,
+      <span class="hljs-attr">"curso"</span>: <span class="hljs-string">"CB8"</span>,
+      <span class="hljs-attr">"anoCurso"</span>: <span class="hljs-string">"5"</span>,
+      <span class="hljs-attr">"instrumento"</span>: <span class="hljs-string">"Guitarra"</span>
+    }],
+  <span class="hljs-attr">"cursos"</span>: [
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"CB1"</span>,
+      <span class="hljs-attr">"designacao"</span>: <span class="hljs-string">"Curso Básico de Clarinete"</span>,
+      <span class="hljs-attr">"duracao"</span>: <span class="hljs-string">"5"</span>,
+      <span class="hljs-attr">"instrumento"</span>: {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"I1"</span>,
+        <span class="hljs-attr">"#text"</span>: <span class="hljs-string">"Clarinete"</span>
+      }
+    }],
+  <span class="hljs-attr">"instrumentos"</span>: [
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"I1"</span>,
+      <span class="hljs-attr">"#text"</span>: <span class="hljs-string">"Clarinete"</span>
+    }]
+}
+</div></code></pre>
+<h4 id="dockerfile">Dockerfile</h4>
+<p>Segue-se a especificação para encapsular o <code>json-server</code>:</p>
+<pre class="hljs"><code><div># Use a imagem nodejs como base
+FROM node
+# Defina a pasta de trabalho como /app
+WORKDIR /app
+# Copie a BD para o diretório de trabalho
+COPY db.json .
+# Instale as dependências
+RUN npm install json-server -g
+# Exponha a porta 3000
+EXPOSE 3000
+# Defina o comando padrão a ser executado quando o container for iniciado
+CMD [&quot;json-server&quot;, &quot;--watch&quot;, &quot;db.json&quot;, &quot;--port&quot;, &quot;3000&quot;, &quot;--host&quot;, &quot;0.0.0.0&quot;]
+</div></code></pre>
+<p>Para colocar em execução e testar podemos fazer:</p>
+<pre class="hljs"><code><div>$ docker build . -t engweb2024/jserver_musica --no-cache
+$ docker run -d -p 3000:3000 --name musica engweb2024/jserver_musica
+$ docker logs musica -f
+</div></code></pre>
+<p>O último comando permite-nos observar o que aconteceu no container quando se tentou colocar em execução:</p>
+<pre class="hljs"><code><div>JSON Server started on PORT :3000
+Press CTRL-C to stop
+Watching db.json...
+
+( ˶ˆ ᗜ ˆ˵ )
+
+Index:
+http://localhost:3000/
+
+Static files:
+Serving ./public directory if it exists
+
+Endpoints:
+http://0.0.0.0:3000/alunos
+http://0.0.0.0:3000/cursos
+http://0.0.0.0:3000/instrumentos
+
+</div></code></pre>
+<h3 id="nodejs-node--mongo">Nodejs: node + mongo</h3>
+<p>Neste exemplo, vamos criar um container para uma aplicação web com vários serviços: uma aplicação em node que tem a sua persistência de dados numa base de dados em MongoDB e como tal necessita dum servidor mongo.</p>
+<p>Nesta tipo de situações, uma especificação em <code>Dockerfile</code> não é suficiente.
+Precisamos de criar uma orquestração de serviços usando o <code>docker-compose</code>.</p>
+<p>A aplicação que iremos usar é a que faz a gestão de entregas de projetos, e vamos apenas isolar a sua API de dados.</p>
+<p>Para se fazer uma orquestração é necessário que cada serviço tenha a sua imagem que depois são combinadas através da orquestração.</p>
+<p>No caso do mongo, iremos usar a última imagem disponível no Hub do Docker.
+Para a aplicação em node, vamos criar a imagem recorrendo à seguinte especificação:</p>
+<pre class="hljs"><code><div>FROM node
+# Create app directory
+WORKDIR /usr/src/app
+# Install app dependencies
+COPY package*.json ./
+RUN npm install
+# Copy app source code
+COPY . .
+#Expose port and start application
+EXPOSE 2204
+CMD [ &quot;npm&quot;, &quot;start&quot; ]
+</div></code></pre>
+<p>A seguir especificamos a orquestração de serviços:</p>
+<pre class="hljs"><code><div>version: &quot;2&quot;
+services:
+ web:
+  container_name: gentregas-api
+  image: engweb2024/gentregas
+  ports:
+    - &quot;2804:2204&quot;
+  depends_on:
+    - mongo
+  links:
+    - mongo
+ mongo:
+  container_name: mongo-server
+  image: mongo
+</div></code></pre>
+<p>Nesta especificação tomaram-se as seguintes decisões:</p>
+<ul>
+<li>Mapeou-se a porta da aplicação que era 2204 na porta 2804;</li>
+<li>Decidiu-se não exteriorizar o mongo (maior nível de segurança), bastando para isso omitir a especificação das portas;</li>
+<li>Criou-se uma dependência entre os containers o que faz com que o container da aplicação só arranque depois do mongo estar disponível. O que evita os erros de conexão no arranque;</li>
+<li>Uma orquestração de serviço necessita de uma rede virtual interna, como não foi especificada, é criada uma por omissão.</li>
+</ul>
+
+</body>
+</html>

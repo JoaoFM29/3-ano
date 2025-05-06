@@ -1,0 +1,356 @@
+#ifdef __APPLE__
+#include <GLUT/glut.h>
+#else
+#include <GL/glew.h>
+#include <GL/glut.h>
+#endif
+#include <iostream>
+#include<stdio.h>
+#include<stdlib.h>
+#include <math.h>
+#include <chrono>
+#include <stack>
+#define _USE_MATH_DEFINES
+#include <tuple>
+#include <vector>
+#include "parser.hpp"
+#include "ponto.hpp"
+#include "algebra.hpp"
+using namespace std;
+
+
+// Camera parameters
+float alpha = 0.0;
+float beta_ang = 0;
+float radius = 0;
+
+float xt,yt,zt = 0.0f;
+float lx,ly,lz = 0.0f;
+float rx, ry, rz;
+
+bool axis = false;
+
+bool showFps = false;
+
+Cena c;
+
+int timebase;
+float frame;
+float fps;
+
+GLuint *buffers;
+
+// Function to convert spherical coordinates to Cartesian coordinates
+void sphericalToCartesian(float alpha_, float beta_, float radius_, float &px, float &py, float &pz) {
+    pz = radius_ * cos(beta_) * sin(alpha_);
+    py = radius_ * sin(beta_);
+    px = radius_ * (cos(beta_)) * cos(alpha_);
+}
+
+float getRadius(float x1, float y1, float z1, float x2, float y2, float z2) {
+    // Calculate the differences in coordinates
+    float dx = x2 - x1;
+    float dy = y2 - y1;
+    float dz = z2 - z1;
+
+    // Calculate the distance using the Euclidean distance formula
+    float distance = sqrt(dx * dx + dy * dy + dz * dz);
+
+    return distance;
+}
+
+void initializeCamera(float eyeX, float eyeY, float eyeZ, float lookAtX, float lookAtY, float lookAtZ) {
+    xt = eyeX;
+    yt = eyeY;
+    zt = eyeZ;
+    lx = lookAtX - xt;
+    ly = lookAtY - yt;
+    lz = lookAtZ - zt;
+    radius = getRadius(eyeX, eyeY, eyeZ, lookAtX, lookAtY, lookAtZ);
+    alpha = atan2(lz, lx);
+    beta_ang = asin(ly / radius);
+
+}
+
+void changeSize(int w, int h) {
+
+    // Prevent a divide by zero, when window is too short
+    // (you cant make a window with zero width).
+    if(h == 0)
+        h = 1;
+
+    // compute window's aspect ratio
+    float ratio = w * 1.0 / h;
+
+    // Set the projection matrix as current
+    glMatrixMode(GL_PROJECTION);
+    // Load Identity Matrix
+    glLoadIdentity();
+
+    // Set the viewport to be the entire window
+    glViewport(0, 0, w, h);
+
+    // Set perspective
+    gluPerspective(c.getCamara()["projection"][0] ,ratio,c.getCamara()["projection"][1],c.getCamara()["projection"][2] );
+
+    // return to the model view matrix mode
+    glMatrixMode(GL_MODELVIEW);
+}
+
+void renderModel(std::vector<Ponto> modelo, GLuint vbo) {
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+    glBufferData(GL_ARRAY_BUFFER, modelo.size() * sizeof(Vertex), modelo.data(), GL_STATIC_DRAW);
+
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glVertexPointer(3, GL_FLOAT, sizeof(Vertex), nullptr);
+
+    glDrawArrays(GL_TRIANGLES, 0, modelo.size());
+
+    glDisableClientState(GL_VERTEX_ARRAY);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+}
+
+void printMatrix(GLenum matrixName) {
+    GLfloat matrix[16];
+    glGetFloatv(matrixName, matrix);
+    std::cout << "Matrix " << matrixName << ":\n";
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            std::cout << matrix[i * 4 + j] << " ";
+        }
+        std::cout << std::endl;
+    }
+}
+
+void printModelviewMatrix() {
+    printMatrix(GL_MODELVIEW_MATRIX);
+}
+void traverseDepthFirst(const Node& node, int level = 0) {
+    glMatrixMode(GL_MODELVIEW_MATRIX);
+    glPushMatrix();
+
+    std::vector<Matrix4x4> mx = node.matrices;
+    Matrix4x4 f = multiplyMatrices(mx);
+    GLfloat glMatrix[]{
+            1.0f, 0.0f, 0.0f, 0.0f,
+            0.0f, 1.0f, 0.0f, 0.0f,
+            0.0f, 0.0f, 1.0f, 0.0f,
+            0.0f, 0.0f, 0.0f, 1.0f
+    };
+
+    matrix4x4ToGLfloat(f,glMatrix);
+
+
+        glMultMatrixf(glMatrix);
+        for (const auto &child: node.children) {
+            traverseDepthFirst(child, level + 1);
+
+        }
+
+    if (node.models.size() > 0) {
+        for (int i = 0; i < node.models.size(); i++) {
+            renderModel(node.models[i], buffers[i]);
+        }
+    }
+    glMatrixMode(GL_MODELVIEW_MATRIX);
+    glPopMatrix();
+
+    // Print other information of the node as needed
+}
+
+void renderScene(void) {
+
+    // clear buffers
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+
+    sphericalToCartesian(alpha, beta_ang, radius, rx, ry, rz);
+    // set the camera
+    glLoadIdentity();
+    // Up vector
+    float ux = c.getCamara()["up"][0], uy = c.getCamara()["up"][1], uz = c.getCamara()["up"][2];
+
+    //gluLookAt
+    gluLookAt(xt, yt, zt, rx + xt, ry + yt, rz + zt, ux, uy, uz);
+
+    if (axis){
+        glBegin(GL_LINES);
+// X axis in red
+        glColor3f(1.0f, 0.0f, 0.0f);
+        glVertex3f(
+                -100.0f, 0.0f, 0.0f);
+        glVertex3f( 100.0f, 0.0f, 0.0f);
+// Y Axis in Green
+        glColor3f(0.0f, 1.0f, 0.0f);
+        glVertex3f(0.0f,
+                   -100.0f, 0.0f);
+        glVertex3f(0.0f, 100.0f, 0.0f);
+// Z Axis in Blue
+        glColor3f(0.0f, 0.0f, 1.0f);
+        glVertex3f(0.0f, 0.0f,
+                   -100.0f);
+        glVertex3f(0.0f, 0.0f, 100.0f);
+        glEnd();
+    }
+
+    traverseDepthFirst(c.getRaizes()[0]);
+
+    frame++;
+    int time = glutGet(GLUT_ELAPSED_TIME);
+    if (time - timebase > 1000) {
+        fps = frame*1000.0/(time-timebase);
+        timebase = time;
+        frame = 0;
+    }
+    char buffer [50];
+    sprintf(buffer,"%.2f",fps);
+    if(showFps)
+        cout<<buffer<<"\n";
+
+    // End of frame
+    glutSwapBuffers();
+}
+
+
+    float speed = 0.01f; // Velocidade de andamento
+
+void computePos(float deltaMove) {
+    xt += deltaMove * rx;
+    yt += deltaMove * ry;
+    zt += deltaMove * rz;
+}
+
+void computePos2(float deltaMove) {
+    // Objetivo desta função é calcular uma perpendicular
+    float cx = rx, cy = ry, cz = rz; // Direções da camara
+    float ux = c.getCamara()["up"][0], uy = c.getCamara()["up"][1], uz = c.getCamara()["up"][2]; // Up vector
+
+    float px, py, pz; // Calcular a direção perpendicular
+    px = cy * uz - uy * cz;
+    py = cz * ux - uz * cx;
+    pz = cx * uy - ux * cy;
+
+    // Normalizar a perpendicular
+    float length = sqrt(px * px + py * py + pz * pz);
+    px /= length;
+    pz /= length;
+
+    xt += deltaMove * px;
+    zt += deltaMove * pz;
+}
+
+void processKeys(unsigned char key, int xx, int yy) {
+
+    switch (key) {
+        case 'w':
+            computePos(speed);
+            break;
+        case 's':
+            computePos(-speed);
+            break;
+        case 'a':
+           computePos2(-speed*4);
+            break;
+        case 'd':
+            computePos2(+speed*4);
+            break;
+        case 'f':
+            yt += speed*4;
+            break;
+        case 'g':
+            yt -= speed*4;
+            break;
+        case 'x':
+            if (axis)
+            axis = false;
+            else
+                axis = true;
+            break;
+        case 'z':
+            if (showFps)
+                showFps = false;
+            else
+                showFps = true;
+            break;
+    }
+    glutPostRedisplay();
+}
+
+
+void processSpecialKeys(int key, int xx, int yy) {
+    float rotationSpeed = 0.02f;
+
+    switch (key) {
+        case GLUT_KEY_LEFT:
+            alpha -= rotationSpeed;
+            break;
+        case GLUT_KEY_RIGHT:
+            alpha += rotationSpeed;
+            break;
+        case GLUT_KEY_UP:
+            beta_ang += rotationSpeed;
+            if (beta_ang > M_PI / 2.0)
+                beta_ang = M_PI / 2.0;
+            break;
+        case GLUT_KEY_DOWN:
+            beta_ang -= rotationSpeed;
+            if (beta_ang < -M_PI / 2.0)
+                beta_ang = -M_PI / 2.0;
+            break;
+
+    }
+
+
+    if (alpha > 2 * M_PI)
+        alpha -= 2 * M_PI;
+    else if (alpha < 0)
+        alpha += 2 * M_PI;
+
+    glutPostRedisplay();
+}
+
+int main(int argc, char **argv) {
+
+    c = fromXml(argv[1]);
+// init GLUT and the window
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
+    glutInitWindowPosition(100,100);
+    glutInitWindowSize(get<0>(c.getJanela()),get<1>(c.getJanela()));
+    glutCreateWindow(argv[1]);
+    initializeCamera(c.getCamara()["position"][0] + xt,c.getCamara()["position"][1] + yt,c.getCamara()["position"][2]+zt,
+                     c.getCamara()["lookAt"][0] + xt,c.getCamara()["lookAt"][1] + yt,c.getCamara()["lookAt"][2] + zt);
+
+// Required callback registry
+    timebase = glutGet(GLUT_ELAPSED_TIME);
+    glutDisplayFunc(renderScene);
+    glutIdleFunc(renderScene);
+    glutReshapeFunc(changeSize);
+
+// Callback registration for keyboard processing
+    glutKeyboardFunc(processKeys);
+    glutSpecialFunc(processSpecialKeys);
+
+//  OpenGL settings
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_CULL_FACE);
+    glEnableClientState(GL_VERTEX_ARRAY);
+
+    int num_models = c.getTotalModelsInTree();
+    buffers = new GLuint[num_models];
+    cout<<num_models<<"\n";
+    glGenBuffers(num_models, buffers);  // Generate VBOs
+    cout<<"Aqui2\n";
+    for (int i = 0; i < num_models; i++) {
+        glBindBuffer(GL_ARRAY_BUFFER, buffers[i]);
+        glBufferData(GL_ARRAY_BUFFER, 0, nullptr, GL_STATIC_DRAW);
+    }
+    cout<<"Aqui\n";
+
+
+
+// enter GLUT's main cycle
+    glutMainLoop();
+
+    return 1;
+}

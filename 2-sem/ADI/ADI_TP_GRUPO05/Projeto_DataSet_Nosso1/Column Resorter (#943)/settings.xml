@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <config key="ColumnOrder">
+            <entry key="array-size" type="xint" value="23"/>
+            <entry key="0" type="xstring" value="id"/>
+            <entry key="1" type="xstring" value="region"/>
+            <entry key="2" type="xstring" value="year"/>
+            <entry key="3" type="xstring" value="manufacturer"/>
+            <entry key="4" type="xstring" value="model"/>
+            <entry key="5" type="xstring" value="condition"/>
+            <entry key="6" type="xstring" value="cylinders"/>
+            <entry key="7" type="xstring" value="fuel"/>
+            <entry key="8" type="xstring" value="odometer"/>
+            <entry key="9" type="xstring" value="title_status"/>
+            <entry key="10" type="xstring" value="transmission"/>
+            <entry key="11" type="xstring" value="VIN"/>
+            <entry key="12" type="xstring" value="drive"/>
+            <entry key="13" type="xstring" value="size"/>
+            <entry key="14" type="xstring" value="type"/>
+            <entry key="15" type="xstring" value="paint_color"/>
+            <entry key="16" type="xstring" value="county"/>
+            <entry key="17" type="xstring" value="state"/>
+            <entry key="18" type="xstring" value="lat"/>
+            <entry key="19" type="xstring" value="long"/>
+            <entry key="20" type="xstring" value="posting_date"/>
+            <entry key="21" type="xstring" value="price"/>
+            <entry key="22" type="xstring" value="&lt;any unknown new column&gt;"/>
+        </config>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="CONFIGURED"/>
+    <entry key="factory" type="xstring" value="org.knime.base.node.preproc.columnresorter.ColumnResorterNodeFactory"/>
+    <entry key="node-name" type="xstring" value="Column Resorter"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="5.2.1.v202401291620"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Base nodes"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.base.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="5.2.1.v202401291620"/>
+    <config key="factory_settings"/>
+    <entry key="name" type="xstring" value="Column Resorter"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+    </config>
+</config>

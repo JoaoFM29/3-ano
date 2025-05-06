@@ -1,0 +1,26 @@
+#quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  #feedback-container,
+  #score-container {
+    display: none;
+  }
+  
+  #options {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #options li {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 5px 10px;
+  }
+  

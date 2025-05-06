@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-teal
+      h1
+        span Bem vindo à página inicial
+    body
+      .w3-container.w3-padding
+        h1(style="padding-top: 30px;") Seleciona uma categoria
+      .w3-container.w3-padding
+        .w3-row-padding.w3-center
+          .w3-col.s6
+            img(src="/images/periodos.png" alt="Periodos" style="max-width:500px; max-height:500px; width:auto; height:auto;")
+            p
+              a(href="/periodos" class="w3-btn w3-teal w3-round-large") Periodos
+          .w3-col.s6
+            img(src="/images/compositores.png" alt="Compositores" style="max-width:350px; max-height:350px; width:auto; height:auto;")
+            p
+              a(href="/compositores" class="w3-btn w3-teal w3-round-large") Compositores
+
+

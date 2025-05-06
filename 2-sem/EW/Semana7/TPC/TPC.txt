@@ -1,0 +1,8 @@
+Carregar o dataset para o mongoDB
+Usar o express para criar uma api de dados REST(recebe pedidos http e responde em json)
+    dos pedidos que chegam à api esta pede ao mongoDB
+
+
+Fazer uma App Web com interface. Recebe pedidos e responde em html sempre que precisar de pedidos vai pedir à API de dados feita em cima
+
+DATASET A USAR : compositores

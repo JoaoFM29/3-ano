@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pessoas</title>
+</head>
+<body>
+    <div id="add-person">
+        <h2>Adicionar Nova Pessoa</h2>
+        <button onclick="openEditPage(null)">Adicionar Pessoa</button>
+    </div>
+
+    <hr>
+
+    <div id="people-list">
+        <h2>Lista de Pessoas</h2>
+        <ul id="list"></ul>
+    </div>
+
+    <!-- Importando a biblioteca Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Script JavaScript para interação com o servidor -->
+    <script src="script.js"></script>
+
+    <script>
+        function openEditPage(personId) {
+            // Redirecionar para a página de edição com o ID da pessoa ou string vazia para novas entradas
+            window.location.href = `edit.html?id=${personId || ''}`;
+        }
+    </script>
+</body>
+</html>

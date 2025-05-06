@@ -1,0 +1,760 @@
+2024-02-23 11:00:19,822 : WARN  : comm-pool-thread-3 :  : Node : CSV Reader : 3:1 : Please specify a file
+2024-02-23 11:10:14,069 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-02-23 11:10:14,070 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-02-23 11:10:14,070 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-02-23 11:10:19,362 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-02-23 11:10:35,839 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-02-23 11:10:35,839 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-02-23 11:10:35,839 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-02-23 11:10:40,076 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-02-23 11:44:16,541 : WARN  : KNIME-Worker-1-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a missing value in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:48:14,530 : WARN  : KNIME-Worker-2-Table Creator 3:6 :  : Node : Table Creator : 3:6 : Node created an empty data table.
+2024-02-23 11:48:25,630 : WARN  : comm-pool-thread-5 :  : Node : Table Writer : 3:6 : Please specify a file
+2024-02-23 11:49:42,778 : WARN  : comm-pool-thread-5 :  : Node : GroupBy : 3:6 : No grouping column included. Aggregate complete table.
+2024-02-23 11:49:42,778 : WARN  : comm-pool-thread-5 :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 11:49:42,812 : WARN  : comm-pool-thread-5 :  : Node : GroupBy : 3:6 : Please select at least one group or aggregation column
+2024-02-23 11:49:52,163 : WARN  : main :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 11:49:52,745 : WARN  : main :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 11:50:26,762 : WARN  : main :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 11:50:27,529 : WARN  : main :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 11:51:02,157 : WARN  : comm-pool-thread-8 :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 11:51:11,610 : WARN  : KNIME-Worker-3-Missing Value 3:7 :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 11:51:29,590 : WARN  : comm-pool-thread-8 :  : Node : Box Plot : 3:5 : The selected dimension column "id" does not exist in the table
+2024-02-23 11:51:34,195 : WARN  : KNIME-Worker-3-Data Explorer 3:4 :  : Node : Box Plot : 3:5 : The selected dimension column "id" does not exist in the table
+2024-02-23 11:52:25,540 : WARN  : main :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 11:52:25,540 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "id" does not exist in the table
+2024-02-23 11:52:26,260 : WARN  : main :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 11:52:26,260 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "id" does not exist in the table
+2024-02-23 11:52:38,578 : WARN  : main :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 11:52:38,578 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "id" does not exist in the table
+2024-02-23 11:52:39,510 : WARN  : main :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 11:52:39,511 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "id" does not exist in the table
+2024-02-23 11:52:40,884 : WARN  : KNIME-Worker-4-Data Explorer 3:4 :  : Node : Box Plot : 3:5 : The selected dimension column "id" does not exist in the table
+2024-02-23 11:52:49,909 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S,C' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,910 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S,C,L' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,910 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,911 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S,C,V' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,911 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S,C,V,L' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,911 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S,C,V,L,Sa' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,912 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S,C,V,Sa' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,912 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S,V,L' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,912 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S*' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,912 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,913 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S*,C' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,914 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S,L' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,914 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S,V' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,914 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S*,C,L' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,915 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S*,C,Sa' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,915 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S*,Sa' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,915 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S,C,Sa' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,915 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S*,V,L' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,916 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,C' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,916 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S*,C,V' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,916 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'B,S,C,L,Sa' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,917 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : All rows with a 'null' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 11:52:49,918 : ERROR : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : Execute failed: The input table contains only missing or NaN values in the selected dimension columns.
+org.knime.core.node.InvalidSettingsException: The input table contains only missing or NaN values in the selected dimension columns.
+	at org.knime.base.views.node.boxplot.BoxPlotNodeFactory.createViewData(BoxPlotNodeFactory.java:270)
+	at org.knime.base.views.node.boxplot.BoxPlotNodeFactory.createViewData(BoxPlotNodeFactory.java:222)
+	at org.knime.base.views.node.boxplot.BoxPlotNodeFactory.onExecute(BoxPlotNodeFactory.java:181)
+	at org.knime.base.views.node.BaseViewsNodeModel.lambda$6(BaseViewsNodeModel.java:193)
+	at org.knime.base.views.node.BaseViewsNodeModel.execute(BaseViewsNodeModel.java:237)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-02-23 11:52:49,923 : WARN  : KNIME-Worker-3-Box Plot 3:5 :  : Node : Box Plot : 3:5 : The selected dimension column "id" does not exist in the table
+2024-02-23 11:57:12,463 : WARN  : main :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 11:57:13,286 : WARN  : main :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 11:57:47,875 : WARN  : main :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 11:58:02,837 : WARN  : comm-pool-thread-10 :  : Node : Cell Splitter : 3:9 : Specify the column to split.
+2024-02-23 12:08:01,125 : WARN  : KNIME-Worker-16-Box Plot 3:10 :  : Node : Box Plot : 3:10 : All rows with a 'null' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 12:08:01,126 : WARN  : KNIME-Worker-16-Box Plot 3:10 :  : Node : Box Plot : 3:10 : All rows with a 'B' in the condition column only contain missing or NaN values. This category is thus omitted.
+2024-02-23 12:08:01,126 : ERROR : KNIME-Worker-16-Box Plot 3:10 :  : Node : Box Plot : 3:10 : Execute failed: The input table contains only missing or NaN values in the selected dimension columns.
+org.knime.core.node.InvalidSettingsException: The input table contains only missing or NaN values in the selected dimension columns.
+	at org.knime.base.views.node.boxplot.BoxPlotNodeFactory.createViewData(BoxPlotNodeFactory.java:270)
+	at org.knime.base.views.node.boxplot.BoxPlotNodeFactory.createViewData(BoxPlotNodeFactory.java:222)
+	at org.knime.base.views.node.boxplot.BoxPlotNodeFactory.onExecute(BoxPlotNodeFactory.java:181)
+	at org.knime.base.views.node.BaseViewsNodeModel.lambda$6(BaseViewsNodeModel.java:193)
+	at org.knime.base.views.node.BaseViewsNodeModel.execute(BaseViewsNodeModel.java:237)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-02-23 12:09:09,967 : WARN  : main :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 12:09:10,662 : WARN  : main :  : Node : GroupBy : 3:6 : No aggregation column defined
+2024-02-23 12:09:27,108 : WARN  : KNIME-Worker-18-Cell Splitter 3:9 :  : Node : Box Plot : 3:10 : The selected dimension column "Mean(id)" does not exist in the table
+2024-02-23 12:09:50,072 : WARN  : main :  : Node : Box Plot : 3:10 : The selected dimension column "Mean(id)" does not exist in the table
+2024-02-23 12:09:50,896 : WARN  : main :  : Node : Box Plot : 3:10 : The selected dimension column "Mean(id)" does not exist in the table
+2024-02-23 12:09:52,160 : WARN  : KNIME-Worker-16-Data Explorer 3:4 :  : Node : Box Plot : 3:10 : The selected dimension column "Mean(id)" does not exist in the table
+2024-02-23 12:12:19,364 : WARN  : comm-pool-thread-16 :  : Node : Ungroup : 3:12 : No ungroup column selected. Node returns input table.
+2024-02-23 12:12:43,606 : WARN  : comm-pool-thread-16 :  : Node : Ungroup : 3:12 : No ungroup column selected. Node returns input table.
+2024-02-23 12:13:18,157 : WARN  : comm-pool-thread-16 :  : Node : Ungroup : 3:12 : No ungroup column selected. Node returns input table.
+2024-02-23 12:13:25,503 : WARN  : KNIME-Worker-20-Ungroup 3:12 :  : Node : Ungroup : 3:12 : No ungroup column selected. Node returns input table.
+2024-02-23 12:13:38,473 : WARN  : main :  : Node : Box Plot : 3:10 : The selected condition column "ingredients_Arr[0]" does not exist in the table
+2024-02-23 12:13:39,310 : WARN  : main :  : Node : Box Plot : 3:10 : The selected condition column "ingredients_Arr[0]" does not exist in the table
+2024-02-23 12:15:31,728 : WARN  : comm-pool-thread-16 :  : JsonRpcErrorResolver :  :  : An unexpected json rpc error occurred
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:811)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:694)
+	at org.knime.js.swt.wizardnodeview.WizardNodeView.closeView(WizardNodeView.java:715)
+	at org.knime.core.node.wizard.AbstractWizardNodeView.callCloseView(AbstractWizardNodeView.java:265)
+	at org.knime.core.node.AbstractNodeView.closeView(AbstractNodeView.java:230)
+	at org.knime.core.node.NodeModel.unregisterAllViews(NodeModel.java:400)
+	at org.knime.core.node.Node.cleanup(Node.java:1850)
+	at org.knime.core.node.workflow.NativeNodeContainer.cleanup(NativeNodeContainer.java:386)
+	at org.knime.core.node.workflow.WorkflowManager.removeNode(WorkflowManager.java:1176)
+	at org.knime.gateway.impl.webui.service.commands.Delete.remove(Delete.java:215)
+	at org.knime.gateway.impl.webui.service.commands.Delete.executeWithLockedWorkflow(Delete.java:196)
+	at org.knime.gateway.impl.webui.service.commands.AbstractWorkflowCommand.execute(AbstractWorkflowCommand.java:76)
+	at org.knime.gateway.impl.webui.service.commands.WorkflowCommands.executeCommandAndModifyCommandStacks(WorkflowCommands.java:284)
+	at org.knime.gateway.impl.webui.service.commands.WorkflowCommands.execute(WorkflowCommands.java:175)
+	at org.knime.gateway.impl.webui.service.DefaultWorkflowService.executeWorkflowCommand(DefaultWorkflowService.java:164)
+	at org.knime.gateway.impl.webui.jsonrpc.service.JsonRpcWorkflowServiceWrapper.executeWorkflowCommand(JsonRpcWorkflowServiceWrapper.java:91)
+	at jdk.internal.reflect.GeneratedMethodAccessor204.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.invoke(JsonRpcBasicServer.java:478)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleObject(JsonRpcBasicServer.java:349)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleJsonNodeRequest(JsonRpcBasicServer.java:274)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleRequest(JsonRpcBasicServer.java:242)
+	at org.knime.gateway.impl.jsonrpc.JsonRpcRequestHandler.handle(JsonRpcRequestHandler.java:104)
+	at org.knime.ui.java.browser.lifecycle.Init.lambda$5(Init.java:244)
+	at com.equo.comm.common.MessageHandler.processReceivedEventMessage(MessageHandler.java:131)
+	at com.equo.comm.ee.provider.service.ChromiumService.receiveMessage(ChromiumService.java:98)
+	at com.equo.comm.ee.provider.CommunicationManagerChromiumImpl.receiveMessage(CommunicationManagerChromiumImpl.java:48)
+	at com.equo.chromium.swt.internal.spi.CommRouterHandler.handleRequest(CommRouterHandler.java:33)
+	at com.equo.chromium.swt.internal.spi.CommRouterHandler.lambda$1(CommRouterHandler.java:51)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2024-02-23 12:21:01,899 : WARN  : comm-pool-thread-17 :  : Node : Column Aggregator : 3:16 : No aggregation method specified. At least one aggregation method is required to perform an aggregation.
+2024-02-23 12:21:36,328 : WARN  : main :  : WrappedNodeDialog : Column Aggregator : 3:16 : failed to apply settings: No aggregation method specified. At least one aggregation method is required to perform an aggregation.
+org.knime.core.node.InvalidSettingsException: No aggregation method specified. At least one aggregation method is required to perform an aggregation.
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:273)
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:223)
+	at org.knime.base.node.preproc.columnaggregator.ColumnAggregatorNodeModel.validateSettings(ColumnAggregatorNodeModel.java:280)
+	at org.knime.core.node.Node.validateSettings(Node.java:719)
+	at org.knime.core.node.Node.validateModelSettings(Node.java:691)
+	at org.knime.core.node.workflow.NativeNodeContainer.performValidateSettings(NativeNodeContainer.java:1196)
+	at org.knime.core.node.workflow.SingleNodeContainer.validateSettings(SingleNodeContainer.java:1062)
+	at org.knime.core.node.workflow.WorkflowManager.loadNodeSettings(WorkflowManager.java:2227)
+	at org.knime.core.node.workflow.NodeContainer.applySettingsFromDialog(NodeContainer.java:1141)
+	at org.knime.core.ui.wrapper.NodeContainerWrapper.applySettingsFromDialog(NodeContainerWrapper.java:264)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.callApplySettingsFromDialog(WrappedNodeDialog.java:672)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doApply(WrappedNodeDialog.java:644)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog$6.widgetSelected(WrappedNodeDialog.java:510)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4646)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4413)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3989)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.open(WrappedNodeDialog.java:199)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openDialog(NodeContainerEditPart.java:958)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:865)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor212.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+2024-02-23 12:21:39,183 : WARN  : main :  : WrappedNodeDialog : Column Aggregator : 3:16 : failed to apply settings: No aggregation method specified. At least one aggregation method is required to perform an aggregation.
+org.knime.core.node.InvalidSettingsException: No aggregation method specified. At least one aggregation method is required to perform an aggregation.
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:273)
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:223)
+	at org.knime.base.node.preproc.columnaggregator.ColumnAggregatorNodeModel.validateSettings(ColumnAggregatorNodeModel.java:280)
+	at org.knime.core.node.Node.validateSettings(Node.java:719)
+	at org.knime.core.node.Node.validateModelSettings(Node.java:691)
+	at org.knime.core.node.workflow.NativeNodeContainer.performValidateSettings(NativeNodeContainer.java:1196)
+	at org.knime.core.node.workflow.SingleNodeContainer.validateSettings(SingleNodeContainer.java:1062)
+	at org.knime.core.node.workflow.WorkflowManager.loadNodeSettings(WorkflowManager.java:2227)
+	at org.knime.core.node.workflow.NodeContainer.applySettingsFromDialog(NodeContainer.java:1141)
+	at org.knime.core.ui.wrapper.NodeContainerWrapper.applySettingsFromDialog(NodeContainerWrapper.java:264)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.callApplySettingsFromDialog(WrappedNodeDialog.java:672)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doApply(WrappedNodeDialog.java:644)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doOK(WrappedNodeDialog.java:559)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog$5.widgetSelected(WrappedNodeDialog.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4646)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4413)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3989)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.open(WrappedNodeDialog.java:199)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openDialog(NodeContainerEditPart.java:958)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:865)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor212.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+2024-02-23 12:21:47,967 : WARN  : main :  : WrappedNodeDialog : Column Aggregator : 3:16 : failed to apply settings: No aggregation method specified. At least one aggregation method is required to perform an aggregation.
+org.knime.core.node.InvalidSettingsException: No aggregation method specified. At least one aggregation method is required to perform an aggregation.
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:273)
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:223)
+	at org.knime.base.node.preproc.columnaggregator.ColumnAggregatorNodeModel.validateSettings(ColumnAggregatorNodeModel.java:280)
+	at org.knime.core.node.Node.validateSettings(Node.java:719)
+	at org.knime.core.node.Node.validateModelSettings(Node.java:691)
+	at org.knime.core.node.workflow.NativeNodeContainer.performValidateSettings(NativeNodeContainer.java:1196)
+	at org.knime.core.node.workflow.SingleNodeContainer.validateSettings(SingleNodeContainer.java:1062)
+	at org.knime.core.node.workflow.WorkflowManager.loadNodeSettings(WorkflowManager.java:2227)
+	at org.knime.core.node.workflow.NodeContainer.applySettingsFromDialog(NodeContainer.java:1141)
+	at org.knime.core.ui.wrapper.NodeContainerWrapper.applySettingsFromDialog(NodeContainerWrapper.java:264)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.callApplySettingsFromDialog(WrappedNodeDialog.java:672)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doApply(WrappedNodeDialog.java:644)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doOK(WrappedNodeDialog.java:559)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog$5.widgetSelected(WrappedNodeDialog.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4646)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4413)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3989)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.open(WrappedNodeDialog.java:199)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openDialog(NodeContainerEditPart.java:958)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:865)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor212.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+2024-02-23 12:21:59,314 : WARN  : main :  : WrappedNodeDialog : Column Aggregator : 3:16 : failed to apply settings: No aggregation method specified. At least one aggregation method is required to perform an aggregation.
+org.knime.core.node.InvalidSettingsException: No aggregation method specified. At least one aggregation method is required to perform an aggregation.
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:273)
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:223)
+	at org.knime.base.node.preproc.columnaggregator.ColumnAggregatorNodeModel.validateSettings(ColumnAggregatorNodeModel.java:280)
+	at org.knime.core.node.Node.validateSettings(Node.java:719)
+	at org.knime.core.node.Node.validateModelSettings(Node.java:691)
+	at org.knime.core.node.workflow.NativeNodeContainer.performValidateSettings(NativeNodeContainer.java:1196)
+	at org.knime.core.node.workflow.SingleNodeContainer.validateSettings(SingleNodeContainer.java:1062)
+	at org.knime.core.node.workflow.WorkflowManager.loadNodeSettings(WorkflowManager.java:2227)
+	at org.knime.core.node.workflow.NodeContainer.applySettingsFromDialog(NodeContainer.java:1141)
+	at org.knime.core.ui.wrapper.NodeContainerWrapper.applySettingsFromDialog(NodeContainerWrapper.java:264)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.callApplySettingsFromDialog(WrappedNodeDialog.java:672)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doApply(WrappedNodeDialog.java:644)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog$6.widgetSelected(WrappedNodeDialog.java:510)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4646)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4413)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3989)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.open(WrappedNodeDialog.java:199)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openDialog(NodeContainerEditPart.java:958)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:865)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor212.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+2024-02-23 12:22:36,630 : WARN  : comm-pool-thread-17 :  : Node : GroupBy : 3:16 : No grouping column included. Aggregate complete table.
+2024-02-23 12:22:36,630 : WARN  : comm-pool-thread-17 :  : Node : GroupBy : 3:16 : No aggregation column defined
+2024-02-23 12:22:36,630 : WARN  : comm-pool-thread-17 :  : Node : GroupBy : 3:16 : Please select at least one group or aggregation column
+2024-02-23 12:22:47,111 : WARN  : main :  : Node : GroupBy : 3:16 : No aggregation column defined
+2024-02-23 12:27:08,024 : WARN  : comm-pool-thread-17 :  : Node : X-Aggregator : 3:17 : No target column selected
+2024-02-23 12:27:12,683 : WARN  : KNIME-Worker-30-X-Aggregator 3:17 :  : NodeContainer : X-Aggregator : 3:17 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3479)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:171)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-02-23 12:27:17,790 : WARN  : main :  : Node : X-Aggregator : 3:17 : Target and prediction column are not of compatible type
+2024-02-23 12:27:18,259 : WARN  : main :  : Node : X-Aggregator : 3:17 : Target and prediction column are not of compatible type
+2024-02-23 12:27:23,610 : WARN  : main :  : Node : X-Aggregator : 3:17 : Target and prediction column are not of compatible type
+2024-02-23 12:27:24,525 : WARN  : main :  : Node : X-Aggregator : 3:17 : Target and prediction column are not of compatible type
+2024-02-23 12:27:28,614 : WARN  : main :  : Node : X-Aggregator : 3:17 : Target and prediction column are not of compatible type
+2024-02-23 12:27:29,192 : WARN  : main :  : Node : X-Aggregator : 3:17 : Target and prediction column are not of compatible type
+2024-02-23 12:27:29,359 : WARN  : main :  : Node : X-Aggregator : 3:17 : Target and prediction column are not of compatible type
+2024-02-23 12:27:29,492 : WARN  : main :  : Node : X-Aggregator : 3:17 : Target and prediction column are not of compatible type
+2024-02-23 12:27:30,711 : WARN  : main :  : Node : X-Aggregator : 3:17 : Target and prediction column are not of compatible type
+2024-02-23 12:27:37,973 : WARN  : KNIME-Worker-31-X-Aggregator 3:17 :  : NodeContainer : X-Aggregator : 3:17 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3479)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:171)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-02-23 12:27:46,526 : WARN  : KNIME-Worker-32-X-Aggregator 3:17 :  : NodeContainer : X-Aggregator : 3:17 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3479)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:171)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-02-23 12:27:50,907 : WARN  : KNIME-Worker-30-X-Aggregator 3:17 :  : NodeContainer : X-Aggregator : 3:17 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3479)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:171)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-02-23 12:27:51,840 : WARN  : KNIME-Worker-31-X-Aggregator 3:17 :  : NodeContainer : X-Aggregator : 3:17 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3479)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:171)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-02-23 12:27:52,274 : WARN  : KNIME-Worker-32-X-Aggregator 3:17 :  : NodeContainer : X-Aggregator : 3:17 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3479)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:171)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-02-23 12:28:14,021 : WARN  : comm-pool-thread-17 :  : Node : Column Aggregator : 3:17 : No aggregation method specified. At least one aggregation method is required to perform an aggregation.
+2024-02-23 12:30:28,618 : WARN  : comm-pool-thread-21 :  : Node : GroupBy : 3:19 : No grouping column included. Aggregate complete table.
+2024-02-23 12:30:28,620 : WARN  : comm-pool-thread-21 :  : Node : GroupBy : 3:19 : No aggregation column defined
+2024-02-23 12:30:28,620 : WARN  : comm-pool-thread-21 :  : Node : GroupBy : 3:19 : Please select at least one group or aggregation column
+2024-02-23 12:30:37,965 : WARN  : main :  : Node : GroupBy : 3:19 : No aggregation column defined
+2024-02-23 12:30:50,168 : WARN  : comm-pool-thread-21 :  : Node : Bar Chart : 3:20 : Table contains no compatible (nominal) category columns
+2024-02-23 12:30:59,139 : WARN  : comm-pool-thread-21 :  : Node : Bar Chart : 3:20 : Table contains no compatible (nominal) category columns
+2024-02-23 12:32:04,084 : WARN  : comm-pool-thread-21 :  : Node : Bar Chart : 3:20 : The selected frequency column "rating" of type "String" is not compatible (i.e. numeric)
+2024-02-23 12:32:04,084 : WARN  : comm-pool-thread-21 :  : Node : Bar Chart : 3:20 : Table contains no compatible (numeric) frequency columns
+2024-02-23 12:32:08,189 : WARN  : comm-pool-thread-21 :  : Node : Bar Chart : 3:20 : The selected frequency column "rating" of type "String" is not compatible (i.e. numeric)
+2024-02-23 12:32:08,189 : WARN  : comm-pool-thread-21 :  : Node : Bar Chart : 3:20 : Table contains no compatible (numeric) frequency columns
+2024-02-23 12:32:09,447 : WARN  : KNIME-Worker-34-Number to String 3:22 :  : Node : Bar Chart : 3:20 : The selected frequency column "rating" of type "String" is not compatible (i.e. numeric)
+2024-02-23 12:32:09,448 : WARN  : KNIME-Worker-34-Number to String 3:22 :  : Node : Bar Chart : 3:20 : Table contains no compatible (numeric) frequency columns
+2024-02-23 12:32:18,083 : WARN  : comm-pool-thread-21 :  : Node : Bar Chart : 3:20 : Table contains no compatible (numeric) frequency columns
+2024-02-23 12:32:52,821 : WARN  : comm-pool-thread-21 :  : Node : Bar Chart : 3:20 : Table contains no compatible (numeric) frequency columns
+2024-02-23 12:33:41,601 : WARN  : comm-pool-thread-21 :  : Node : Bar Chart : 3:20 : Table contains no compatible (numeric) frequency columns
+2024-02-23 12:33:47,020 : WARN  : KNIME-Worker-36-Number to String 3:22 :  : Node : Bar Chart : 3:20 : Table contains no compatible (numeric) frequency columns
+2024-02-23 12:34:51,411 : WARN  : comm-pool-thread-21 :  : Node : GroupBy : 3:21 : No grouping column included. Aggregate complete table.
+2024-02-23 12:34:51,412 : WARN  : comm-pool-thread-21 :  : Node : GroupBy : 3:21 : No aggregation column defined
+2024-02-23 12:34:51,412 : WARN  : comm-pool-thread-21 :  : Node : GroupBy : 3:21 : Please select at least one group or aggregation column
+2024-02-23 12:35:00,683 : WARN  : main :  : Node : GroupBy : 3:21 : No aggregation column defined
+2024-02-23 12:35:01,199 : WARN  : main :  : Node : GroupBy : 3:21 : No aggregation column defined
+2024-02-23 12:36:06,044 : WARN  : comm-pool-thread-22 :  : Node : Bar Chart : 3:20 : The selected category column "rating" of type "Number (double)" is not compatible (i.e. nominal)
+2024-02-23 12:36:14,613 : WARN  : comm-pool-thread-22 :  : Node : Bar Chart : 3:20 : The selected category column "rating" of type "Number (double)" is not compatible (i.e. nominal)
+2024-02-23 12:36:24,518 : WARN  : comm-pool-thread-22 :  : Node : Bar Chart : 3:20 : The selected category column "rating" of type "Number (double)" is not compatible (i.e. nominal)
+2024-02-23 12:37:19,883 : WARN  : comm-pool-thread-21 :  : Node : Bar Chart : 3:20 : Table contains no compatible (numeric) frequency columns
+2024-02-23 12:38:00,911 : WARN  : comm-pool-thread-21 :  : Node : Column Aggregator : 3:24 : No aggregation method specified. At least one aggregation method is required to perform an aggregation.
+2024-02-23 12:38:12,843 : WARN  : main :  : WrappedNodeDialog : Column Aggregator : 3:24 : failed to apply settings: No aggregation method specified. At least one aggregation method is required to perform an aggregation.
+org.knime.core.node.InvalidSettingsException: No aggregation method specified. At least one aggregation method is required to perform an aggregation.
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:273)
+	at org.knime.core.node.util.CheckUtils.checkSetting(CheckUtils.java:223)
+	at org.knime.base.node.preproc.columnaggregator.ColumnAggregatorNodeModel.validateSettings(ColumnAggregatorNodeModel.java:280)
+	at org.knime.core.node.Node.validateSettings(Node.java:719)
+	at org.knime.core.node.Node.validateModelSettings(Node.java:691)
+	at org.knime.core.node.workflow.NativeNodeContainer.performValidateSettings(NativeNodeContainer.java:1196)
+	at org.knime.core.node.workflow.SingleNodeContainer.validateSettings(SingleNodeContainer.java:1062)
+	at org.knime.core.node.workflow.WorkflowManager.loadNodeSettings(WorkflowManager.java:2227)
+	at org.knime.core.node.workflow.NodeContainer.applySettingsFromDialog(NodeContainer.java:1141)
+	at org.knime.core.ui.wrapper.NodeContainerWrapper.applySettingsFromDialog(NodeContainerWrapper.java:264)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.callApplySettingsFromDialog(WrappedNodeDialog.java:672)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doApply(WrappedNodeDialog.java:644)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog$6.widgetSelected(WrappedNodeDialog.java:510)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4646)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4413)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3989)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.open(WrappedNodeDialog.java:199)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openDialog(NodeContainerEditPart.java:958)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:865)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor212.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+2024-02-23 12:39:09,208 : WARN  : comm-pool-thread-23 :  : Node : GroupBy : 3:25 : No grouping column included. Aggregate complete table.
+2024-02-23 12:39:09,209 : WARN  : comm-pool-thread-23 :  : Node : GroupBy : 3:25 : No aggregation column defined
+2024-02-23 12:39:09,209 : WARN  : comm-pool-thread-23 :  : Node : GroupBy : 3:25 : Please select at least one group or aggregation column
+2024-02-23 12:39:24,986 : WARN  : main :  : Node : GroupBy : 3:25 : No aggregation column defined
+2024-02-23 12:39:25,693 : WARN  : main :  : Node : GroupBy : 3:25 : No aggregation column defined
+2024-02-23 12:39:45,439 : WARN  : comm-pool-thread-24 :  : Node : Bar Chart : 3:26 : Table contains no compatible (nominal) category columns
+2024-02-23 12:39:52,399 : WARN  : comm-pool-thread-24 :  : Node : Bar Chart : 3:26 : Table contains no compatible (nominal) category columns
+2024-02-23 12:39:58,293 : WARN  : comm-pool-thread-24 :  : Node : Bar Chart : 3:26 : Table contains no compatible (nominal) category columns
+2024-02-23 12:40:43,454 : WARN  : comm-pool-thread-23 :  : Node : Bar Chart : 3:27 : Table contains no compatible (numeric) frequency columns
+2024-02-23 12:40:53,929 : WARN  : comm-pool-thread-23 :  : Node : Bar Chart : 3:27 : Table contains no compatible (numeric) frequency columns
+2024-02-23 12:41:56,494 : WARN  : main :  : Node : GroupBy : 3:25 : No aggregation column defined
+2024-02-23 12:41:56,494 : WARN  : main :  : Node : Bar Chart : 3:27 : The selected category column "rating" does not exist in the table
+2024-02-23 15:21:40,345 : WARN  : KNIME-Worker-44-Number to String 3:26 :  : Node : Bar Chart : 3:27 : The selected category column "rating" does not exist in the table
+2024-02-23 15:21:50,256 : WARN  : main :  : Node : GroupBy : 3:25 : No aggregation column defined
+2024-02-23 15:21:50,256 : WARN  : main :  : Node : Bar Chart : 3:27 : Table contains no compatible (numeric) frequency columns
+2024-02-23 15:24:13,428 : WARN  : main :  : Node : GroupBy : 3:25 : No aggregation column defined
+2024-02-23 15:24:13,428 : WARN  : main :  : Node : Bar Chart : 3:27 : The selected category column "rating" does not exist in the table
+2024-02-23 15:24:29,694 : WARN  : main :  : Node : Bar Chart : 3:27 : The selected category column "rating" does not exist in the table
+2024-02-23 15:24:45,828 : WARN  : comm-pool-thread-27 :  : Node : Bar Chart : 3:27 : The selected category column "rating" does not exist in the table
+2024-02-23 15:24:47,228 : WARN  : KNIME-Worker-48-Number to String 3:26 :  : Node : Bar Chart : 3:27 : The selected category column "rating" does not exist in the table
+2024-02-23 15:24:59,346 : WARN  : comm-pool-thread-27 :  : Node : Bar Chart : 3:27 : Table contains no compatible (numeric) frequency columns
+2024-02-23 15:25:19,012 : WARN  : comm-pool-thread-27 :  : Node : Bar Chart : 3:27 : Table contains no compatible (numeric) frequency columns
+2024-02-23 15:25:49,383 : WARN  : comm-pool-thread-27 :  : Node : Bar Chart : 3:27 : Table contains no compatible (numeric) frequency columns
+2024-02-23 15:27:21,481 : WARN  : comm-pool-thread-27 :  : Node : Bar Chart : 3:27 : Table contains no compatible (numeric) frequency columns
+2024-02-23 15:28:27,127 : WARN  : comm-pool-thread-27 :  : Node : Bar Chart : 3:27 : Table contains no compatible (numeric) frequency columns
+2024-02-23 15:30:55,144 : WARN  : comm-pool-thread-29 :  : Node : Bar Chart : 3:27 : Table contains no compatible (numeric) frequency columns
+2024-02-23 15:32:01,677 : WARN  : comm-pool-thread-31 :  : Node : Bar Chart : 3:27 : Table contains no compatible (numeric) frequency columns
+2024-02-23 15:36:16,960 : WARN  : main :  : Node : GroupBy : 3:25 : No aggregation column defined
+2024-02-23 15:36:17,684 : WARN  : main :  : Node : GroupBy : 3:25 : No aggregation column defined
+2024-02-23 15:36:40,770 : WARN  : comm-pool-thread-34 :  : Node : Bar Chart : 3:27 : Table contains no compatible (numeric) frequency columns
+2024-02-23 15:37:02,962 : WARN  : comm-pool-thread-34 :  : Node : Bar Chart : 3:27 : The selected category column "year_reviewed" of type "Number (integer)" is not compatible (i.e. nominal)
+2024-02-23 15:37:16,567 : WARN  : comm-pool-thread-34 :  : Node : Bar Chart : 3:27 : Table contains no compatible (numeric) frequency columns
+2024-02-23 15:38:43,914 : WARN  : comm-pool-thread-34 :  : Node : GroupBy : 3:28 : No aggregation column defined
+2024-02-23 15:39:02,176 : WARN  : main :  : Node : GroupBy : 3:28 : No aggregation column defined
+2024-02-23 15:39:12,144 : WARN  : comm-pool-thread-34 :  : Node : Bar Chart : 3:29 : Table contains no compatible (numeric) frequency columns
+2024-02-23 15:39:24,686 : WARN  : main :  : Node : GroupBy : 3:28 : No aggregation column defined
+2024-02-23 15:39:26,035 : WARN  : main :  : Node : GroupBy : 3:28 : No aggregation column defined
+2024-02-23 15:40:19,276 : WARN  : main :  : Node : GroupBy : 3:25 : No aggregation column defined
+2024-02-23 15:40:20,749 : WARN  : main :  : Node : GroupBy : 3:25 : No aggregation column defined
+2024-02-23 15:43:37,743 : WARN  : comm-pool-thread-34 :  : Node : GroupBy : 3:30 : No aggregation column defined
+2024-02-23 15:44:00,165 : WARN  : main :  : Node : GroupBy : 3:30 : No aggregation column defined
+2024-02-23 15:44:13,167 : WARN  : main :  : Node : GroupBy : 3:30 : No aggregation column defined
+2024-02-23 15:44:13,653 : WARN  : main :  : Node : GroupBy : 3:30 : No aggregation column defined
+2024-02-23 15:44:26,912 : WARN  : comm-pool-thread-35 :  : Node : X-Aggregator : 3:31 : Selected columns 'rating' and 'cocoa_percent' as prediction and target columns
+2024-02-23 15:44:27,978 : WARN  : KNIME-Worker-61-X-Aggregator 3:31 :  : NodeContainer : X-Aggregator : 3:31 : Encountered loop-end without corresponding head!
+org.knime.core.node.workflow.IllegalFlowObjectStackException: Encountered loop-end without corresponding head!
+	at org.knime.core.node.workflow.WorkflowManager.doBeforeExecution(WorkflowManager.java:3479)
+	at org.knime.core.node.workflow.NodeContainer.notifyParentExecuteStart(NodeContainer.java:660)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:171)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-02-23 15:47:35,879 : WARN  : main :  : WrappedNodeDialog : Rule Engine : 3:32 : failed to apply settings: line 5, col 21: No outcome specified.
+org.knime.core.node.InvalidSettingsException: line 5, col 21: No outcome specified.
+	at org.knime.base.node.rules.engine.RulePanel.saveSettings(RulePanel.java:571)
+	at org.knime.base.node.rules.engine.RuleEngineNodeDialog.saveSettingsTo(RuleEngineNodeDialog.java:114)
+	at org.knime.core.node.NodeDialogPane.internalSaveSettingsTo(NodeDialogPane.java:539)
+	at org.knime.core.node.NodeDialogPane$4.run(NodeDialogPane.java:778)
+	at org.knime.core.node.util.ViewUtils$3.run(ViewUtils.java:353)
+	at org.knime.core.node.util.ViewUtils$2.run(ViewUtils.java:155)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.text.ParseException: line 5, col 21: No outcome specified.
+	at org.knime.base.node.rules.engine.SimpleRuleParser.parse(SimpleRuleParser.java:235)
+	at org.knime.base.node.rules.engine.RuleFactory.parse(RuleFactory.java:191)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:468)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:496)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:507)
+	at org.knime.base.node.rules.engine.RulePanel.saveSettings(RulePanel.java:569)
+	... 18 more
+2024-02-23 15:48:20,382 : WARN  : main :  : WrappedNodeDialog : Rule Engine : 3:32 : failed to apply settings: line 5, col 17: Expected a number, string, column, a table property or flow variable reference.
+(The operator = is not supported.)
+org.knime.core.node.InvalidSettingsException: line 5, col 17: Expected a number, string, column, a table property or flow variable reference.
+(The operator = is not supported.)
+	at org.knime.base.node.rules.engine.RulePanel.saveSettings(RulePanel.java:571)
+	at org.knime.base.node.rules.engine.RuleEngineNodeDialog.saveSettingsTo(RuleEngineNodeDialog.java:114)
+	at org.knime.core.node.NodeDialogPane.internalSaveSettingsTo(NodeDialogPane.java:539)
+	at org.knime.core.node.NodeDialogPane$4.run(NodeDialogPane.java:778)
+	at org.knime.core.node.util.ViewUtils$3.run(ViewUtils.java:353)
+	at org.knime.core.node.util.ViewUtils$2.run(ViewUtils.java:155)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.text.ParseException: line 5, col 17: Expected a number, string, column, a table property or flow variable reference.
+(The operator = is not supported.)
+	at org.knime.base.node.rules.engine.BaseRuleParser.parseOperand(BaseRuleParser.java:1063)
+	at org.knime.base.node.rules.engine.BaseRuleParser.handleRelationRightOperand(BaseRuleParser.java:920)
+	at org.knime.base.node.rules.engine.BaseRuleParser.parseRelation(BaseRuleParser.java:857)
+	at org.knime.base.node.rules.engine.BaseRuleParser.parseRootBooleanExpression(BaseRuleParser.java:757)
+	at org.knime.base.node.rules.engine.BaseRuleParser.parseAndExpression(BaseRuleParser.java:712)
+	at org.knime.base.node.rules.engine.BaseRuleParser.parseXorExpression(BaseRuleParser.java:689)
+	at org.knime.base.node.rules.engine.BaseRuleParser.parseOrExpression(BaseRuleParser.java:666)
+	at org.knime.base.node.rules.engine.BaseRuleParser.parseBooleanExpression(BaseRuleParser.java:654)
+	at org.knime.base.node.rules.engine.SimpleRuleParser.parseCondition(SimpleRuleParser.java:278)
+	at org.knime.base.node.rules.engine.SimpleRuleParser.parse(SimpleRuleParser.java:230)
+	at org.knime.base.node.rules.engine.RuleFactory.parse(RuleFactory.java:191)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:468)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:496)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:507)
+	at org.knime.base.node.rules.engine.RulePanel.saveSettings(RulePanel.java:569)
+	... 18 more
+2024-02-23 15:49:39,055 : WARN  : main :  : WrappedNodeDialog : Rule Engine : 3:32 : failed to apply settings: line 5, col 23: No outcome specified.
+org.knime.core.node.InvalidSettingsException: line 5, col 23: No outcome specified.
+	at org.knime.base.node.rules.engine.RulePanel.saveSettings(RulePanel.java:571)
+	at org.knime.base.node.rules.engine.RuleEngineNodeDialog.saveSettingsTo(RuleEngineNodeDialog.java:114)
+	at org.knime.core.node.NodeDialogPane.internalSaveSettingsTo(NodeDialogPane.java:539)
+	at org.knime.core.node.NodeDialogPane$4.run(NodeDialogPane.java:778)
+	at org.knime.core.node.util.ViewUtils$3.run(ViewUtils.java:353)
+	at org.knime.core.node.util.ViewUtils$2.run(ViewUtils.java:155)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.text.ParseException: line 5, col 23: No outcome specified.
+	at org.knime.base.node.rules.engine.SimpleRuleParser.parse(SimpleRuleParser.java:235)
+	at org.knime.base.node.rules.engine.RuleFactory.parse(RuleFactory.java:191)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:468)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:496)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:507)
+	at org.knime.base.node.rules.engine.RulePanel.saveSettings(RulePanel.java:569)
+	... 18 more
+2024-02-23 15:50:11,715 : WARN  : main :  : WrappedNodeDialog : Rule Engine : 3:32 : failed to apply settings: line 5, col 21: No outcome specified.
+org.knime.core.node.InvalidSettingsException: line 5, col 21: No outcome specified.
+	at org.knime.base.node.rules.engine.RulePanel.saveSettings(RulePanel.java:571)
+	at org.knime.base.node.rules.engine.RuleEngineNodeDialog.saveSettingsTo(RuleEngineNodeDialog.java:114)
+	at org.knime.core.node.NodeDialogPane.internalSaveSettingsTo(NodeDialogPane.java:539)
+	at org.knime.core.node.NodeDialogPane$4.run(NodeDialogPane.java:778)
+	at org.knime.core.node.util.ViewUtils$3.run(ViewUtils.java:353)
+	at org.knime.core.node.util.ViewUtils$2.run(ViewUtils.java:155)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.text.ParseException: line 5, col 21: No outcome specified.
+	at org.knime.base.node.rules.engine.SimpleRuleParser.parse(SimpleRuleParser.java:235)
+	at org.knime.base.node.rules.engine.RuleFactory.parse(RuleFactory.java:191)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:468)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:496)
+	at org.knime.base.node.rules.engine.RulePanel.computeRules(RulePanel.java:507)
+	at org.knime.base.node.rules.engine.RulePanel.saveSettings(RulePanel.java:569)
+	... 18 more
+2024-02-23 15:51:38,785 : WARN  : KNIME-Worker-65-Missing Value 3:33 :  : Node : Missing Value : 3:33 : The current settings use missing value handling methods that cannot be represented in PMML 4.2.
+2024-02-23 15:52:07,786 : WARN  : KNIME-Worker-66-Missing Value 3:33 :  : Node : Missing Value : 3:33 : Column "prediction" still contains missing values.
+2024-02-23 15:53:17,634 : WARN  : KNIME-Worker-67-Missing Value 3:33 :  : Node : Missing Value : 3:33 : The current settings use missing value handling methods that cannot be represented in PMML 4.2.
+2024-02-23 15:55:05,782 : WARN  : comm-pool-thread-40 :  : Node : GroupBy : 3:33 : No aggregation column defined
+2024-02-23 15:55:21,745 : WARN  : comm-pool-thread-39 :  : Node : Row Filter : 3:33 : No row filter specified
+2024-02-23 15:55:59,945 : WARN  : comm-pool-thread-39 :  : Node : Bar Chart : 3:34 : The selected category column "year_reviewed" does not exist in the table
+2024-02-23 15:58:56,296 : WARN  : comm-pool-thread-39 :  : Node : Bar Chart : 3:35 : The selected category column "year_reviewed" does not exist in the table
+2024-02-23 16:02:11,973 : WARN  : comm-pool-thread-42 :  : Node : Row Filter : 3:36 : Column range filter: Input table doesn't contain specified column name
+2024-02-23 16:02:22,070 : WARN  : KNIME-Worker-75-Row Filter 3:36 :  : Node : Row Filter : 3:36 : Node created an empty data table.

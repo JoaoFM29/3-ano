@@ -1,0 +1,14 @@
+i.
+a) A-B-D-H-I-E-J-K-C-F-<L>
+b) A-C-F-L custo = 7
+
+ii.
+a) A-B-C-D-E-F-<G>
+b) A-C-G custo = 4
+
+iii.
+a) A-B-C-D-E-H-I-J-K-<G>
+b) A-C-G custo = 4
+
+iv.
+b)

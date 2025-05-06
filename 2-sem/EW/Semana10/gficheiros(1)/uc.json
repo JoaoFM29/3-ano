@@ -1,0 +1,17 @@
+[
+    {
+        "_id": "EngWeb2024",
+        "designacao": "Engenharia Web 2024",
+        "link": "https://epl.di.uminho.pt/~jcr/AULAS/EngWeb2024/"
+    },
+    {
+        "_id": "PL2024",
+        "designacao": "Processamento de Linguagens 2024",
+        "link": "https://elearning.uminho.pt/"
+    },
+    {
+        "_id": "RPCW2024",
+        "designacao": "Representação e Processamento de Conhecimento na Web 2024",
+        "link": "https://epl.di.uminho.pt/~jcr/AULAS/RPCW2024/"
+    }
+]

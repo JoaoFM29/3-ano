@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PR>
+    <meta>
+        <key>gficheiros</key>
+        <title>Gestão de ficheiros: upload e download</title>
+        <bdate>2024-04-15</bdate>
+        <edate>2024-04-20</edate>
+        <supervisor url="www.di.uminho.pt/~jcr">
+            José Carlos Ramalho
+        </supervisor>
+    </meta>
+    <workteam>
+        <worker num="A4140">
+            <name>José Carlos Ramalho</name>
+            <email>a4140@alunos.uminho.pt</email>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            Aplicação em nodejs que demonstra como fazer upload e download de ficheiros para e de um servidor.
+        </p>
+        <p>
+            Para executar, basta entrar na pasta gficheiros e executar: npm start.
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="gficheiros">
+            Aplicação em nodejs.
+        </link>
+        <link url="ficheiros-cartoons">
+            Ficheiros com imagens para teste.
+        </link>
+    </deliverables>
+</PR>

@@ -1,0 +1,46 @@
+
+docker run -d -p 27017:27017 -—name (nome) (imagem)
+(docker run --name mongoTeste -d -p 27017:27017 mongo)
+
+docker cp publicacoes(nome do ficheiro) mongoTeste(nome do container):/tmp
+(docker cp ../dataset_com_ids.json mongoPratica:/tmp)
+
+docker exec mongoTeste mongoimport -d EngWeb2024(basededados) -c compositores(colecao) /tmp/compositoresValido.json --jsonArray(depende do dataset)
+(importar os dados do arquivo compositoresValido.json para a coleção compositores no banco de dados EngWeb2024 dentro do contêiner Docker chamado mongoTPC)
+
+mongosh
+show dbs
+Use EngWeb2024(db)
+db.compositores.find()
+db.compositores.find().pretty()
+db.compositores.countDocuments() -> numero de entradas
+db.compositores.find({ year:{$gte:"2011"}}).count() -> numero de entradas com numero maior ou igual quee 2011
+db.compositores.find({ year:{$gte:"2011"}}, {title:1, _id:0}) -> aparecer so o titulo (id por omissão aparece por temos que por a 0)
+db.compositores.find({ year:{$gte:"2011"}}, {title:1, _id:0}).sort({title:1}) -> ordena pelo titulo ascedentemente(se for desc era -1)
+db.compositores.insertOne({_id:"xyz", comida:"massa italiana", titulo: "La massita"})
+
+anwing copia a entrada de campos que são listas e faz com que deixem de ser listas (exemplo em baixo)
+PASSA DISTO:
+{
+    "autors":[
+        joao,
+        ana
+    ]
+}
+
+PARA ISTO:
+{
+    "autors": ana
+}
+
+{
+    "autors": joao
+}
+
+npm start -> inicializar o express
+
+(CUIDADO A USAR ISTO)
+npx express-generator apigalunos
+cd apigalunos
+npm i mongoose --save
+npm i

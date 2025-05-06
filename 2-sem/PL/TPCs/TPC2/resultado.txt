@@ -1,0 +1,43 @@
+<html>
+<h1>My Comprehensive Markdown Document</h1>
+
+Welcome to my Markdown document where you can explore various Markdown elements.
+
+<h2>Paragraphs</h2>
+
+This is a paragraph. It contains some text to demonstrate paragraph formatting.
+
+This is another paragraph. Markdown treats consecutive lines of text as separate paragraphs.
+
+<h2>Links</h2>
+
+<a href="https://www.google.com">Google</a>
+
+<a href="https://www.markdownguide.org">Markdown Guide</a>
+
+<h2>Images</h2>
+
+<img src="Markdown Logo" alt="Markdown Logo"/>
+
+<img src="Nature Image" alt="Nature Image"/>
+
+<h2>Bold</h2>
+
+<b>Este texto está em negrito usando 2 asteriscos em cada lado.</b>
+
+<h2>Itálico</h2>
+
+<i>Este texto está em itálico usando 1 asterisco em cada lado.</i>
+
+<h2>Section with a Link and Image</h2>
+
+Here's a section with both a link and an image. [![Nature Image](https://source.unsplash.com/800x400/?nature)](https://source.unsplash.com/800x400/?nature)
+
+<h2>Lists</h2>
+
+<ol>
+     <li>Item 1</li>
+     <li>Item 2</li>
+     <li>Item 3</li>
+</ol>
+</html>

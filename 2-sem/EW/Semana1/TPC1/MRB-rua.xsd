@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- Versão do ficheiro e Encoding-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"> <!--Indica que os elementos devem ser qualificados com seus namespaces-->
+    <xs:complexType name="Tentidade" mixed="true"> <!--Define um tipo complexo chamado "Tentidade" que pode conter texto misto(texto ou outros elementos) e tem um atributo chamado "tipo" do tipo "TipoEntidade".-->
+        <xs:attribute name="tipo" type="TipoEntidade"/><!--Tipo complexo refere-se a um elemento que pode conter outros elementos, atributos e/ou texto-->
+    </xs:complexType>
+    <xs:simpleType name="TipoEntidade"> <!--Define um tipo simples chamado "TipoEntidade" que é uma restrição de string com enumerações possíveis-->
+        <xs:restriction base="xs:string"><!--Enumeration lista os valores possíveis para este tipo simples-->
+            <xs:enumeration value="pessoa"/>
+            <xs:enumeration value="instituição"/>
+            <xs:enumeration value="empresa"/>
+            <xs:enumeration value="família"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:group name="misto"> <!--Define um grupo chamado "misto" que contém uma escolha entre os elementos "entidade", "lugar" ou "data".-->
+        <xs:choice> <!-- Indica que, dentro deste grupo, apenas um dos elementos definidos pode ocorrer. É uma escolha exclusiva entre as opções-->
+            <xs:element name="entidade" type="Tentidade"/> <!--Indica que pode ocorrer o elemento "entidade" do tipo complexo "Tentidade"-->
+            <xs:element name="lugar"> <!--Indica que pode ocorrer o elemento "lugar", definido logo a seguir-->
+                <xs:complexType> <!-- É um tipo complexo pois contém outros elementos-->
+                    <xs:simpleContent> <!--Indica que o conteúdo do elemento é simples, ou seja, é uma string com atributos adicionais-->
+                        <xs:extension base="xs:string"> <!--Indica que o conteúdo do elemento "lugar" é uma extensão da string. Ou seja, o conteúdo do elemento "lugar" é uma string, mas pode ter atributos adicionais-->
+                            <xs:attribute name="norm" type="xs:string"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="data" type="xs:string"/> <!--Indica que pode ocorrer o elemento "data" do tipo string-->
+        </xs:choice>
+    </xs:group>
+    <xs:element name="rua"> <!-- Define o elemento rua, de tipo complexo-->
+        <xs:complexType>
+            <xs:sequence> <!--Indica que os elementos dentro de "rua" devem aparecer na ordem especificada-->
+                <xs:element name="meta"> <!--Define o elemento "meta" dentro de "rua", de tipo complexo-->
+                    <xs:complexType>
+                        <xs:sequence> <!--Os elementos dentro de meta (dentro de rua, por sua vez), devem aparecer na ordem específicada-->
+                            <xs:element name="número" type="xs:string"/>
+                            <xs:element name="nome" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="corpo"> <!--Define o elemento "corpo" dentro de "rua", de tipo complexo-->
+                    <xs:complexType>
+                        <xs:choice maxOccurs="unbounded"> <!--Ao usar maxOccurs="unbounded", permite-se que o elemento ocorra um número indefinido de vezes dentro do elemento pai-->
+                            <xs:element name="para"> <!--Define o elemento "para" dentro de "corpo"-->
+                                <xs:complexType mixed="true"> <!-- 'para' pode ter texto e elementos xml-->
+                                    <xs:group maxOccurs="unbounded" minOccurs="0" ref="misto"/> <!--Permite a inclusão de elementos definidos no grupo "misto" dentro de "para". O grupo "misto" foi definido anteriormente-->
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="lista-casas"> <!--Define o elemento "lista-casas" dentro de "corpo", de tipo complexo-->
+                                <xs:complexType>
+                                    <xs:sequence> <!-- Indica a ordem dos elemntos dentro de lista-casas-->
+                                        <xs:element maxOccurs="unbounded" name="casa"> <!-- Define o elemento "casa" dentro de "lista-casas", de tipo complexo, com elementos em sequencia-->
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="número" type="xs:string"/> <!--Representa o número associado à casa-->
+                                                  <xs:element minOccurs="0" name="enfiteuta"
+                                                  type="xs:string" maxOccurs="unbounded"/> <!--Representa o(s) enfiteuta(s) (Arrendatário) da casa. Pode ocorrer zero ou mais vezes.-->
+                                                  <xs:element minOccurs="0" name="foro"
+                                                  type="xs:string"/> <!-- elemento foro da casa, pode ocorrer 0 ou 1 vez(porque por default maxoccurs é 1)-->
+                                                  <xs:element minOccurs="0" name="desc"> <!--Representa uma descrição da casa. Pode ocorrer zero ou 1 vez. É um tipo complexo com uma determinada sequência-->
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element maxOccurs="unbounded" minOccurs="0"
+                                                            name="para"> <!--Representa um parágrafo dentro da descrição da casa. Pode ocorrer zero ou mais vezes.-->
+                                                                <xs:complexType mixed="true"> <!--Indica que o conteúdo do elemento "para" pode ser misto, contendo texto e elementos XML-->
+                                                                    <xs:group maxOccurs="unbounded" minOccurs="0"
+                                                                    ref="misto"/> <!--Permite (porque pode acontecer 0 vezes) a inclusão de elementos definidos no grupo "misto" dentro de "para"-->
+                                                                </xs:complexType>
+                                                            </xs:element>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element minOccurs="0" name="vista"
+                                                  type="xs:string"/> <!--Representa a vista associada à casa. Pode ocorrer zero ou uma vez.-->
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="nome" type="xs:string"/> <!--Define o elemento nome dentro de corpo-->
+                            <xs:element name="figura"> <!--Define o elemento "figura" dentro de "corpo", de tipo complexo com elementos em sequência-->
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="imagem"> <!--Define o elemento "imagem" dentro de "figura", de tipo complexo (possui atributos, neste caso)-->
+                                            <xs:complexType>
+                                                <xs:attribute name="path" type="xs:string"
+                                                  use="required"/> <!--Define um atributo obrigatório (required) "path" para o elemento "imagem"-->
+                                                <xs:attribute name="largura" type="xs:int"/> <!--Define um atributo opcional "largura" para o elemento "imagem"-->
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="legenda" type="xs:string"/> <!--Define o elemento "legenda" dentro de "figura". Este elemento contém um texto simples-->
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:ID" use="required"/> <!--Define um atributo obrigatório "id" para o elemento "figura", fora da sequência-->
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

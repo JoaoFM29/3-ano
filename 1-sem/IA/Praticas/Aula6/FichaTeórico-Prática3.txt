@@ -1,0 +1,15 @@
+1.
+Tipo : estado único
+Estado inicial : estação de Aeroporto
+Estado final ou condição objetivo: estação do Lumiar
+Operadores de mudança de estado: ficar na linha, mudar de linha
+Custo: Se a mudança de linhas nao tiver custo então o nº de estações seria o custo senão
+       teremos que ter um custo para essa troca e o numero de estações
+
+2.
+Tipo : estado único
+Representação do estado : stack
+Estado inicial : os discos na torre C
+Estado final ou condição objetivo: os discos na torre A
+Operadores de mudança de estado: pop, push em cada stack(piramide)
+Custo: 1 em cada movimento

@@ -1,0 +1,42 @@
+[
+    {
+      "question": "Qual foi o primeiro imperador romano?",
+      "options": ["Júlio César", "Augusto", "Nero", "Constantino"],
+      "answer": "Augusto"
+    },
+    {
+      "question": "Quem foi o líder do movimento de independência da Índia, conhecido como 'Mahatma'?",
+      "options": ["Indira Gandhi", "Jawaharlal Nehru", "Mahatma Gandhi", "Rajiv Gandhi"],
+      "answer": "Mahatma Gandhi"
+    },
+    {
+      "question": "Qual evento marcou o início da Revolução Francesa em 1789?",
+      "options": ["O Incêndio de Londres", "O Massacre de São Bartolomeu", "A Queda do Muro de Berlim", "A Queda da Bastilha"],
+      "answer": "A Queda da Bastilha"
+    },
+    {
+      "question": "Quem foi o primeiro presidente dos Estados Unidos?",
+      "options": ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "Franklin D. Roosevelt"],
+      "answer": "George Washington"
+    },
+    {
+      "question": "Qual cidade foi capital do Império Bizantino?",
+      "options": ["Atenas", "Constantinopla", "Roma", "Alexandria"],
+      "answer": "Constantinopla"
+    },
+    {
+      "question": "Quem foi o líder da Revolução Russa de 1917?",
+      "options": ["Vladimir Lenin", "Joseph Stalin", "Leon Trotsky", "Mikhail Gorbachev"],
+      "answer": "Vladimir Lenin"
+    },
+    {
+      "question": "Qual foi a última dinastia da China imperial?",
+      "options": ["Yuan", "Ming", "Tang", "Qing"],
+      "answer": "Qing"
+    },
+    {
+      "question": "Qual foi a batalha decisiva que marcou o fim da Guerra dos Cem Anos entre a Inglaterra e a França?",
+      "options": ["Batalha de Hastings", "Batalha de Agincourt", "Batalha de Castillon", "Batalha de Poitiers"],
+      "answer": "Batalha de Castillon"
+    }
+  ]

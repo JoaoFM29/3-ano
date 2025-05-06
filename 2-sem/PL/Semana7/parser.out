@@ -1,0 +1,181 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> categorias
+Rule 1     categorias -> CATEGORIA COLONS entrada categorias
+Rule 2     entrada -> TRACO NUMERO COLONS TIPO COLONS NUMERO COLONS NUMERO PVIRG entrada
+Rule 3     categorias -> empty
+Rule 4     entrada -> empty
+Rule 5     empty -> <empty>
+
+Terminals, with rules where they appear
+
+CATEGORIA            : 1
+COLONS               : 1 2 2 2
+NUMERO               : 2 2 2
+PVIRG                : 2
+TIPO                 : 2
+TRACO                : 2
+error                : 
+
+Nonterminals, with rules where they appear
+
+categorias           : 1 0
+empty                : 3 4
+entrada              : 1 2
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . categorias
+    (1) categorias -> . CATEGORIA COLONS entrada categorias
+    (3) categorias -> . empty
+    (5) empty -> .
+
+    CATEGORIA       shift and go to state 2
+    $end            reduce using rule 5 (empty -> .)
+
+    categorias                     shift and go to state 1
+    empty                          shift and go to state 3
+
+state 1
+
+    (0) S' -> categorias .
+
+
+
+state 2
+
+    (1) categorias -> CATEGORIA . COLONS entrada categorias
+
+    COLONS          shift and go to state 4
+
+
+state 3
+
+    (3) categorias -> empty .
+
+    $end            reduce using rule 3 (categorias -> empty .)
+
+
+state 4
+
+    (1) categorias -> CATEGORIA COLONS . entrada categorias
+    (2) entrada -> . TRACO NUMERO COLONS TIPO COLONS NUMERO COLONS NUMERO PVIRG entrada
+    (4) entrada -> . empty
+    (5) empty -> .
+
+    TRACO           shift and go to state 6
+    CATEGORIA       reduce using rule 5 (empty -> .)
+    $end            reduce using rule 5 (empty -> .)
+
+    entrada                        shift and go to state 5
+    empty                          shift and go to state 7
+
+state 5
+
+    (1) categorias -> CATEGORIA COLONS entrada . categorias
+    (1) categorias -> . CATEGORIA COLONS entrada categorias
+    (3) categorias -> . empty
+    (5) empty -> .
+
+    CATEGORIA       shift and go to state 2
+    $end            reduce using rule 5 (empty -> .)
+
+    categorias                     shift and go to state 8
+    empty                          shift and go to state 3
+
+state 6
+
+    (2) entrada -> TRACO . NUMERO COLONS TIPO COLONS NUMERO COLONS NUMERO PVIRG entrada
+
+    NUMERO          shift and go to state 9
+
+
+state 7
+
+    (4) entrada -> empty .
+
+    CATEGORIA       reduce using rule 4 (entrada -> empty .)
+    $end            reduce using rule 4 (entrada -> empty .)
+
+
+state 8
+
+    (1) categorias -> CATEGORIA COLONS entrada categorias .
+
+    $end            reduce using rule 1 (categorias -> CATEGORIA COLONS entrada categorias .)
+
+
+state 9
+
+    (2) entrada -> TRACO NUMERO . COLONS TIPO COLONS NUMERO COLONS NUMERO PVIRG entrada
+
+    COLONS          shift and go to state 10
+
+
+state 10
+
+    (2) entrada -> TRACO NUMERO COLONS . TIPO COLONS NUMERO COLONS NUMERO PVIRG entrada
+
+    TIPO            shift and go to state 11
+
+
+state 11
+
+    (2) entrada -> TRACO NUMERO COLONS TIPO . COLONS NUMERO COLONS NUMERO PVIRG entrada
+
+    COLONS          shift and go to state 12
+
+
+state 12
+
+    (2) entrada -> TRACO NUMERO COLONS TIPO COLONS . NUMERO COLONS NUMERO PVIRG entrada
+
+    NUMERO          shift and go to state 13
+
+
+state 13
+
+    (2) entrada -> TRACO NUMERO COLONS TIPO COLONS NUMERO . COLONS NUMERO PVIRG entrada
+
+    COLONS          shift and go to state 14
+
+
+state 14
+
+    (2) entrada -> TRACO NUMERO COLONS TIPO COLONS NUMERO COLONS . NUMERO PVIRG entrada
+
+    NUMERO          shift and go to state 15
+
+
+state 15
+
+    (2) entrada -> TRACO NUMERO COLONS TIPO COLONS NUMERO COLONS NUMERO . PVIRG entrada
+
+    PVIRG           shift and go to state 16
+
+
+state 16
+
+    (2) entrada -> TRACO NUMERO COLONS TIPO COLONS NUMERO COLONS NUMERO PVIRG . entrada
+    (2) entrada -> . TRACO NUMERO COLONS TIPO COLONS NUMERO COLONS NUMERO PVIRG entrada
+    (4) entrada -> . empty
+    (5) empty -> .
+
+    TRACO           shift and go to state 6
+    CATEGORIA       reduce using rule 5 (empty -> .)
+    $end            reduce using rule 5 (empty -> .)
+
+    entrada                        shift and go to state 17
+    empty                          shift and go to state 7
+
+state 17
+
+    (2) entrada -> TRACO NUMERO COLONS TIPO COLONS NUMERO COLONS NUMERO PVIRG entrada .
+
+    CATEGORIA       reduce using rule 2 (entrada -> TRACO NUMERO COLONS TIPO COLONS NUMERO COLONS NUMERO PVIRG entrada .)
+    $end            reduce using rule 2 (entrada -> TRACO NUMERO COLONS TIPO COLONS NUMERO COLONS NUMERO PVIRG entrada .)
+

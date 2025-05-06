@@ -1,0 +1,40 @@
+1.
+a)
+                  3                       (max)
+     3            2             2         (min) -> eu queria o min então o adversário joga o max (3)
+ 3  12  8      2  4  6      14  5   2     (max) -> eu queria o max então o adversário joga o min (3-2-2)
+
+b)
+    3 - 3 - 3 (eu espero que o adversário jogue também o melhor para ele)
+
+c)  algoritmo da poda
+
+                                      [alfa,beta]
+                                      [-00,+00](0)
+                                      [3,+00](1)
+                                      [3,2] (2)
+
+      [3,3](1)                          [2,2](2)         [-00,14] 3<14 continua
+      [12,+00] 3<12 nao mexe               X             [-00,5] 3<5 continua
+      [8,+00] 3<8 nao mexe                 X             [2,2] 3>2 para
+                                    (paramos porque
+                                    encontramos logo
+                                     um menor do que
+                                     o já tinhamos 2<3)
+
+2.                                                          -100
+                                                          [X][0][X]
+                                                          [ ][X][ ]
+                                                          [ ][ ][0]
+            -100                                            -100                                          -1                                            -100
+          [X][0][X]                                       [X][0][X]                                     [X][0][X]                                     [X][0][X]
+          [0][X][ ]                                       [ ][X][ ]                                     [ ][X][ ]                                     [ ][X][0]
+          [ ][ ][0]                                       [ ][0][0]                                     [0][ ][0]                                      [][ ][0]
+   -100          -2             -3             -6           -100            -4                0             -1             0               -5           -100            -4
+[X][0][X]     [X][0][X]      [X][0][X]      [X][0][X]     [X][0][X]      [X][0][X]        [X][0][X]     [X][0][X]      [X][0][X]        [X][0][X]     [X][0][X]      [X][0][X]
+[0][X][ ]     [0][X][ ]      [0][X][X]      [X][X][ ]     [ ][X][ ]      [ ][X][]         [ ][X][X]     [ ][X][]       [ ][X][X]        [X][X][0]     [ ][X][0]      [ ][X][0]
+[X][ ][0]     [ ][X][0]      [ ][ ][0]      [ ][0][0]     [X][0][0]      [X][0][0]        [0][][0]      [0][X][0]      [0][][0]         [][ ][0]      [X][ ][0]      [][X][0]
+
+f(x) = (302+01)-(3X2+X1)
+
+A jogada seria a do -1 e a seguinte -1 outra vez

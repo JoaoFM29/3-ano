@@ -1,0 +1,27 @@
+eu= Mara Maria Mendes Almeida.
+		Eu  =Antonio Cunha Rego.
+		ELE=Antonio Silva.
+
+GIC = <T,V,S,P>
+
+T -{PRONOME, ESPACO, NOME, IGUAL, PONTO}
+V: {frase, nome, nome2}
+S - {frase}
+
+P:   
+    frase -> PRONOME ESPACO IGUAL ESPACO nome PONTO
+           | vazio
+
+    nome -> NOME nome2
+          | vazio
+
+    nome2 -> ESPACO NOME nome2
+           | vazio
+
+tokens = (
+      pronome,
+      espaco, \s+
+      nome, [a-zA-Z] 
+      igual,
+      ponto
+)

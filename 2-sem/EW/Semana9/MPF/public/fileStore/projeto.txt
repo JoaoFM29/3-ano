@@ -1,0 +1,31 @@
+produtores podem alterar, eliminar e ver as coisas que submeteram
+
+consumidor apenas ve 
+
+temos de inventar forma de armazenar a informação (bd e filesystem)
+
+ENVIO E RECEÇÃO DE FICHEIROS
+- Envio em binário ( body de um post ) Limitação - 1 ficheiro por Envio
+
+- Envio em multipart/form-data (posts hibridos) req.file (1) req.files (2+)
+ 
+- Envio em base64 ( empacotar em json e submissão normal)
+
+
+Middleware ( pipeline horizontal)
+
+usar o mesmo nome de campo no formulário faz com que os ficheiros fiquem agrupados num array
+
+Envio de ficheiros em backgroud:
+pacote form-data js , combinado com fs e axios
+
+const form = new FormData()
+const filepath = "..."
+form.append( "myfile", fs.createReadStream (filepath))
+form.append( "desc", "descrição")
+
+(para colocar mais troco o path e repito o processo)
+
+
+axios.post.... (post do form para o servidor)
+

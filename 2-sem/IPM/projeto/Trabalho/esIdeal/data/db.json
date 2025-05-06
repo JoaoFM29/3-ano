@@ -1,0 +1,737 @@
+{
+  "service-definitions": [
+    {
+      "id": "sp",
+      "descr": "Substituir pneus",
+      "duração": 40
+    },
+    {
+      "id": "cr",
+      "descr": "Calibrar rodas",
+      "duração": 20
+    },
+    {
+      "id": "ad",
+      "descr": "Alinhar direção",
+      "duração": 30
+    },
+    {
+      "id": "sct",
+      "descr": "Subsituir calços travões",
+      "duração": 60
+    },
+    {
+      "id": "mot",
+      "descr": "Mudar óleo travões",
+      "duração": 20
+    },
+    {
+      "id": "li",
+      "descr": "Limpeza interior",
+      "duração": 120
+    },
+    {
+      "id": "le",
+      "descr": "Limpeza exterior",
+      "duração": 30
+    },
+    {
+      "id": "sfah",
+      "descr": "Substituir filtro ar habitáculo",
+      "duração": 30
+    },
+    {
+      "id": "mom",
+      "descr": "Mudar óleo motor",
+      "duração": 10
+    },
+    {
+      "id": "sfo",
+      "descr": "Substituir filtro óleo",
+      "duração": 20
+    },
+    {
+      "id": "sfc",
+      "descr": "Substituir filtro combustível",
+      "duração": 30
+    },
+    {
+      "id": "sfam",
+      "descr": "Substituir filtro ar motor",
+      "duração": 30
+    },
+    {
+      "id": "scc",
+      "descr": "Substituir conversor catalítico",
+      "duração": 30
+    },
+    {
+      "id": "sba",
+      "descr": "Substituir bateria de arranque",
+      "duração": 30
+    },
+    {
+      "id": "svi",
+      "descr": "Substituir velas de incandescência",
+      "duração": 30
+    },
+    {
+      "id": "sfp",
+      "descr": "Substituir filtro de partículas",
+      "duração": 30
+    },
+    {
+      "id": "rfp",
+      "descr": "Regenerar filtro de partículas",
+      "duração": 30
+    },
+    {
+      "id": "sva",
+      "descr": "Substituir válvula do acelerador",
+      "duração": 30
+    },
+    {
+      "id": "svi",
+      "descr": "Substituir velas de ignição",
+      "duração": 30
+    },
+    {
+      "id": "adb",
+      "descr": "Avaliar desempenho da bateria",
+      "duração": 30
+    },
+    {
+      "id": "sb",
+      "descr": "Substituir bateria",
+      "duração": 20
+    }
+  ],
+  "vehicle-types": [
+    {
+      "id": "gasolina",
+      "serviços": [
+        "sp",
+        "cr",
+        "ad",
+        "sct",
+        "mot",
+        "li",
+        "le",
+        "sfah",
+        "mom",
+        "sfo",
+        "sfc",
+        "sfam",
+        "scc",
+        "sba",
+        "sva",
+        "svi"
+      ]
+    },
+    {
+      "id": "gasoleo",
+      "serviços": [
+        "sp",
+        "cr",
+        "ad",
+        "sct",
+        "mot",
+        "li",
+        "le",
+        "sfah",
+        "mom",
+        "sfo",
+        "sfc",
+        "sfam",
+        "scc",
+        "sba",
+        "svi",
+        "sfp",
+        "rfp"
+      ]
+    },
+    {
+      "id": "eletrico",
+      "serviços": [
+        "sp",
+        "cr",
+        "ad",
+        "sct",
+        "mot",
+        "li",
+        "le",
+        "sfah",
+        "adb",
+        "sb"
+      ]
+    },
+    {
+      "id": "hibrido",
+      "serviços": [
+        "sp",
+        "cr",
+        "ad",
+        "sct",
+        "mot",
+        "li",
+        "le",
+        "sfah",
+        "mom",
+        "sfo",
+        "sfc",
+        "sfam",
+        "scc",
+        "sba",
+        "sva",
+        "svi",
+        "adb",
+        "sb"
+      ]
+    }
+  ],
+  "clients": [
+    {
+      "id": "123",
+      "nome": "João Silva",
+      "email": "js@imail.com",
+      "telefone": "912345678",
+      "morada": "Praça Manuel Fernandes da Silva, 4715-244 Braga"
+    },
+    {
+      "id": "124",
+      "nome": "Maria Santos",
+      "email": "jms@imail.com",
+      "telefone": "912345679",
+      "morada": "R. Damião de Góis, 4700-028  Braga"
+    },
+    {
+      "id": "125",
+      "nome": "José Pereira",
+      "email": "jp@imail.com",
+      "telefone": "912345680",
+      "morada": "R. Dr Rocha Peixoto, 4700-033  Braga"
+    },
+    {
+      "id": "126",
+      "nome": "Joao Magalhaes",
+      "email": "jm@gmail.com",
+      "telefone": "918471368",
+      "morada": "R. da Corredoura 165, 4805-490 Guimaraes"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "08-25-AA",
+      "marca": "Audi",
+      "modelo": "A4 Avant",
+      "clientId": "123",
+      "vehicle-typeId": "gasolina",
+      "cilindrada": 1000,
+      "kms": 200000
+    },
+    {
+      "id": "AH-31-BB",
+      "marca": "BMW",
+      "modelo": "M1",
+      "clientId": "124",
+      "vehicle-typeId": "gasoleo",
+      "cilindrada": 2000,
+      "kms": 120000
+    },
+    {
+      "id": "AH-32-44",
+      "marca": "Tesla",
+      "modelo": "Model S",
+      "clientId": "123",
+      "vehicle-typeId": "eletrico",
+      "potencia": 200,
+      "kms": 20000
+    },
+    {
+      "id": "AH-21-25",
+      "marca": "BMW",
+      "modelo": "I8",
+      "clientId": "125",
+      "vehicle-typeId": "hibrido",
+      "cilindrada": 1000,
+      "potencia": 200,
+      "kms": 80000
+    },
+    {
+      "id": "78-NZ-36",
+      "marca": "Nissan",
+      "modelo": "Juke",
+      "clientId": "126",
+      "vehicle-typeId": "gasoleo",
+      "cilindrada": 1200,
+      "potencia": 100,
+      "kms": 120000
+    },
+    {
+      "id": "39-AJ-76",
+      "marca": "Tesla",
+      "modelo": "3",
+      "clientId": "126",
+      "vehicle-typeId": "eletrico",
+      "potencia": 352,
+      "kms": 5000
+    },
+    {
+      "id": "43-VJ-12",
+      "marca": "Renault",
+      "modelo": "Megane E-tech",
+      "clientId": "123",
+      "vehicle-typeId": "eletrico",
+      "potencia": 220,
+      "kms": 430
+    },
+    {
+      "id": "AA-22-41",
+      "marca": "Opel",
+      "modelo": "Corsa eletric",
+      "clientId": "124",
+      "vehicle-typeId": "eletrico",
+      "potencia": 156,
+      "kms": 12000
+    }
+  ],
+  "services": [
+    {
+      "id": "s31",
+      "vehicleId": "08-25-AA",
+      "service-definitionId": "sp",
+      "estado": "nafila",
+      "agendamento": "filaDeEspera",
+      "descrição": "Colocar XPTO 225R15",
+      "chegada": {
+        "dia": 1,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 10,
+        "minutos": 15
+      },
+      "postID": "p4"
+    },
+    {
+      "id": "s31",
+      "vehicleId": "39-AJ-76",
+      "service-definitionId": "sct",
+      "estado": "programado",
+      "agendamento": "programado",
+      "descrição": "Colocar ferodo 23334",
+      "chegada": {
+        "dia": 1,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 10,
+        "minutos": 15
+      },
+      "postID": "p4"
+    },
+    {
+      "id": "s69",
+      "vehicleId": "AH-32-44",
+      "service-definitionId": "le",
+      "estado": "realizado",
+      "agendamento": "filaDeEspera",
+      "descrição": "Ver jantes.",
+      "chegada": {
+        "dia": 1,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 9,
+        "minutos": 50
+      },
+      "postID": "p1",
+      "motivo-sugestao": "muito gastos",
+      "sugestoes": [
+        "sp"
+      ]
+    },
+    {
+      "id": "s01",
+      "vehicleId": "AA-22-41",
+      "service-definitionId": "mot",
+      "estado": "programado",
+      "agendamento": "programado",
+      "descrição": "Adicionar a mesma marca de óleo que tinha.",
+      "chegada": {
+        "dia": 4,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 10,
+        "minutos": 20
+      },
+      "postID": "p1"
+    },
+    {
+      "id": "s02",
+      "vehicleId": "AA-22-41",
+      "service-definitionId": "sfah",
+      "estado": "programado",
+      "agendamento": "filaDeEspera",
+      "descrição": "Utilizar da marca NORAUTO",
+      "chegada": {
+        "dia": 3,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 9,
+        "minutos": 10
+      },
+      "postID": "p1"
+    },
+    {
+      "id": "s32",
+      "vehicleId": "AH-31-BB",
+      "service-definitionId": "li",
+      "estado": "realizado",
+      "agendamento": "programado",
+      "data": {
+        "dia": 26,
+        "mes": 3,
+        "ano": 2024,
+        "hora": 14,
+        "minutos": 15
+      },
+      "descrição": "Atenção ao banco do condutor.",
+      "chegada": {
+        "dia": 1,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 10,
+        "minutos": 0
+      },
+      "postID": "p1",
+      "motivo-sugestao": "dads",
+      "sugestoes": [
+        "sp"
+      ]
+    },
+    {
+      "id": "s999",
+      "vehicleId": "39-AJ-76",
+      "service-definitionId": "sb",
+      "estado": "programado",
+      "agendamento": "programado",
+      "data": {
+        "dia": 26,
+        "mes": 3,
+        "ano": 2024,
+        "hora": 14,
+        "minutos": 15
+      },
+      "descrição": "Atenção ao banco do condutor.",
+      "chegada": {
+        "dia": 1,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 10,
+        "minutos": 0
+      },
+      "postID": "p6"
+    },
+    {
+      "id": "s04",
+      "vehicleId": "43-VJ-12",
+      "service-definitionId": "adb",
+      "estado": "programado",
+      "agendamento": "filaDeEspera",
+      "data": {
+        "dia": 26,
+        "mes": 3,
+        "ano": 2024,
+        "hora": 14,
+        "minutos": 15
+      },
+      "descrição": "Atenção ao abrir a mala que está danificada.",
+      "chegada": {
+        "dia": 29,
+        "mes": 3,
+        "ano": 2024,
+        "hora": 10,
+        "minutos": 0
+      },
+      "postID": "p6"
+    },
+    {
+      "id": "s03",
+      "vehicleId": "43-VJ-12",
+      "service-definitionId": "sp",
+      "estado": "programado",
+      "agendamento": "programado",
+      "data": {
+        "dia": 26,
+        "mes": 3,
+        "ano": 2024,
+        "hora": 14,
+        "minutos": 15
+      },
+      "descrição": "Atenção às jantes.",
+      "chegada": {
+        "dia": 1,
+        "mes": 3,
+        "ano": 2024,
+        "hora": 10,
+        "minutos": 10
+      },
+      "postID": "p6"
+    },
+    {
+      "id": "s988",
+      "vehicleId": "78-NZ-36",
+      "service-definitionId": "sfam",
+      "estado": "programado",
+      "agendamento": "programado",
+      "data": {
+        "dia": 26,
+        "mes": 3,
+        "ano": 2024,
+        "hora": 14,
+        "minutos": 15
+      },
+      "descrição": "Atenção à pintura.",
+      "chegada": {
+        "dia": 1,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 10,
+        "minutos": 0
+      },
+      "postID": "p5"
+    },
+    {
+      "id": "s05",
+      "vehicleId": "AA-22-41",
+      "service-definitionId": "ad",
+      "estado": "programado",
+      "agendamento": "filaDeEspera",
+      "data": {
+        "dia": 26,
+        "mes": 3,
+        "ano": 2024,
+        "hora": 14,
+        "minutos": 15
+      },
+      "descrição": "A direção descaia para a esquerda.",
+      "chegada": {
+        "dia": 30,
+        "mes": 3,
+        "ano": 2024,
+        "hora": 10,
+        "minutos": 45
+      },
+      "postID": "p5"
+    },
+    {
+      "id": "s33",
+      "vehicleId": "AH-32-44",
+      "service-definitionId": "le",
+      "estado": "aDecorrer",
+      "agendamento": "filaDeEspera",
+      "descrição": "Ver jantes.",
+      "chegada": {
+        "dia": 1,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 9,
+        "minutos": 50
+      },
+      "postID": "p3"
+    },
+    {
+      "id": "s06",
+      "vehicleId": "78-NZ-36",
+      "service-definitionId": "cr",
+      "estado": "programado",
+      "agendamento": "programado",
+      "descrição": "Ver direção.",
+      "chegada": {
+        "dia": 3,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 11,
+        "minutos": 46
+      },
+      "postID": "p3"
+    },
+    {
+      "id": "s34",
+      "vehicleId": "AH-21-25",
+      "service-definitionId": "sfc",
+      "estado": "parado",
+      "agendamento": "filaDeEspera",
+      "descrição": "Falta o filtro.",
+      "chegada": {
+        "dia": 1,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 9,
+        "minutos": 40
+      },
+      "postID": "p2"
+    },
+    {
+      "id": "s12",
+      "vehicleId": "08-25-AA",
+      "service-definitionId": "sp",
+      "estado": "nafila",
+      "agendamento": "filaDeEspera",
+      "descrição": "Colocar XPTO 225R15",
+      "chegada": {
+        "dia": 2,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 9,
+        "minutos": 40
+      },
+      "postID": "p2"
+    },
+    {
+      "id": "s24",
+      "vehicleId": "08-25-AA",
+      "service-definitionId": "li",
+      "estado": "programado",
+      "agendamento": "programado",
+      "data": {
+        "dia": 2,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 14,
+        "minutos": 15
+      },
+      "descrição": "shampoo XPTO",
+      "chegada": {
+        "dia": 2,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 9,
+        "minutos": 20
+      },
+      "postID": "p1"
+    }
+  ],
+  "mechanics": [
+    {
+      "id": "m1",
+      "nome": "José Castro",
+      "senha": "jose123",
+      "especialização": "geral",
+      "serviços-realizados": [
+        {
+          "id": "s69",
+          "vehicleId": "AH-32-44",
+          "service-definitionId": "le",
+          "estado": "realizado",
+          "agendamento": "filaDeEspera",
+          "descrição": "Ver jantes.",
+          "chegada": {
+            "dia": 1,
+            "mes": 2,
+            "ano": 2024,
+            "hora": 9,
+            "minutos": 50
+          },
+          "postID": "p3",
+          "motivo-sugestao": "muito gastos",
+          "sugestoes": [
+            "sp"
+          ]
+        },
+        {
+          "id": "s32",
+          "vehicleId": "AH-31-BB",
+          "service-definitionId": "li",
+          "estado": "realizado",
+          "agendamento": "programado",
+          "data": {
+            "dia": 26,
+            "mes": 3,
+            "ano": 2024,
+            "hora": 14,
+            "minutos": 15
+          },
+          "descrição": "Atenção ao banco do condutor.",
+          "chegada": {
+            "dia": 1,
+            "mes": 2,
+            "ano": 2024,
+            "hora": 10,
+            "minutos": 0
+          },
+          "postID": "p1",
+          "motivo-sugestao": "dads",
+          "sugestoes": [
+            "sp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "nome": "Marco Magalhaes",
+      "senha": "marco123",
+      "especialização": "combustao",
+      "serviços-realizados": []
+    },
+    {
+      "id": "m3",
+      "nome": "Gustavo Moreira",
+      "senha": "gustavo123",
+      "especialização": "combustao",
+      "serviços-realizados": []
+    },
+    {
+      "id": "m4",
+      "nome": "Sara Ferreira",
+      "senha": "sara123",
+      "especialização": "eletrico",
+      "serviços-realizados": []
+    },
+    {
+      "id": "m5",
+      "nome": "Rui Carvalho",
+      "senha": "rui123",
+      "especialização": "combustao",
+      "serviços-realizados": []
+    },
+    {
+      "id": "m6",
+      "nome": "Marta Costa",
+      "senha": "marta123",
+      "especialização": "eletrico",
+      "serviços-realizados": []
+    }
+  ],
+  "service-stations": [
+    {
+      "id": "p1",
+      "nome": "Posto 1",
+      "especialidade": "geral"
+    },
+    {
+      "id": "p2",
+      "nome": "Posto 2",
+      "especialidade": "geral"
+    },
+    {
+      "id": "p3",
+      "nome": "Posto 3",
+      "especialidade": "eletrico"
+    },
+    {
+      "id": "p4",
+      "nome": "Posto 4",
+      "especialidade": "combustao"
+    },
+    {
+      "id": "p5",
+      "nome": "Posto 5",
+      "especialidade": "combustao"
+    },
+    {
+      "id": "p6",
+      "nome": "Posto 6",
+      "especialidade": "eletrico"
+    }
+  ]
+}

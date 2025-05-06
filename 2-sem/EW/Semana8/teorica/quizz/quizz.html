@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="quizz.css">
+</head>
+
+<body>
+
+    <div id="quiz-container">
+        <div id="question-container">
+            <h2 id="question"></h2>
+            <ul id="options"></ul>
+            <button id="submit-btn">Submit Answer</button>
+        </div>
+        <div id="feedback-container">
+            <p id="feedback"></p>
+            <button id="next-btn">Next Question</button>
+        </div>
+        <div id="score-container">
+            <p>Your Score: <span id="score">0</span></p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="quizz.js"></script>
+</body>
+
+</html>

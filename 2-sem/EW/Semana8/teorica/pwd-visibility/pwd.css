@@ -1,0 +1,12 @@
+.password-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 5px 10px;
+  }
+  
