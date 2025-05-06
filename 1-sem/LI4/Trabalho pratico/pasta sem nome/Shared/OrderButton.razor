@@ -1,0 +1,24 @@
+<div>
+    
+        <div class="d-flex align-items-center">
+            <button type="button" class="btn btn-light small-button" @onclick="ToggleOrder">@GetOrderButtonText()</button>
+        </div>
+
+</div>
+
+@code {
+    [Parameter] public EventCallback<Boolean> OnOrderChanged { get; set; }
+    private bool isOrderByAZ = true;
+
+    private void ToggleOrder()
+    {
+        isOrderByAZ = !isOrderByAZ;
+        OnOrderChanged.InvokeAsync(isOrderByAZ); // Invoke the callback with the updated order
+    }
+
+    private string GetOrderButtonText()
+    {
+        return isOrderByAZ ? "A-Z" : "Tempo";
+    }
+
+}

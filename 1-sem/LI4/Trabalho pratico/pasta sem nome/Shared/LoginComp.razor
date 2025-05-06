@@ -1,0 +1,60 @@
+@using BirdBoxFull.Shared;
+@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+@inject ILocalStorageService LocalStorage
+@inject IServicoUtilizador ServicoUtilizador
+@inject IJSRuntime JSRuntime
+
+
+<div class="navbar-logo"><a href=""><img src="logof.png" alt="Logo" /></a></div>
+<EditForm Model="user" OnSubmit="HandleLogin">
+    <div class="form-group">
+        <input class="form-control" id="oneUsername" aria-describedby="usernameHelp" placeholder="Username:" @bind-value="user.Username">
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" id="onePassword" placeholder="Password:" @bind="user.Password">
+    </div>
+    <div class="button-container">
+        <button type="submit" class="btn btn-dark log-button">Login</button>
+        <button @onclick="GoToRegistration" class="btn btn-dark log-button">Fazer Registo</button>
+    </div>
+</EditForm>
+
+
+@code {
+    // Method to handle button click and navigate to registration page
+    private void GoToRegistration()
+    {
+        NavigationManager.NavigateTo("/registo");
+    }
+
+    private Utilizador user = new Utilizador();
+
+    private async void HandleLogin()
+    {
+        Utilizador real = await ServicoUtilizador.GetUtilizador(user.Username, user.Password);
+        if (real == null)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", "Credenciais não coincidem com nenhum utilizador registado!");
+            await LocalStorage.SetItemAsync<string>("username", string.Empty);
+            await LocalStorage.SetItemAsync<string>("password", string.Empty);
+            NavigationManager.NavigateTo("/registo");
+        }
+        else
+        {
+
+            await LocalStorage.SetItemAsync<string>("username", user.Username);
+            await LocalStorage.SetItemAsync<string>("password", user.Password);
+            if (user.Username.Equals("admin"))
+            {
+                NavigationManager.NavigateTo("/adminindex");
+            }
+            else
+            {
+                NavigationManager.NavigateTo("/");
+            }
+            
+
+        }
+    }
+}

@@ -1,0 +1,190 @@
+@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+@inject IServicoProduto ServicoProduto
+@inject IServicoUtilizador ServicoUtilizador
+@inject ILocalStorageService LocalStorage
+@inject IJSRuntime JSRuntime
+
+<EditForm Model = "l" OnSubmit="HandleSubmition">
+    <div class="form-group">
+        <input type="categorias" class="form-categorias" id="oneCategoria" placeholder="Nome" @bind-value = "l.Name" required>
+        <input type="dataInicio" class="form-control" id="dataInicio" placeholder="Descricao"@bind-value = "l.Descricao" required>
+        <input type="valorMinimo" class="form-control" id="valorMinimo" placeholder="Valor Mínimo" @bind-value = "l.EntryPrice" required>
+        <input type="localizacao" class="form-control" id="localizacao" placeholder="Localização" @bind-value = "l.Location" required>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" @bind-value ="PedirValidacao">
+              <label class="form-check-label" for="flexCheckIndeterminate">
+                Pedir Validação
+              </label>
+            </div>
+        @if (PedirValidacao)
+        {
+            l.Estado = "aValidar";
+            l.Relatorio = "nada";
+            l.IsPublic = false;
+        }
+        else
+        {
+            l.Estado = "aDecorrer";
+            l.Relatorio = "nada";
+            l.IsPublic = true;
+        }
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" @onclick="() => HandleRadioClick(1)" required>
+            <label class="form-check-label" for="flexRadioDefault1">
+                1 Dia
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" @onclick="() => HandleRadioClick(3)" required>
+            <label class="form-check-label" for="flexRadioDefault2">
+                3 Dias
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" @onclick="() => HandleRadioClick(7)" required>
+            <label class="form-check-label" for="flexRadioDefault3">
+                7 Dias
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" @onclick="() => HandleRadioClick(0.0833)" required>
+            <label class="form-check-label" for="flexRadioDefault4">
+                5 minutos
+            </label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="fileUpload" class="custom-file-input">
+            Adicionar Media
+        </label>
+        <InputFile id="fileUpload" class="input-file" style="display: none;" OnChange="HandleFileChange" multiple accept="image/*" required />
+    </div>
+
+    <div class="button-group">
+        <button type="submit" class="btn btn-primary custom-file-input">Submeter</button>
+    </div>
+</EditForm>
+
+
+
+@code {
+
+    private Utilizador utilizador = new Utilizador();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Retrieve userId from LocalStorage
+        string userId = await LocalStorage.GetItemAsync<string>("username") ?? string.Empty;
+
+        if (string.IsNullOrEmpty(userId))
+        {
+            NavigationManager.NavigateTo("/login");
+        }
+        else
+        {
+            string userPassword = await LocalStorage.GetItemAsync<string>("password") ?? string.Empty;
+            utilizador = await ServicoUtilizador.GetUtilizador(userId, userPassword);
+        }
+
+        // Call the base implementation
+        await base.OnInitializedAsync();
+    }
+
+
+    Leilao l = new Leilao();
+
+    bool PedirValidacao;
+
+    private double selectedDuration = 3; // Default value for 3 Dias
+
+    private void HandleRadioClick(double duration)
+    {
+        // Use the selected duration as needed
+        switch (duration)
+        {
+            case 1:
+                l.DataFinal = DateTime.Now.AddDays(1);
+                break;
+            case 3:
+                l.DataFinal = DateTime.Now.AddDays(3);
+                break;
+            case 7:
+                l.DataFinal = DateTime.Now.AddDays(7);
+                break;
+            case 0.0833:
+                l.DataFinal = DateTime.Now.AddMinutes(5);
+                break;
+            default:
+                l.DataFinal = DateTime.Now.AddDays(3);
+                break;
+        }
+    }
+
+
+
+    private List<string> imageUrls = new List<string>();
+
+    private bool HasImages => imageUrls.Count > 0 && imageUrls.Count < 5;
+
+
+    private async Task HandleSubmition()
+    {
+        if (HasImages)
+        {
+            try
+            {
+                // Process the submission
+                Leilao novoLeilao = new Leilao(utilizador.Username, l.Descricao, l.Relatorio, l.Estado, imageUrls, l.Name, l.EntryPrice, l.Location, l.IsPublic, l.DataFinal);
+                novoLeilao.Utilizador = utilizador;
+                await ServicoProduto.AddLeilao(novoLeilao);
+                await UploadImages(novoLeilao.CodLeilao, novoLeilao);
+
+                // Navigate to the "/" page
+                await JSRuntime.InvokeVoidAsync("window.alert", "Auction added successfully");
+                NavigationManager.NavigateTo("/");
+            }
+            catch (Exception ex)
+            {
+                // Show an alert with the error message
+                await JSRuntime.InvokeVoidAsync("window.alert", "Error: " + ex.Message);
+            }
+        }
+        else
+        {
+            // Show an error message or take appropriate action
+            await JSRuntime.InvokeVoidAsync("window.alert", "Images are required.");
+        }
+    }
+
+
+    private async Task HandleFileChange(InputFileChangeEventArgs e)
+    {
+        imageUrls.Clear(); // Clear existing images
+
+        var files = e.GetMultipleFiles().Take(4); // Limit to 4 files
+        foreach (var imageFile in files)
+        {
+            var buffer = new byte[imageFile.Size];
+            await imageFile.OpenReadStream().ReadAsync(buffer);
+            var imageUrl = $"data:{imageFile.ContentType};base64,{Convert.ToBase64String(buffer)}";
+            imageUrls.Add(imageUrl);
+        }
+    }
+
+    private async Task UploadImages(string idLeilao, Leilao leil)
+    {
+        // Send the imageUrls and productId to the server
+        // This can be done using a service or HTTP client
+        // Example:
+        var leilaoCodLeilao = idLeilao; // Replace with the actual Leilao CodLeilao
+        var images = imageUrls.Select(url => new LeilaoImage { ImageUrl = url, LeilaoCodLeilao = leilaoCodLeilao, Leilao = leil }).ToList();
+
+        // Assuming you have a service for handling image uploads
+        await ServicoProduto.UploadImages(images); // Assuming 'servicoProduto' is your IServicoProduto instance
+
+        // Optionally, clear the imageUrls list after uploading
+        imageUrls.Clear();
+    }
+}

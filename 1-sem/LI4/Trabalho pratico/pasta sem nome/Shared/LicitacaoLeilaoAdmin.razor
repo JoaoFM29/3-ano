@@ -1,0 +1,84 @@
+﻿@inject ILocalStorageService LocalStorage
+@inject IServicoUtilizador ServicoUtilizador
+@inject IServicoLicitacao ServicoLicitacao
+@inject IServicoProduto ServicoProduto
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
+
+<h1>Descrição</h1>
+
+<h2>Descrição: @Leilao.Descricao</h2>
+<h2>Descrição: @Leilao.Estado</h2>
+@if (Leilao.Relatorio.Equals("nada"))
+{
+        <h3>Não Auntenticado</h3>
+}
+else
+{
+        <h3>Autenticado: @Leilao.Relatorio</h3>
+}
+
+<!-- File input and upload button -->
+<InputFile OnChange="HandleFileChange" multiple />
+<button @onclick="UploadFiles" class="btn btn-dark log-button">Adicionar Relatorio</button>
+<button type="submit" class="btn btn-dark log-button">Remover Leilao</button>
+
+@code {
+    [Parameter]
+    public Leilao Leilao { get; set; }
+
+    private Utilizador Utilizador = new Utilizador();
+    private IReadOnlyList<IBrowserFile> selectedFiles;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Retrieve userId from LocalStorage
+        string userId = await LocalStorage.GetItemAsync<string>("username") ?? string.Empty;
+
+        if (string.IsNullOrEmpty(userId))
+        {
+            NavigationManager.NavigateTo("/login");
+        }
+        else
+        {
+            string userPassword = await LocalStorage.GetItemAsync<string>("password") ?? string.Empty;
+            Utilizador = await ServicoUtilizador.GetUtilizador(userId, userPassword);
+        }
+
+        // Call the base implementation
+        await base.OnInitializedAsync();
+    }
+
+    private async Task HandleFileChange(InputFileChangeEventArgs e)
+    {
+        selectedFiles = e.GetMultipleFiles();
+    }
+
+    private async Task UploadFiles()
+    {
+        if (selectedFiles != null && selectedFiles.Count > 0)
+        {
+            foreach (var file in selectedFiles)
+            {
+                var uniqueIdentifier = Guid.NewGuid();
+                var fileName = $"{uniqueIdentifier.ToString()}.pdf";
+
+                // Read file content into a byte array
+                using (var memoryStream = new MemoryStream())
+                {
+                    await file.OpenReadStream().CopyToAsync(memoryStream);
+                    var fileContent = memoryStream.ToArray();
+
+                    // Call the service to update the Leilao with the new file content
+                    await ServicoProduto.UpdateLeilaoRelatorio(Leilao.CodLeilao,fileName,fileContent);
+                }
+            }
+
+            // Clear the selected files
+            selectedFiles = null;
+
+            // Update the UI or perform any additional actions if needed
+            StateHasChanged();
+        }
+    }
+}

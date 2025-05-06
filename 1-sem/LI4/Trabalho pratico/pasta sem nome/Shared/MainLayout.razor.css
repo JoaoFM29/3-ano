@@ -1,0 +1,39 @@
+﻿.page {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+@media (max-width: 1024px) {
+    .page {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .page {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+}
+
+@media (max-width:425px) {
+    .page {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width:375px) {
+    .page {
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+    }
+}

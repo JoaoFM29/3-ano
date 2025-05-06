@@ -1,0 +1,47 @@
+﻿/* Navbar styling */
+.navbar {
+    background-color: #ffffff !important; /* Set your desired background color to white */
+    padding: 15px; /* Add padding for better appearance */
+}
+
+/* Logo styling */
+.navbar-brand img {
+    max-height: 8rem; /* Set your desired max height for the logo */
+}
+
+/* Toggler styling */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff; /* Set your desired color for the toggler icon */
+}
+
+/* Navbar links styling */
+.navbar-nav .nav-link {
+    color: #000; /* Set your desired color for the links */
+    margin: 3px; /* Add margin for better spacing between links */
+    font-weight: bold; /* Optional: Set font weight for the links */
+}
+
+    /* Optional: Change link color on hover */
+    .navbar-nav .nav-link:hover {
+        color: #555; /* Set your desired color for link hover */
+    }
+
+/* Optional: Add media queries for responsive font sizes or any other adjustments */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        max-height: 3rem; /* Adjust logo height for smaller screens */
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff; /* Adjust toggler icon color for smaller screens */
+        max-height: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 8px; /* Adjust font size for smaller screens */
+    }
+}

@@ -1,0 +1,101 @@
+﻿@using System.Text.Json;
+@inject IServicoProduto ServicoProduto
+@inject ILocalStorageService LocalStorage
+@inject NavigationManager NavigationManager
+<!-- Add a button for each Licitacao item -->
+<!-- Add a button for each Licitacao item -->
+<ul class="list-unstyled card-container">
+    @foreach (var product in l)
+    {
+        @if (product.Leilao.Estado.Equals("aDecorrer") || product.Leilao.Estado.Equals("aProcessar")){
+
+                        <li class="card my-3">
+                            <div class="card-img-wrapper">
+                                <a href="/produto/@product.Leilao.CodLeilao">
+                                            <img class="card-img" src="@product.Leilao.Images.ElementAt(0)" alt="@product.Leilao.Name" />
+                                </a>
+                            </div>
+                            <div class="card-text">
+                                    <a href="/produto/@product.Leilao.CodLeilao">
+                                        <h4>@product.Leilao.Name</h4>
+                                </a>
+                                    <p>Entrada: @product.Leilao.EntryPrice €</p>
+                                    <p>Localização: @product.Leilao.Location</p>
+
+                @if (product.Leilao.Estado.Equals("aDecorrer"))
+                {
+                                            <p>A decorrer</p>
+                }
+                else if (product.Leilao.Estado.Equals("aProcessar"))
+                {
+                                            <p>A ser processado</p>
+                }
+                
+
+                            </div>
+                        </li>
+        }
+
+    }
+</ul>
+
+
+@code {
+    [Parameter]
+    public string Username { get; set; }
+
+    List<WishList> l { get; set; } = new List<WishList>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Username = await LocalStorage.GetItemAsync<string>("username") ?? string.Empty;
+        await LoadLicitacoes();
+    }
+
+    private async Task LoadLicitacoes()
+    {
+        l = await ServicoProduto.GetLeilaoWishList(Username);
+
+        foreach (WishList item in l)
+        {
+            Leilao temp = await ServicoProduto.loadLeilao(item.LeilaoCodLeilao);
+            item.Leilao = temp;
+        }
+    }
+
+    [Parameter] public List<string> AppliedFilters { get; set; }
+
+    [Parameter] public bool CurrentOrder { get; set; }
+    // Helper method to get ordered Leiloes based on parameters
+    private void GetOrderedLeiloes()
+    {
+
+
+        // Apply filtering based on applied filters
+        if (AppliedFilters != null && AppliedFilters.Any())
+        {
+            l = l.Where(leilao =>
+                AppliedFilters.All(filter => leilao.Leilao.Name.Contains(filter, StringComparison.OrdinalIgnoreCase))).ToList();
+        }
+        // Apply ordering based on the current order
+        // Apply ordering based on the current order
+        if (CurrentOrder)
+        {
+            l = l.OrderBy(product => product.Leilao.Name).ToList();
+        }
+        else
+        {
+            l = l.OrderBy(product => product.Leilao.DataFinal).ToList();
+        }
+
+
+    }
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+        GetOrderedLeiloes();
+    }
+
+
+
+}

@@ -1,0 +1,70 @@
+﻿@using System.Text.Json;
+@inject IServicoUtilizador ServicoUtilizador
+@inject ILocalStorageService LocalStorage
+@inject NavigationManager NavigationManager
+
+
+<ul class="list-unstyled card-container">
+@foreach(Utilizador u in l)
+{
+
+                        <li class="card">
+                            <div class="card-img-wrapper">
+                                     <a href="/adminperfil/@u.Username/@u.Password">
+                                       <img class="card-img" src="prof.png"/>
+                                </a>
+                                    
+
+                            </div>
+                            <div class="card-text">
+                                <h4>@u.Username</h4>
+                                <p>@u.Nome</p>
+                                <p>@u.email</p>
+                                <p>@u.numeroTelemovel</p>
+
+                                
+          
+                            </div>
+                        </li>
+}
+</ul>
+
+
+
+
+
+@code {
+
+    List<Utilizador> l { get; set; } = new List<Utilizador>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadUtilizadores();
+
+        Console.WriteLine(l.Count);
+    }
+
+    private async Task LoadUtilizadores()
+    {
+        // Load all Utilizadores
+        l = await ServicoUtilizador.GetUtilizadores();
+
+        // Remove Utilizador with username "admin"
+        Utilizador adminUtilizador = l.FirstOrDefault(u => u.Username == "admin");
+        if (adminUtilizador != null)
+        {
+            l.Remove(adminUtilizador);
+        }
+    }
+
+    // Method to handle button click
+    private async void HandleButtonClickApagar(Licitacao selectedLicitacao)
+    {
+        Console.WriteLine($"Button clicked for Licitacao: {selectedLicitacao.codLicitacao}");
+        //await ServicoLicitacao.ApagarLicitacao(selectedLicitacao.codLicitacao);
+        //l.Remove(selectedLicitacao);
+
+        // Refresh the page by calling StateHasChanged
+        StateHasChanged();
+    }
+}

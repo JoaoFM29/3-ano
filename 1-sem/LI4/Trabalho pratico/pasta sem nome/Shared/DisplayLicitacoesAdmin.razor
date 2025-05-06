@@ -1,0 +1,85 @@
+﻿@using System.Text.Json;
+@inject IServicoLicitacao ServicoLicitacao
+@inject IServicoProduto ServicoProduto
+@inject ILocalStorageService LocalStorage
+@inject NavigationManager NavigationManager
+<!-- Add a button for each Licitacao item -->
+<!-- Add a button for each Licitacao item -->
+<ul class="list-unstyled card-container">
+    @foreach (var product in l)
+    {
+        @if (product.Estado.Equals("Valida") && !product.Leilao.Estado.Equals("Terminado"))
+        {
+                     <li class="card my-3">
+                          <div class="card-img-wrapper">
+                            <img class="card-img" src="@product.Leilao.Images.ElementAt(0)" alt="@product.Leilao.Name" />
+                        </div>
+                        <div class="card-text">
+                            <h4>@product.Leilao.Name</h4>
+                            <p>@product.valor</p>
+                    @if (product.Leilao.Estado.Equals("aDecorrer"))
+                    {
+                                 <p>A decorrer</p>
+                    }
+                    else if (product.Leilao.Estado.Equals("aProcessar"))
+                    {
+                                                                    <p>A ser processado</p>
+                    }
+                    else if (product.Leilao.Estado.Equals("aValidar"))
+                    {
+                                                                    <p>A ser validado</p>
+                    }
+                    else if (product.Leilao.Estado.Equals("Terminado"))
+                    {
+                                                                     <p>Terminado</p>
+                    }
+
+                            <!-- Add a button for each Licitacao item -->
+                    @if (product.Leilao.Estado.Equals("aDecorrer") && product.isWinner != true)
+                    {
+                                                    <button class="btn btn-dark log-button" @onclick="() => HandleButtonClickApagar(product)">Apagar Licitacao</button>
+                    }
+                    
+                        </div>
+                    </li>
+        }
+    }
+</ul>
+
+@code {
+    [Parameter]
+    public string Username { get; set; }
+
+    List<Licitacao> l { get; set; } = new List<Licitacao>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Username = await LocalStorage.GetItemAsync<string>("username") ?? string.Empty;
+        await LoadLicitacoes();
+    }
+
+    private async Task LoadLicitacoes()
+    {
+        l = await ServicoLicitacao.ConsultarLicitacaoListAll();
+
+        foreach (Licitacao item in l)
+        {
+            Leilao temp = await ServicoProduto.loadLeilao(item.LeilaoCodLeilao);
+            item.Leilao = temp;
+        }
+    }
+
+    // Method to handle button click
+    private async void HandleButtonClickApagar(Licitacao selectedLicitacao)
+    {
+        Console.WriteLine($"Button clicked for Licitacao: {selectedLicitacao.codLicitacao}");
+        await ServicoLicitacao.ApagarLicitacao(selectedLicitacao.codLicitacao);
+        l.Remove(selectedLicitacao);
+
+        // Refresh the page by calling StateHasChanged
+        StateHasChanged();
+    }
+
+
+
+}

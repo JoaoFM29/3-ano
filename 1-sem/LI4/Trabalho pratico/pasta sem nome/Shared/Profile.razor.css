@@ -1,0 +1,329 @@
+.form-control {
+    width: 40rem;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5rem;
+    border: 1px solid #ccc;
+    background-color: rgba(217,217,217,0.5);
+    height: 2.3rem;
+    margin-right: 12rem;
+    margin-bottom: 1rem; /* Add margin between input boxes */
+}
+.info{
+
+    font-size: 1.5rem;
+    margin-top:2.5rem;
+    margin-bottom:1rem;
+
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.log-button {
+    width: 15rem;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 13rem;
+}
+.containerImagem img{
+    width:8rem;
+
+}
+.containerImagem {
+    margin-bottom: 2rem;
+    margin-left: 16rem;
+
+}
+
+@media(max-width:1024px) {
+
+    .form-control {
+        width: 36rem;
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217,217,217,0.5);
+        height: 2.3rem;
+        margin-right: 0rem;
+        margin-bottom: 1rem; /* Add margin between input boxes */
+    }
+
+    .info {
+        font-size: 1.4rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.3rem;
+    }
+
+    .log-button {
+        width: 13rem;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 13rem;
+    }
+
+    .containerImagem img {
+        width: 7rem;
+    }
+
+    .containerImagem {
+        margin-bottom: 2rem;
+        margin-left: 16rem;
+    }
+}
+
+@media(max-width:768px) {
+
+    .form-control {
+        width: 36rem;
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217,217,217,0.5);
+        height: 2.3rem;
+        margin-right: 0rem;
+        margin-bottom: 1rem; /* Add margin between input boxes */
+    }
+
+    .info {
+        font-size: 1.4rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.3rem;
+    }
+
+    .log-button {
+        width: 13rem;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 13rem;
+    }
+
+    .containerImagem img {
+        width: 7rem;
+    }
+
+    .containerImagem {
+        margin-bottom: 2rem;
+        margin-left: 16rem;
+    }
+}
+@media(max-width:650px) {
+
+    .form-control {
+        width: 30rem;
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217,217,217,0.5);
+        height: 2.3rem;
+        margin-right: 0rem;
+        margin-bottom: 1rem; /* Add margin between input boxes */
+    }
+
+    .info {
+        font-size: 1.4rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.3rem;
+    }
+
+    .log-button {
+        width: 13rem;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 13rem;
+    }
+
+    .containerImagem img {
+        width: 7rem;
+    }
+
+    .containerImagem {
+        margin-bottom: 2rem;
+        margin-left: 16rem;
+    }
+}
+@media(max-width:425px) {
+
+    .form-control {
+        width: 24rem;
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217,217,217,0.5);
+        height: 2.3rem;
+        margin-right: 0rem;
+        margin-bottom: 1rem; /* Add margin between input boxes */
+    }
+
+    .info {
+        font-size: 1.2rem;
+        margin-top: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.3rem;
+    }
+
+    .log-button {
+        width: 11rem;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 6rem;
+    }
+
+    .containerImagem img {
+        width: 7rem;
+    }
+
+    .containerImagem {
+        margin-bottom: 2rem;
+        margin-left: 10rem;
+    }
+}
+@media(max-width:375px) {
+
+    .form-control {
+        width: 22rem;
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217,217,217,0.5);
+        height: 2.3rem;
+        margin-right: 0rem;
+        margin-bottom: 1rem; /* Add margin between input boxes */
+    }
+
+    .info {
+        font-size: 1.2rem;
+        margin-top: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.3rem;
+    }
+
+    .log-button {
+        width: 11rem;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 6rem;
+    }
+
+    .containerImagem img {
+        width: 7rem;
+    }
+
+    .containerImagem {
+        margin-bottom: 2rem;
+        margin-left: 10rem;
+    }
+}
+
+@media(max-width:320px) {
+
+    .form-control {
+        width: 18rem;
+        padding: 20px;
+        font-size: 12px;
+        border-radius: 5rem;
+        border: 1px solid #ccc;
+        background-color: rgba(217,217,217,0.5);
+        height: 2.3rem;
+        margin-right: 0rem;
+        margin-bottom: 1rem; /* Add margin between input boxes */
+    }
+
+    .info {
+        font-size: 1.2rem;
+        margin-top: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.3rem;
+    }
+
+    .log-button {
+        width: 11rem;
+        padding: 10px;
+        font-size: 12px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 2rem;
+    }
+
+    .containerImagem img {
+        width: 7rem;
+    }
+
+    .containerImagem {
+        margin-bottom: 2rem;
+        margin-left: 5rem;
+    }
+}

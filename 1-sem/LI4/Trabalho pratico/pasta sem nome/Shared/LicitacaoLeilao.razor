@@ -1,0 +1,105 @@
+﻿@inject ILocalStorageService LocalStorage
+@inject IServicoUtilizador ServicoUtilizador
+@inject IServicoLicitacao ServicoLicitacao
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
+
+<h1>Descrição</h1>
+
+<h2><strong>Descrição:</strong> @Leilao.Descricao</h2>
+@if (Leilao.Relatorio.Equals("nada"))
+{
+        <h3>Não Auntenticado</h3>
+}
+else
+{
+        <button class="btn btn-dark log-button" @onclick="NavigateToUrl">Ver Relatório</button>
+}
+
+<EditForm Model="l" OnSubmit="HandleSubmition">
+    <input class="form-control" id="oneValor" placeholder="Valor" @bind-value="l.valor">
+    <div class="button-container">
+        <button type="submit" class="btn btn-dark log-button">Enviar Licitação</button>
+    </div>
+</EditForm>
+
+@code {
+    [Parameter]
+    public Leilao Leilao { get; set; }
+
+    public Licitacao l { get; set; } = new Licitacao();
+
+    private async Task NavigateToUrl()
+    {
+        string url = Leilao.Relatorio;
+        await JSRuntime.InvokeVoidAsync("open", url, "_blank");
+    }
+
+    public async void HandleSubmition()
+    {
+        Licitacao real = await ServicoLicitacao.ConsultarLicitacao(Utilizador.Username, Leilao.CodLeilao);
+
+        Licitacao novaLicitacao = new Licitacao(Leilao.CodLeilao, Leilao, Utilizador.Username, Utilizador, l.valor, DateTime.Now, false, "Valida");
+
+        if (novaLicitacao.valor < (float)Leilao.EntryPrice)
+        {
+            // Display an alert for low bid value
+            await JSRuntime.InvokeVoidAsync("alert", "Error: Valor inválido");
+           
+        }
+        else if (Leilao.UtilizadorUsername.Equals(Utilizador.Username))
+        {
+            // Display an alert for the current user being the auction owner
+            await JSRuntime.InvokeVoidAsync("alert", "Error: Dono do leilão não pode fazer licitações");
+            NavigationManager.NavigateTo("/");
+        }
+        else if (real != null)
+        {
+            // Display an alert for an existing bid by the user
+            await JSRuntime.InvokeVoidAsync("alert", "Error: Já licitou uma vez");
+            NavigationManager.NavigateTo("/");
+        }
+        else if (DateTime.Now.CompareTo(Leilao.DataFinal) > 0)
+        {
+            // Display an alert for an existing bid by the user
+            await JSRuntime.InvokeVoidAsync("alert", "Error: Tempo já terminou");
+            NavigationManager.NavigateTo("/");
+        }
+        else
+        {
+            // Display a confirmation dialog before proceeding
+            bool userConfirmed = await JSRuntime.InvokeAsync<bool>("confirm", $"Deseja avançar com a licitação no valor de {novaLicitacao.valor} ?");
+
+            if (userConfirmed)
+            {
+                
+                await ServicoLicitacao.AddLicitacao(novaLicitacao);
+                await JSRuntime.InvokeVoidAsync("alert", "Licitação Registada!");
+                NavigationManager.NavigateTo("/");
+            }
+            
+        }
+    }
+
+
+    private Utilizador Utilizador = new Utilizador();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Retrieve userId from LocalStorage
+        string userId = await LocalStorage.GetItemAsync<string>("username") ?? string.Empty;
+
+        if (string.IsNullOrEmpty(userId))
+        {
+            NavigationManager.NavigateTo("/login");
+        }
+        else
+        {
+            string userPassword = await LocalStorage.GetItemAsync<string>("password") ?? string.Empty;
+            Utilizador = await ServicoUtilizador.GetUtilizador(userId, userPassword);
+        }
+
+        // Call the base implementation
+        await base.OnInitializedAsync();
+    }
+}

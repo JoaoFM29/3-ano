@@ -1,0 +1,47 @@
+@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+
+<div class="col">
+    <div class="col-9" id="slide-menu">
+        <!-- Content for the slide menu -->
+        <button class="btn btn-dark d-md-none the-button" type="button" data-toggle="collapse" data-target="#sideMenu" aria-expanded="false" aria-controls="sideMenu">
+            Menu
+        </button>
+
+        <div class="collapse d-md-flex flex-column-reverse" id="sideMenu">
+            <div class="mb-2">
+                <button @onclick="GoToPerfil" class="btn btn-dark the-button btn-block">Ver perfil</button>
+            </div>
+            <div class="mb-2">
+                <button @onclick="GoToLicitacoes" class="btn btn-dark the-button btn-block">Ver licitações ativas</button>
+            </div>
+            <div class="mb-2">
+                <button @onclick="GoToLeiloes" class="btn btn-dark the-button btn-block">Ver leilões ativos</button>
+            </div>
+            <div>
+                <button @onclick="GoToWishes" class="btn btn-dark the-button btn-block">Lista de desejos</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    // Method to handle button click and navigate to the registration page
+    private void GoToPerfil()
+    {
+        NavigationManager.NavigateTo("/user");
+    }
+    private void GoToLicitacoes()
+    {
+        NavigationManager.NavigateTo("/userlicitacoes");
+    }
+    private void GoToLeiloes()
+    {
+        NavigationManager.NavigateTo("/userleiloes");
+    }
+    private void GoToWishes()
+    {
+        NavigationManager.NavigateTo("/userwishes");
+    }
+}
+

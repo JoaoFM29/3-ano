@@ -1,0 +1,204 @@
+.filter-box {
+    height: 8.5rem; 
+    width: 63rem;
+    margin-bottom: 1rem; 
+    padding: 10px; 
+    overflow: hidden;
+    margin-left: 0rem;
+}
+
+.filter-bar-content {
+    font-size: 2.2rem;
+    font-family: 'News Reader', sans-serif;
+}
+
+.custom-line {
+    border: 1px solid #000;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+.date-text {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-left: 26rem;
+}
+@media (max-width: 1400px) {
+    .filter-box {
+        height: 8rem; 
+        width: 58rem;
+        padding: 10px; 
+        overflow: hidden;
+        margin-left: 0rem;
+    }
+
+    .filter-bar-content {
+        font-size: 2.1rem;
+    }
+    .date-text {
+        font-size: 1.1rem;
+        margin-top: 0.8rem;
+        margin-left: 1.8rem;
+    }
+}
+@media (max-width: 1250px) {
+    .filter-box {
+        height: 8rem; 
+        width: 48rem;
+        padding: 10px; 
+        overflow: hidden;
+        margin-left: 0rem;
+    }
+
+    .filter-bar-content {
+        font-size: 2.1rem;
+    }
+    .date-text {
+        font-size: 1.1rem;
+        margin-top: 0.8rem;
+        margin-left: 1.8rem;
+    }
+}
+@media (max-width: 1024px) {
+    .filter-box {
+        height: 7rem; 
+        width: 38rem;
+        padding: 10px; 
+        overflow: hidden;
+        margin-left: 0rem;
+    }
+
+    .filter-bar-content {
+        font-size: 2.1rem;
+    }
+    .date-text {
+        font-size: 1.1rem;
+        margin-top: 0.8rem;
+        margin-left: 1.8rem;
+    }
+}
+@media (max-width: 850px) {
+    .filter-box {
+        height: 6rem; 
+        width: 36rem;
+        padding: 10px; 
+        overflow: hidden;
+        margin-left: 0rem;
+    }
+
+    .filter-bar-content {
+        font-size: 1.2rem;
+    }
+    .date-text {
+        font-size: 1rem;
+        margin-top: 0.6rem;
+        margin-left: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-box {
+        height: 5rem; 
+        width: 32rem;
+        padding: 10px; 
+        overflow: hidden;
+    }
+
+    .filter-bar-content {
+        font-size: 1.2rem;
+    }
+    .date-text {
+        font-size: 1rem;
+        margin-top: 0.6rem;
+        margin-left: 1.6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .filter-box {
+        height: 6rem; 
+        width: 200rem;
+        padding: 10px; 
+        overflow: hidden;
+    }
+
+    .filter-bar-content {
+        font-size: 1.2rem;
+    }
+    .date-text {
+        font-size: 1rem;
+        margin-top: 0.6rem;
+        margin-left: 1.6rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .filter-box {
+        height: 6rem; 
+        width: 30rem;
+        padding: 10px; 
+        overflow: hidden;
+    }
+
+    .filter-bar-content {
+        font-size: 1.2rem;
+    }
+    .date-text {
+        font-size: 1rem;
+        margin-top: 0.6rem;
+        margin-left: 1.6rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .filter-box {
+        height: 5rem; 
+        width: 24rem;
+        padding: 10px; 
+        overflow: hidden;
+    }
+
+    .filter-bar-content {
+        font-size: 1rem;
+    }
+    .date-text {
+        font-size: 0.8rem;
+        margin-top: 0.6rem;
+        margin-left: 1.6rem;
+    }
+}
+@media (max-width: 375px) {
+    .filter-box {
+        height: 5rem; 
+        width: 20rem;
+        padding: 10px; 
+        overflow: hidden;
+    }
+
+    .filter-bar-content {
+        font-size: 0.8rem;
+    }
+    .date-text {
+        font-size: 0.5rem;
+        margin-top: 0.6rem;
+        margin-left: 1.6rem;
+    }
+}
+
+@media (max-width: 325px) {
+    .filter-box {
+        height: 6rem; 
+        width: 18rem;
+        padding: 10px; 
+        overflow: hidden;
+    }
+
+    .filter-bar-content {
+        font-size: 0.8rem;
+    }
+    .date-text {
+        font-size: 0.4rem;
+        margin-top: 0.6rem;
+        margin-left: 1.6rem;
+    }
+}

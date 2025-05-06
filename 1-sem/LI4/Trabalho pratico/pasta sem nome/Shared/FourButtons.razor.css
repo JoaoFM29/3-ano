@@ -1,0 +1,78 @@
+.the-button {
+    width: 12rem;
+    padding: 10px;
+    font-size: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5rem;
+    margin-top: 1rem;
+
+}
+
+@media (max-width: 1024px) {
+    .the-button {
+        width: 8rem;
+        padding: 8px;
+        font-size: 10px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5rem;
+        margin-top: 0.8rem;
+    
+    }
+}
+@media (max-width: 850px) {
+    .the-button {
+        width: 6rem;
+        padding: 6px;
+        font-size: 8px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5rem;
+        margin-top: 0.5rem;
+    
+    }
+}
+@media (max-width: 600px) {
+    .the-button {
+        width: 5rem;
+        padding: 6px;
+        font-size: 8px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5rem;
+        margin-top: 0.3rem;
+    
+    }
+}
+
+@media (max-width: 500px) {
+    .the-button {
+        width: 5rem;
+        padding: 6px;
+        font-size: 8px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5rem;
+        margin-top: 0.3rem;
+    
+    }
+    @media (max-width: 450px) {
+        .the-button {
+            width: 4rem;
+            padding: 6px;
+            font-size: 6px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5rem;
+            margin-top: 0.2rem;
+        
+        }
+    }
+}

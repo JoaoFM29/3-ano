@@ -1,0 +1,98 @@
+﻿@inject IServicoProduto ServicoProduto
+@inject ILocalStorageService LocalStorage
+
+
+
+<ul class="list-unstyled card-container">
+    @foreach (var product in l)
+    {
+        
+                    <li class="card my-3">
+                        <div class="card-img-wrapper">
+                            <a href="/produto/@product.CodLeilao">
+                                <img class="card-img" src="@product.Images.ElementAt(0)" alt="@product.Name" />
+                            </a>
+                        </div>
+                        <div class="card-text">
+                            <a href="/produto/@product.CodLeilao">
+                                <h4>@product.Name</h4>
+                            </a>
+                            <p>Entrada: @product.EntryPrice €</p>
+                            <p>Localização: @product.Location</p>
+
+                    @if (product.Estado.Equals("aDecorrer"))
+                    {
+                                    <p>A decorrer</p>
+                    }
+                    else if (product.Estado.Equals("aProcessar"))
+                    {
+                                    <p>A ser processado</p>
+                    }
+                    else if (product.Estado.Equals("aValidar"))
+                    {
+                                    <p>A ser validado</p>
+                    }
+                else if (product.Estado.Equals("Terminado"))
+                {
+                                     <p>Terminado</p>
+                }
+                    
+                        </div>
+                    </li>
+        
+    }
+</ul>
+
+
+
+@code {
+
+    [Parameter]
+    public string Username { get; set; }
+
+    List<Leilao> l { get; set; } = new List<Leilao>();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        Username = await LocalStorage.GetItemAsync<string>("username") ?? string.Empty;
+        l = await ServicoProduto.GetLeilaoByUser(Username);
+    }
+
+    [Parameter] public List<string> AppliedFilters { get; set; }
+
+    [Parameter] public bool CurrentOrder { get; set; }
+    // Helper method to get ordered Leiloes based on parameters
+    private async void GetOrderedLeiloes()
+    {
+
+        
+        // Apply filtering based on applied filters
+        if (AppliedFilters != null && AppliedFilters.Any())
+        {
+            l = l.Where(leilao =>
+                AppliedFilters.All(filter => leilao.Name.Contains(filter, StringComparison.OrdinalIgnoreCase))).ToList();
+        }
+        // Apply ordering based on the current order
+        // Apply ordering based on the current order
+        if (CurrentOrder)
+        {
+            l = l.OrderBy(product => product.Name).ToList();
+        }
+        else
+        {
+            l = l.OrderBy(product => product.DataFinal).ToList();
+        }
+
+
+    }
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+        GetOrderedLeiloes();
+    }
+
+
+
+}

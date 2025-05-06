@@ -1,0 +1,49 @@
+﻿@inherits LayoutComponentBase
+@inject ILocalStorageService LocalStorage
+@inject NavigationManager NavigationManager
+@inject IServicoUtilizador ServicoUtilizador
+
+
+<div class="containerImagem"><img src="prof.png" alt="Logo" /></div>
+<EditForm Model="Utilizador" OnValidSubmit="HandleSubmit">
+    <div class="form-group">
+        <input type="text" class="form-control" @bind="Utilizador.Nome" placeholder=@Utilizador.Nome>
+        <input type="email" class="form-control" @bind="Utilizador.email" placeholder=@Utilizador.email>
+        <input type="tel" class="form-control" @bind="Utilizador.numeroTelemovel" placeholder=@Utilizador.numeroTelemovel>
+    </div>
+    <div class="info">Morada de envio</div>
+    <div class="form-group">
+        <input type="text" class="form-control" @bind="Utilizador.localidade" placeholder=@Utilizador.localidade>
+        <input type="text" class="form-control" @bind="Utilizador.rua" placeholder=@Utilizador.rua>
+        <input type="text" class="form-control" @bind="Utilizador.numeroPorta" placeholder=@Utilizador.numeroPorta>
+        <input type="text" class="form-control" @bind="Utilizador.codigoPostal" placeholder=@Utilizador.codigoPostal>
+    </div>
+    <div class="button-container">
+        <button type="submit" class="btn btn-dark log-button">Enviar Registo</button>
+    </div>
+</EditForm>
+
+
+@code {
+    [Parameter]
+    public Utilizador Utilizador { get; set; } = new Utilizador();
+
+    private async Task HandleSubmit()
+    {
+        // Call the service to update the user information
+        var success = await ServicoUtilizador.AlteraUtilizador(Utilizador);
+
+        if (success)
+        {
+            // Handle successful update
+            Console.WriteLine("User information updated successfully!");
+        }
+        else
+        {
+            // Handle update failure
+            Console.WriteLine("Failed to update user information.");
+        }
+    }
+
+
+}

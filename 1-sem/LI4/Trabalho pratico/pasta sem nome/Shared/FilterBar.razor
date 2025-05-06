@@ -1,0 +1,48 @@
+﻿<div class="d-flex align-items-center filter-bar-content">
+    <div class="flex-fill order-1">
+        <div class="d-flex align-items-center"> <!-- Added a container for Title and date-text -->
+            <div class="mr-3"> <!-- Added margin to separate Title and date-text -->
+                @Title
+            </div>
+            <div class="date-text">
+                @currentDate
+            </div>
+        </div>
+    </div>
+    <div class="ml-auto order-3">
+        <FilterButton OnFilterChanged="UpdateFilter" />
+    </div>
+    <div class="ml-2 order-4">
+        <OrderButton OnOrderChanged="ToggleOrder"></OrderButton>
+    </div>
+</div>
+<hr class="custom-line" />
+
+@code {
+
+    [Parameter]
+    public string Title { get; set; }
+
+    string currentDate = DateTime.Now.ToString("MMMM dd, yyyy");
+
+    private List<string> appliedFilters = new List<string>();
+
+    private bool isOrderByAZ = true; // Initialize isOrderByAZ
+
+    [Parameter] public EventCallback<List<string>> OnFilterChanged { get; set; }
+
+    [Parameter] public EventCallback<bool> OnOrderChanged { get; set; }
+
+    private void UpdateFilter(List<string> newFilterValue)
+    {
+        // Assuming you have some logic to determine the filters
+        List<string> newFilters = newFilterValue;
+        OnFilterChanged.InvokeAsync(newFilters);
+    }
+
+    private void ToggleOrder(bool newOrder)
+    {
+        isOrderByAZ = newOrder;
+        OnOrderChanged.InvokeAsync(newOrder);
+    }
+}

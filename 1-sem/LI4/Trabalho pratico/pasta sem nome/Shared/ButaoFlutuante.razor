@@ -1,0 +1,16 @@
+﻿@inherits Microsoft.AspNetCore.Components.ComponentBase
+@inject NavigationManager NavigationManager
+
+
+<div class="floating-button" @onclick="NavigateToPage">
+    <span>?</span>
+</div>
+
+@code {
+    [Parameter] public string PageUrl { get; set; } = "/aboutus";
+
+    private void NavigateToPage()
+    {
+        NavigationManager.NavigateTo(PageUrl);
+    }
+}

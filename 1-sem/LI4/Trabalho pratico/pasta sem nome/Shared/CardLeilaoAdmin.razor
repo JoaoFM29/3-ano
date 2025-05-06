@@ -1,0 +1,107 @@
+﻿@inherits Microsoft.AspNetCore.Components.ComponentBase
+@inject ILocalStorageService LocalStorage
+@inject NavigationManager NavigationManager
+@inject IServicoProduto ServicoProduto
+@inject IJSRuntime JSRuntime
+<div class="card">
+    <div class="row no-gutters">
+        <div class="col-md-9">
+            <div class="d-flex flex-column">
+                @if (Leilao != null && Leilao.Images != null)
+                {
+                    @for (int i = 1; i < Leilao.Images.Count; i++)
+                    {
+                        int temp = i;
+                                <div class="card-img-small">
+                                            <img class="img-thumbnail mb-2" src="@Leilao.Images.ElementAtOrDefault(temp)" alt="Image" @onclick="(() => SwapImages(temp))">
+                                        </div>
+                    }
+                }
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card-body">
+                @if (Leilao != null && Leilao.Images != null && Leilao.Images.Count > 0)
+                {
+                            <div class="card-img-big">
+                                <img class="img-thumbnail mb-2" src="@Leilao.Images[0]" alt="Big Image" @onclick="(() => SwapImages(0))">
+                            </div>
+                            <p class="card-title">@Leilao.Name</p>
+                            <p class="card-text">Entrada: @Leilao.EntryPrice €</p>
+                            <p class="card-text">Timer: @remainingTime</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<button @onclick="RemoverLeilao" class="btn btn-dark log-button">Apagar Leilão</button>
+
+
+@code {
+    [Parameter]
+    public Leilao Leilao { get; set; }
+
+    private Timer timer;
+    private string remainingTime;
+
+    protected override void OnInitialized()
+    {
+        try
+        {
+
+            CalculateRemainingTime(null);
+            timer = new Timer(CalculateRemainingTime, null, 0, 1000);
+
+        }
+        catch (NullReferenceException e)
+        {
+            remainingTime = "00:00:00";
+        }
+    }
+
+    private void CalculateRemainingTime(object state)
+    {
+
+        TimeSpan timeRemaining = Leilao.DataFinal - DateTime.Now;
+        if (timeRemaining.TotalSeconds > 0)
+        {
+            remainingTime = $"{(int)timeRemaining.TotalHours:D2}:{timeRemaining.Minutes:D2}:{timeRemaining.Seconds:D2}";
+        }
+        else
+        {
+            remainingTime = "00:00:00";
+            timer.Change(Timeout.Infinite, Timeout.Infinite); // Stop the timer
+        }
+
+        StateHasChanged();
+
+
+    }
+
+    private void SwapImages(int clickedImageIndex)
+    {
+        Console.WriteLine(clickedImageIndex);
+        if (clickedImageIndex > 0 && clickedImageIndex < Leilao.Images.Count)
+        {
+            var temp = Leilao.Images[0];
+            Leilao.Images[0] = Leilao.Images[clickedImageIndex];
+            Leilao.Images[clickedImageIndex] = temp;
+        }
+    }
+
+
+    // Dispose the timer when the component is disposed
+    public void Dispose()
+    {
+        timer?.Dispose();
+    }
+
+    public async void RemoverLeilao()
+    {
+
+        await ServicoProduto.RemoveLeilao(Leilao.CodLeilao);
+
+        NavigationManager.NavigateTo("/adminindex");
+
+    }
+}

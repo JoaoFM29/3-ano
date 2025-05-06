@@ -1,0 +1,83 @@
+@using BirdBoxFull.Shared;
+@using System.Text.Json;
+@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+@inject ILocalStorageService LocalStorage
+@inject IServicoUtilizador ServicoUtilizador
+@inject IJSRuntime JSRuntime
+
+<div class="navbar-logo"><a href="login"><img src="logof.png" alt="Logo" /></a></div>
+<EditForm Model="newUtilizador" OnSubmit="HandleSubmit">
+    <div class="form-group">
+        <input type="username" class="form-control" id="oneUsername" aria-describedby="usernameHelp" placeholder="Username: " @bind-value="newUtilizador.Username">
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" id="onePassword" placeholder="Password:" @bind-value="newUtilizador.Password">
+    </div>
+    <div class="form-group">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email:" @bind-value="newUtilizador.email">
+  </div>
+  
+    <input type="rua" class="form-control-cont-in" id="oneIndic" placeholder="Indicativo:" @bind-value="newUtilizador.indicativo">
+    <input type="rua" class="form-control-cont-cont" id="oneTel" placeholder="Contacto:" @bind-value="newUtilizador.numeroTelemovel">
+    <input type="rua" class="form-control-cont-id" id="oneCc" placeholder="Identificação:" @bind-value="newUtilizador.cc">
+  
+  <div class="form-group">
+    <input type="nome" class="form-control" id="oneNme" placeholder="Nome:" @bind-value="newUtilizador.Nome">
+  </div>
+  <div class="form-group">
+    <input type="rua" class="form-control-morada" id="oneRua" placeholder="Rua:" @bind-value="newUtilizador.rua">
+    <input type="codigo-postal" class="form-control-morada-dir" id="oneCp" placeholder="Código Postal:" @bind-value="newUtilizador.codigoPostal">
+  </div>
+  <div class="form-group">
+    <input type="n-porta" class="form-control-morada" id="oneNporta" placeholder="NºPorta:" @bind-value="newUtilizador.numeroPorta">
+    <input type="n-porta" class="form-control-morada-dir" id="oneCidade" placeholder="Cidade:"@bind-value="newUtilizador.localidade">
+  </div>
+  <div class="form-group">
+    <input type="n-porta" class="form-control" id="oneNacionalidade" placeholder="Iban:">
+  </div>
+  
+    <div class="button-container">
+        <button type="submit" class="btn btn-dark log-button">Enviar Registo</button>
+    </div>
+</EditForm>
+
+@code {
+    private Utilizador newUtilizador = new Utilizador();
+
+    private async Task HandleSubmit()
+    {
+        // Check if all form fields have data
+        if (string.IsNullOrWhiteSpace(newUtilizador.Username) ||
+            string.IsNullOrWhiteSpace(newUtilizador.Password) ||
+            // Add similar checks for other form fields as needed
+            string.IsNullOrWhiteSpace(newUtilizador.email) ||
+            string.IsNullOrWhiteSpace(newUtilizador.indicativo) ||
+            string.IsNullOrWhiteSpace(newUtilizador.numeroTelemovel) ||
+            string.IsNullOrWhiteSpace(newUtilizador.cc) ||
+            string.IsNullOrWhiteSpace(newUtilizador.Nome) ||
+            string.IsNullOrWhiteSpace(newUtilizador.rua) ||
+            string.IsNullOrWhiteSpace(newUtilizador.numeroPorta) ||
+            string.IsNullOrWhiteSpace(newUtilizador.localidade) ||
+            string.IsNullOrWhiteSpace(newUtilizador.codigoPostal))
+        {
+            await JSRuntime.InvokeVoidAsync("window.alert", "Por favor, preencha todos os campos.");
+            return;
+        }
+        var response = await ServicoUtilizador.AddUtilizador(newUtilizador);
+
+        if (response != null && response)
+        {
+            NavigationManager.NavigateTo("/login");
+           
+        }
+        else
+        {
+            await JSRuntime.InvokeVoidAsync("window.alert", "Utilizador já existente!");
+            Console.WriteLine("ERROR");
+        }
+
+
+    }
+}  
+

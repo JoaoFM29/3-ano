@@ -1,0 +1,152 @@
+﻿@using System.Text.Json;
+@inject IServicoLicitacao ServicoLicitacao
+@inject IServicoProduto ServicoProduto
+@inject ILocalStorageService LocalStorage
+@inject NavigationManager NavigationManager
+<!-- Add a button for each Licitacao item -->
+<!-- Add a button for each Licitacao item -->
+<ul class="list-unstyled card-container">
+    @foreach (var product in l)
+    {
+        @if (product.Estado.Equals("Valida") && !product.Leilao.Estado.Equals("Terminado"))
+        {
+             <li class="card my-3">
+                  <div class="card-img-wrapper">
+                    <img class="card-img" src="@product.Leilao.Images.ElementAt(0)" alt="@product.Leilao.Name" />
+                </div>
+                <div class="card-text">
+                    <h4>@product.Leilao.Name</h4>
+                    <p>@product.valor</p>
+                    @if (product.Leilao.Estado.Equals("aDecorrer"))
+                    {
+                     <p>A decorrer</p>
+                    }
+                    else if (product.Leilao.Estado.Equals("aProcessar"))
+                    {
+                                                        <p>A ser processado</p>
+                    }
+                    else if (product.Leilao.Estado.Equals("aValidar"))
+                    {
+                                                        <p>A ser validado</p>
+                    }
+                    else if (product.Leilao.Estado.Equals("Terminado"))
+                    {
+                                                         <p>Terminado</p>
+                    }
+
+                    <!-- Add a button for each Licitacao item -->
+                @if (product.Leilao.Estado.Equals("aDecorrer") && product.isWinner != true)
+                {
+                                        <button class="btn btn-dark log-button" @onclick="() => HandleButtonClickApagar(product)">Apagar Licitacao</button>
+                }
+                else if (product.isWinner == true)
+                {
+                                                    <button class="btn btn-dark log-button" @onclick="() => HandleButtonClickPagar(product)">Fazer Pagamento</button>
+                }
+                </div>
+            </li>
+        }
+    }
+</ul>
+
+
+@code {
+    [Parameter]
+    public string Username { get; set; }
+
+    List<Licitacao> l { get; set; } = new List<Licitacao>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Username = await LocalStorage.GetItemAsync<string>("username") ?? string.Empty;
+        await LoadLicitacoes();
+    }
+
+    private async Task LoadLicitacoes()
+    {
+        l = await ServicoLicitacao.ConsultarLicitacaoList(Username);
+
+        foreach (Licitacao item in l)
+        {
+            Leilao temp = await ServicoProduto.loadLeilao(item.LeilaoCodLeilao);
+            item.Leilao = temp;
+        }
+    }
+
+    // Method to handle button click
+    private async void HandleButtonClickApagar(Licitacao selectedLicitacao)
+    {
+        Console.WriteLine($"Button clicked for Licitacao: {selectedLicitacao.codLicitacao}");
+        await ServicoLicitacao.ApagarLicitacao(selectedLicitacao.codLicitacao);
+        l.Remove(selectedLicitacao);
+
+        // Refresh the page by calling StateHasChanged
+        StateHasChanged();
+    }
+
+    private async void HandleButtonClickPagar(Licitacao selectedLicitacao)
+    {
+        string checkoutUrl = await ServicoLicitacao.Checkout(selectedLicitacao);
+
+        // Attempt to parse the JSON and extract the URL
+        try
+        {
+            using (JsonDocument doc = JsonDocument.Parse(checkoutUrl))
+            {
+                if (doc.RootElement.TryGetProperty("result", out JsonElement resultElement))
+                {
+                    string extractedUrl = resultElement.GetString();
+                    Console.WriteLine("Extracted URL: " + extractedUrl);
+
+                    // Now you can navigate to the extracted URL
+                    NavigationManager.NavigateTo(extractedUrl);
+                }
+                else
+                {
+                    Console.WriteLine("Property 'result' not found in the JSON.");
+                }
+            }
+        }
+        catch (JsonException ex)
+        {
+            Console.WriteLine("Error parsing JSON: " + ex.Message);
+        }
+    }
+
+
+    [Parameter] public List<string> AppliedFilters { get; set; }
+
+    [Parameter] public bool CurrentOrder { get; set; }
+    // Helper method to get ordered Leiloes based on parameters
+    private void GetOrderedLeiloes()
+    {
+
+
+        // Apply filtering based on applied filters
+        if (AppliedFilters != null && AppliedFilters.Any())
+        {
+            l = l.Where(leilao =>
+                AppliedFilters.All(filter => leilao.Leilao.Name.Contains(filter, StringComparison.OrdinalIgnoreCase))).ToList();
+        }
+        // Apply ordering based on the current order
+        // Apply ordering based on the current order
+        if (CurrentOrder)
+        {
+            l = l.OrderBy(product => product.Leilao.Name).ToList();
+        }
+        else
+        {
+            l = l.OrderBy(product => product.Leilao.DataFinal).ToList();
+        }
+
+
+    }
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+        GetOrderedLeiloes();
+    }
+
+
+
+}

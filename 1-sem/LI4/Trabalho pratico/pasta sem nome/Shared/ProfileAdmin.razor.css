@@ -1,0 +1,44 @@
+﻿.form-control {
+    width: 40rem;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5rem;
+    border: 1px solid #ccc;
+    background-color: rgba(217,217,217,0.5);
+    height: 2.3rem;
+    margin-right: 12rem;
+    margin-bottom: 1rem; /* Add margin between input boxes */
+}
+
+.info {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.log-button {
+    width: 15rem;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 13rem;
+}
+
+.containerImagem img {
+    width: 8rem;
+}
+
+.containerImagem {
+    margin-bottom: 2rem;
+    margin-left: 16rem;
+}

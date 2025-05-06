@@ -1,0 +1,43 @@
+<div class="d-flex align-items-center">
+    @if (!isExpanded)
+    {
+        <button type="button" class="btn btn-dark small-button" @onclick="ExpandFilter">Filtrar</button>
+    }
+    else
+    {
+        <input class="form-control resizable resizable-input" type="text" placeholder="Insira Valor"
+               @bind="filterValue" />
+        <button type="button" class="btn btn-dark small-button" @onclick="AddFilter">Aplicar</button>
+        <button type="button" class="btn btn-dark small-button" @onclick="RemoveFilterData">Limpar</button>
+    }
+</div>
+
+
+@code {
+    [Parameter] public EventCallback<List<string>> OnFilterChanged { get; set; }
+    private string filterValue = "";
+    private List<string> appliedFilters = new List<string>();
+    private bool isExpanded = false;
+
+    private void ExpandFilter()
+    {
+        isExpanded = true;
+    }
+    private async Task AddFilter()
+    {
+        if (!string.IsNullOrEmpty(filterValue))
+        {
+            appliedFilters.Add(filterValue);
+             filterValue = ""; // Clear the input box after adding the filter
+            await OnFilterChanged.InvokeAsync(appliedFilters); // Invoke the callback with the updated filters
+    }
+}
+
+private async Task RemoveFilterData()
+{
+    appliedFilters.Clear(); // Remove all applied filters
+    await OnFilterChanged.InvokeAsync(appliedFilters); // Invoke the callback with the cleared filters
+    isExpanded = false; // Collapse after clearing filters
+}
+
+}
