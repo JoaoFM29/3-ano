@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+    .flex-column-reverse {
+        flex-direction: column; /* Switch to column layout on larger screens */
+    }
+
+    .flex-grow-1 {
+        max-width: none; /* Remove max-width on larger screens */
+    }
+
+    .mb-md-0 {
+        margin-bottom: 0; /* Remove margin-bottom on larger screens */
+    }
+}

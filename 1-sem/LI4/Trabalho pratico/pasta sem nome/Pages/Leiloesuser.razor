@@ -1,0 +1,56 @@
+@inject ILocalStorageService LocalStorage
+@page "/userleiloes"
+@inject NavigationManager NavigationManager
+<PageTitle>Meu Perfil</PageTitle>
+<MainLayout></MainLayout>
+<NavMenu></NavMenu>
+
+
+<div class="d-flex flex-column flex-md-row">
+    <div class="flex-grow-1 mb-3 mb-md-0 mr-md-3">
+        <FourButtons></FourButtons>
+    </div>
+    <div>
+        <FilterBarShort Title="Leilões Ativos" OnFilterChanged="UpdateFilter" OnOrderChanged="UpdateOrder"></FilterBarShort>
+        <DisplayLeiloes AppliedFilters="@appliedFilters" CurrentOrder="@stateOrder"></DisplayLeiloes>
+    </div>
+</div>
+<ButaoFlutuante></ButaoFlutuante>
+
+@code {
+    [Parameter]
+    public string userId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Retrieve userId from LocalStorage
+        userId = await LocalStorage.GetItemAsync<string>("username") ?? string.Empty;
+
+        if (string.IsNullOrEmpty(userId))
+        {
+            NavigationManager.NavigateTo("/login");
+        }
+
+        Console.WriteLine(userId);
+
+        // Call the base implementation
+        await base.OnInitializedAsync();
+    }
+
+    private List<string> appliedFilters = new List<string>();
+
+    private bool stateOrder = true;
+
+    private void UpdateFilter(List<string> newFilters)
+    {
+        appliedFilters = newFilters;
+    }
+    private void UpdateOrder(bool b)
+    {
+        stateOrder = b;
+
+    }
+
+}
+
+

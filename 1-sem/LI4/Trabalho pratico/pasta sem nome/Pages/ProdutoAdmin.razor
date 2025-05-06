@@ -1,0 +1,40 @@
+﻿@page "/produtoadmin/{productId}"
+@inject IServicoProduto ServicoProduto
+
+<PageTitle>Produto @productId</PageTitle>
+<NavMenuAdmin></NavMenuAdmin>
+
+@if (isLoading)
+{
+            <div class="loading-screen">
+                Loading...
+            </div>
+}
+else
+{
+                <div class="d-flex flex-column flex-md-row">
+            <div class="flex-grow-1 mb-3 mb-md-0">
+                    <CardLeilaoAdmin Leilao="@product" />
+
+            </div>
+            <div>
+                    <LicitacaoLeilaoAdmin Leilao="@product" />
+
+            </div>
+        </div>
+
+}
+
+@code {
+    [Parameter]
+    public string productId { get; set; }
+
+    private Leilao product = new Leilao();
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        product = await ServicoProduto.loadLeilao(productId);
+        isLoading = false;
+    }
+}

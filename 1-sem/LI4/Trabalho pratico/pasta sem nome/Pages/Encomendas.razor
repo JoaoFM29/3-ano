@@ -1,0 +1,26 @@
+﻿@page "/encomendas"
+<PageTitle>Criar Leilão</PageTitle>
+<NavMenu></NavMenu>
+<FilterBar Title="Encomendas Ativas" OnFilterChanged ="UpdateFilter" OnOrderChanged="UpdateOrder"></FilterBar>
+<DisplayEncomendas AppliedFilters="@appliedFilters" CurrentOrder="@stateOrder"></DisplayEncomendas>
+<ButaoFlutuante></ButaoFlutuante>
+
+
+
+
+@code {
+
+    private List<string> appliedFilters = new List<string>();
+
+    private bool stateOrder = true;
+
+    private void UpdateFilter(List<string> newFilters)
+    {
+        appliedFilters = newFilters;
+    }
+    private void UpdateOrder(bool b)
+    {
+        stateOrder = b;
+
+    }
+}

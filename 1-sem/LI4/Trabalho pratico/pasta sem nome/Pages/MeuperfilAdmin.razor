@@ -1,0 +1,53 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+@inject ILocalStorageService LocalStorage
+@inject IServicoUtilizador ServicoUtilizador
+
+@page "/adminperfil/{userAver}/{pass}"
+<PageTitle>Meu Perfil</PageTitle>
+<MainLayout></MainLayout>
+<NavMenuAdmin></NavMenuAdmin>
+<div class="d-flex flex-column flex-md-row">
+    <div class="flex-grow-1 mb-3 mb-md-0">
+        <TwoButtons></TwoButtons>
+
+    </div>
+    <div>
+       
+        <ProfileAdmin Utilizador="@utilizador"></ProfileAdmin>
+    </div>
+</div>
+
+
+
+@code {
+    [Parameter]
+    public string userId { get; set; }
+
+    [Parameter]
+    public string userAver { get; set; }
+
+    [Parameter]
+    public string pass { get; set; }
+
+    Utilizador utilizador = new Utilizador();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Retrieve userId from LocalStorage
+        userId = await LocalStorage.GetItemAsync<string>("username") ?? string.Empty;
+
+        if (string.IsNullOrEmpty(userId) || !userId.Equals("admin"))
+        {
+            NavigationManager.NavigateTo("/login");
+        }
+
+       utilizador = await ServicoUtilizador.GetUtilizador(userAver,pass);
+
+        // Call the base implementation
+        await base.OnInitializedAsync();
+    }
+
+}
+
+

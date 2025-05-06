@@ -1,0 +1,25 @@
+﻿@page "/"
+<PageTitle>Index</PageTitle>
+<MainLayout></MainLayout>
+<NavMenu></NavMenu>
+<FilterBar Title="Leilões Ativos" OnFilterChanged ="UpdateFilter" OnOrderChanged="UpdateOrder"></FilterBar>
+<ListaProdutos AppliedFilters="@appliedFilters" CurrentOrder="@stateOrder"></ListaProdutos>
+<ButaoFlutuante></ButaoFlutuante>
+
+
+@code{
+
+    private List<string> appliedFilters = new List<string>();
+
+    private bool stateOrder = true;
+
+    private void UpdateFilter(List<string> newFilters)
+    {
+        appliedFilters = newFilters;
+    }
+    private void UpdateOrder(bool b)
+    {
+        stateOrder = b;
+
+    }
+}
